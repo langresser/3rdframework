@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_0.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_basic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_copy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_empty_mtree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_format_newc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_help.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_C_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_H_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_L_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_O_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_T_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_U_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_X_upper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_b.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_exclude.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_gid_gname.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_keep_newer_files.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_newer_than.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_nodump.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_q.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_r.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_option_uid_uname.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_patterns.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_print_longpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_stdio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_strip_components.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_symlink_dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\tar\test\test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{234D7697-9EC1-4C88-8FE9-A5F4939DA5C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{025873AB-3EDD-45C4-892B-09255178E37A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

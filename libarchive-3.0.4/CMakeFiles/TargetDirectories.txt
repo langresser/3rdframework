@@ -1,0 +1,17 @@
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/ALL_BUILD.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/Continuous.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/Experimental.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/Nightly.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/NightlyMemoryCheck.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/ZERO_CHECK.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/CMakeFiles/archive.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/CMakeFiles/archive_static.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/cpio/CMakeFiles/bsdcpio.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/cpio/test/CMakeFiles/bsdcpio_test.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/tar/CMakeFiles/bsdtar.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/tar/test/CMakeFiles/bsdtar_test.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeFiles/libarchive_test.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/CMakeFiles/run_all_tests.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/cpio/test/CMakeFiles/run_bsdcpio_test.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/tar/test/CMakeFiles/run_bsdtar_test.dir
+E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeFiles/run_libarchive_test.dir

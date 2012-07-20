@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\cpio\cmdline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\cpio\cpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive_fe\err.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive_fe\line_reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\cpio\cpio_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\cpio\cpio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\cpio\cpio_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive_fe\err.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive_fe\lafe_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive_fe\line_reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\cpio\cpio_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{234D7697-9EC1-4C88-8FE9-A5F4939DA5C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{025873AB-3EDD-45C4-892B-09255178E37A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

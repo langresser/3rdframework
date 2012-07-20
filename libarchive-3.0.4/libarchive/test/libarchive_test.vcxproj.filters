@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\read_open_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_freebsd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_nfs4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_pax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_posix1e.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_api_feature.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_clear_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_getdate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_match_owner.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_match_path.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_match_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_pathmatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_close_twice.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_close_twice_open_fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_close_twice_open_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_next_header_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_next_header_raw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_open2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_filter_option.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_format_option.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_option.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_support.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_set_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_string_conversion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_filter_option.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_format_option.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_option.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_bad_fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_bzip2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_cpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_gtar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_gzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_lzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_lzma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_mac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_pax_libarchive_2x.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_solaris_tar_acl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_solaris_pax_sparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_tar_hardlink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_xz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_empty_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_entry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_entry_strmode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_extattr_freebsd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_filter_count.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_fuzz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_gnutar_filename_encoding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_link_resolver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_failure.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_pax_filename_encoding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_compress_program.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_data_large.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_disk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_disk_directory_traversals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_disk_entry_from_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_extract.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_file_nonexistent.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_7zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_ar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cab_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_afio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_Z.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_be.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_bz2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_gz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_lzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_lzma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_xz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_odc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4_bzip2_rpm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4_gzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4_gzip_rpm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4c_Z.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_gz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_lzma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_sparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_iso_Z.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_iso_multi_extent.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_iso_xorriso.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_bz2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_long.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_rr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_versioned.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_bz2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_ce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_new_bz2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_rr_moved.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isozisofs_bz2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_lha.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_lha_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_mtree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_pax_bz2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_rar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_raw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tar_empty_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tar_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tbz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tgz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tlz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_txz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_ustar_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_xar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_zip_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_large.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_pax_truncated.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_position.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_truncated.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_truncated_filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_uu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_sparse_basic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_tar_filenames.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_tar_large.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_ustar_filenames.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_ustar_filename_encoding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_bzip2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_gzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_lzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_lzma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_program.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_xz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_failures.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_hardlink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_lookup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_perms.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_secure.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_sparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_symlink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_times.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_7zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_ar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio_newc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio_odc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_gnutar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_boot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_zisofs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_mtree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_mtree_fflags.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_pax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_shar_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar_sparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar_ustar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_xar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_xar_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_zip_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_zip_no_compression.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_open_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_zip_filename_encoding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{234D7697-9EC1-4C88-8FE9-A5F4939DA5C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{025873AB-3EDD-45C4-892B-09255178E37A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_acl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_check_magic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_copy_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_link_resolver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_sparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_strmode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_xattr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_getdate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_match.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_pathmatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_ppmd7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_rb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_data_into_fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_disk_entry_from_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_disk_posix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_disk_set_standard_lookup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_extract.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_open_fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_open_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_open_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_open_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_set_options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_all.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_bzip2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_gzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_none.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_program.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_rpm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_uu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_filter_xz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_7zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_all.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_ar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_by_code.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_cab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_cpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_empty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_iso9660.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_lha.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_mtree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_rar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_raw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_tar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_xar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_support_format_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_string_sprintf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_virtual.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_disk_posix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_disk_set_standard_lookup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_open_fd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_open_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_open_filename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_open_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter_bzip2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter_gzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter_none.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter_program.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_add_filter_xz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_7zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_ar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_by_name.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_cpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_cpio_newc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_gnutar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_iso9660.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_mtree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_pax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_shar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_ustar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_xar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_format_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_set_options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\filter_fork.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_copy_bhfi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_disk_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_disk_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\filter_fork_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_crypto_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_entry_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_options_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_pathmatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_ppmd_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_ppmd7_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_rb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_disk_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_read_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_string_composition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_disk_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_write_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\filter_fork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\archive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{234D7697-9EC1-4C88-8FE9-A5F4939DA5C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{025873AB-3EDD-45C4-892B-09255178E37A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

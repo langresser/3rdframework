@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{8FE76E85-9716-4EEF-A662-DBB6DB5FE20C}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>libarchive_test</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libarchive_test.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libarchive_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libarchive_test.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libarchive_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">libarchive_test.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">libarchive_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">libarchive_test.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">libarchive_test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4061;4254;4295;4296;4389;4505;4514;4702;4706</TreatSpecificWarningsAsErrors>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/Debug/libarchive_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\Debug\archive_static.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/Debug/libarchive_test.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFile>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/Debug/libarchive_test.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/Release/libarchive_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\Release\archive_static.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/Release/libarchive_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/Release/libarchive_test.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/MinSizeRel/libarchive_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\MinSizeRel\archive_static.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/MinSizeRel/libarchive_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/MinSizeRel/libarchive_test.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/RelWithDebInfo/libarchive_test.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;LIBARCHIVE_STATIC;LIST_H;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive;E:/llvm/libarchive-3.0.4/libarchive-3.0.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\RelWithDebInfo\archive_static.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/RelWithDebInfo/libarchive_test.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFile>E:/llvm/libarchive-3.0.4/libarchive-3.0.4/bin/RelWithDebInfo/libarchive_test.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/llvm/libarchive-3.0.4/libarchive-3.0.4 -BE:/llvm/libarchive-3.0.4/libarchive-3.0.4 --check-stamp-file E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\list.h;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/llvm/libarchive-3.0.4/libarchive-3.0.4 -BE:/llvm/libarchive-3.0.4/libarchive-3.0.4 --check-stamp-file E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\list.h;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/llvm/libarchive-3.0.4/libarchive-3.0.4 -BE:/llvm/libarchive-3.0.4/libarchive-3.0.4 --check-stamp-file E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\list.h;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/llvm/libarchive-3.0.4/libarchive-3.0.4 -BE:/llvm/libarchive-3.0.4/libarchive-3.0.4 --check-stamp-file E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/test/CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\list.h;E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test.h" />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\main.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\read_open_memory.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_freebsd.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_nfs4.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_pax.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_acl_posix1e.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_api_feature.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_clear_error.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_crypto.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_getdate.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_match_owner.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_match_path.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_match_time.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_pathmatch.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_close_twice.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_close_twice_open_fd.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_close_twice_open_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_next_header_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_next_header_raw.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_open2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_filter_option.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_format_option.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_option.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_set_options.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_read_support.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_set_error.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_string.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_string_conversion.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_filter_option.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_format_option.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_option.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_archive_write_set_options.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_bad_fd.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_bzip2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_cpio.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_gtar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_gzip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_lzip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_lzma.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_mac.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_pax_libarchive_2x.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_solaris_tar_acl.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_solaris_pax_sparse.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_tar_hardlink.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_xz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_compat_zip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_empty_write.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_entry.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_entry_strmode.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_extattr_freebsd.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_filter_count.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_fuzz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_gnutar_filename_encoding.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_link_resolver.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_failure.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_fd.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_file.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_open_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_pax_filename_encoding.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_compress_program.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_data_large.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_disk.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_disk_directory_traversals.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_disk_entry_from_file.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_extract.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_file_nonexistent.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_7zip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_ar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cab.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cab_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_afio.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_Z.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_be.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_bz2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_gz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_lzip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_lzma.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_bin_xz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_odc.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4_bzip2_rpm.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4_gzip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4_gzip_rpm.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_cpio_svr4c_Z.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_gz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_lzma.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_gtar_sparse.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_iso_Z.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_iso_multi_extent.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_iso_xorriso.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_bz2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_long.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_rr.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isojoliet_versioned.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_bz2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_ce.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_new_bz2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isorr_rr_moved.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_isozisofs_bz2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_lha.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_lha_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_mtree.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_pax_bz2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_rar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_raw.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tar_empty_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tar_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tbz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tgz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tlz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_txz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_tz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_ustar_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_xar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_zip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_format_zip_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_large.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_pax_truncated.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_position.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_truncated.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_truncated_filter.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_read_uu.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_sparse_basic.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_tar_filenames.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_tar_large.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_ustar_filenames.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_ustar_filename_encoding.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_bzip2.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_gzip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_lzip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_lzma.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_program.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_compress_xz.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_failures.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_hardlink.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_lookup.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_perms.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_secure.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_sparse.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_symlink.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_disk_times.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_7zip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_ar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio_newc.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_cpio_odc.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_gnutar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_boot.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_filename.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_iso9660_zisofs.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_mtree.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_mtree_fflags.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_pax.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_shar_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar_sparse.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_tar_ustar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_xar.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_xar_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_zip.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_zip_empty.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_format_zip_no_compression.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_write_open_memory.c"  />
+    <ClCompile Include="E:\llvm\libarchive-3.0.4\libarchive-3.0.4\libarchive\test\test_zip_filename_encoding.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/llvm/libarchive-3.0.4/libarchive-3.0.4/ZERO_CHECK.vcxproj">
+      <Project>5D040484-D77B-4D9B-8E44-BB9328EF7223</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/llvm/libarchive-3.0.4/libarchive-3.0.4/libarchive/archive_static.vcxproj">
+      <Project>D9237B5F-CA07-4EE6-9EE0-2268C872CAC9</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
