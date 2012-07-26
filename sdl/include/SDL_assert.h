@@ -65,7 +65,7 @@ extern void __cdecl __debugbreak(void);
 
 #if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L) /* C99 supports __func__ as a standard. */
 #   define SDL_FUNCTION __func__
-#elif defined(_MSC_VER) || (__GNUC__ >= 2)
+#elif ((__GNUC__ >= 2) || defined(_MSC_VER))
 #   define SDL_FUNCTION __FUNCTION__
 #else
 #   define SDL_FUNCTION "???"
