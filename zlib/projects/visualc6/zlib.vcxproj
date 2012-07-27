@@ -33,12 +33,19 @@
       <Configuration>LIB Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <SccProjectName />
     <SccLocalPath />
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
@@ -48,7 +55,7 @@
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'" Label="Configuration">
@@ -73,6 +80,9 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -130,7 +140,7 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">
-    <OutDir>.\Win32_DLL_ASM_Debug\</OutDir>
+    <OutDir>../../../libs</OutDir>
     <IntDir>.\Win32_DLL_ASM_Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -332,7 +342,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_DEBUG;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Win32_DLL_ASM_Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Win32_DLL_ASM_Debug\zlib.pch</PrecompiledHeaderOutputFile>
       <PrecompiledHeader>
@@ -450,20 +460,6 @@
     <ClCompile Include="..\..\trees.c" />
     <ClCompile Include="..\..\uncompr.c" />
     <ClCompile Include="..\..\zutil.c" />
-    <ClCompile Include="..\..\contrib\masmx86\gvmat32c.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">true</ExcludedFromBuild>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Release|Win32'">true</ExcludedFromBuild>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB Release|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">true</ExcludedFromBuild>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">true</ExcludedFromBuild>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\win32\zlib.def">
@@ -471,44 +467,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="..\..\contrib\masmx86\gvmat32.asm">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">true</ExcludedFromBuild>
-      <Command Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">ml.exe /nologo /c /coff /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">true</ExcludedFromBuild>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">ml.exe /nologo /c /coff /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">ml.exe /nologo /c /coff /Cx /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">ml.exe /nologo /c /coff /Cx /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\contrib\masmx86\inffas32.asm">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">true</ExcludedFromBuild>
-      <Command Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">ml.exe /nologo /c /coff /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">true</ExcludedFromBuild>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">ml.exe /nologo /c /coff /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">ml.exe /nologo /c /coff /Cx /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">ml.exe /nologo /c /coff /Cx /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">Assembling...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">$(IntDir)\$(InputName).obj;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="README.txt" />
   </ItemGroup>
@@ -526,14 +484,14 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\win32\zlib1.rc">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB Release|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">\llvm\meandmyshadowsvn\lib\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB Release|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB Debug|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB ASM Debug|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL ASM Debug|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB ASM Release|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL ASM Release|Win32'">\llvm\3rdframework\zlib\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
