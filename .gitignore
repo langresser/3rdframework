@@ -5,3 +5,7 @@
 *.idb
 *.pdb
 *.log
+.svn/
+*.lib
+*.dll
+*.exp
