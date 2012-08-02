@@ -100,7 +100,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <CLRUnmanagedCodeCheck>false</CLRUnmanagedCodeCheck>

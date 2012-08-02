@@ -27,8 +27,8 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalStaticTextProperties.h"
-#include "FalStaticText.h"
+#include "falagard/FalStaticTextProperties.h"
+#include "falagard/FalStaticText.h"
 #include "CEGUIPropertyHelper.h"
 #include "CEGUILogger.h"
 

@@ -28,7 +28,7 @@ purpose:	This codec provide FreeImage based image loading
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
 #include "CEGUIExceptions.h"
-#include "CEGUIFreeImageImageCodec.h"
+#include "ImageCodecModules/FreeImageImageCodec/CEGUIFreeImageImageCodec.h"
 #include "CEGUILogger.h"
 #include "CEGUISize.h"
 

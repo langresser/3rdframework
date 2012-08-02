@@ -25,7 +25,7 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalTitlebar.h"
+#include "falagard/FalTitlebar.h"
 #include "falagard/CEGUIFalWidgetLookManager.h"
 #include "falagard/CEGUIFalWidgetLookFeel.h"
 #include "elements/CEGUITitlebar.h"

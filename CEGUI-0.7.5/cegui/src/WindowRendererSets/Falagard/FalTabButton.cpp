@@ -25,7 +25,7 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalTabButton.h"
+#include "falagard/FalTabButton.h"
 #include "falagard/CEGUIFalWidgetLookManager.h"
 #include "falagard/CEGUIFalWidgetLookFeel.h"
 #include "elements/CEGUITabButton.h"

@@ -9,3 +9,11 @@
 *.lib
 *.dll
 *.exp
+*.manifest
+*.suo
+*.lastbuildstate
+*.unsuccessfulbuild
+*.cache
+*.ilk
+*.pck
+Debug/

@@ -25,7 +25,7 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalScrollablePane.h"
+#include "falagard/FalScrollablePane.h"
 #include "falagard/CEGUIFalWidgetLookManager.h"
 #include "falagard/CEGUIFalWidgetLookFeel.h"
 #include "CEGUIWindowManager.h"

@@ -35,16 +35,7 @@
 #include <vector>
 #include <map>
 
-#if (defined( __WIN32__ ) || defined( _WIN32 )) && !defined(CEGUI_STATIC)
-#   ifdef NULL_GUIRENDERER_EXPORTS
-#       define NULL_GUIRENDERER_API __declspec(dllexport)
-#   else
-#       define NULL_GUIRENDERER_API __declspec(dllimport)
-#   endif
-#else
 #   define NULL_GUIRENDERER_API
-#endif
-
 #if defined(_MSC_VER)
 #   pragma warning(push)
 #   pragma warning(disable : 4251)

@@ -190,9 +190,6 @@ void Editbox::setValidationString(const String& validation_string)
         onTextInvalidatedEvent(args);
     }
 #else
-    CEGUI_THROW(InvalidRequestException("Editbox::setValidationString: Unable "
-        "to set validation string because CEGUI was compiled without regular "
-        "expression support"));
 #endif
 }
 

@@ -31,7 +31,7 @@
 
 #include "rapidxml.hpp"
 
-#include "CEGUIRapidXMLParser.h"
+#include "XMLParserModules/RapidXMLParser/CEGUIRapidXMLParser.h"
 #include "CEGUIResourceProvider.h"
 #include "CEGUISystem.h"
 #include "CEGUIXMLHandler.h"

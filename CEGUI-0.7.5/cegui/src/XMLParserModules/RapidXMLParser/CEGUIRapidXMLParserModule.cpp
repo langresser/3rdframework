@@ -25,8 +25,8 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUIRapidXMLParserModule.h"
-#include "CEGUIRapidXMLParser.h"
+#include "XMLParserModules/RapidXMLParser/CEGUIRapidXMLParserModule.h"
+#include "XMLParserModules/RapidXMLParser/CEGUIRapidXMLParser.h"
 
 //----------------------------------------------------------------------------//
 CEGUI::XMLParser* createParser(void)

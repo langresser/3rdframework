@@ -29,7 +29,7 @@
 #   include "config.h"
 #endif
 
-#include "FalEditbox.h"
+#include "falagard/FalEditbox.h"
 #include "falagard/CEGUIFalWidgetLookManager.h"
 #include "falagard/CEGUIFalWidgetLookFeel.h"
 #include "CEGUIPropertyHelper.h"

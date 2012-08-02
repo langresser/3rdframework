@@ -28,7 +28,7 @@
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -97,10 +97,9 @@
       </HeaderFileName>
     </Midl>
     <ClCompile>
-      <AdditionalOptions>/D OGG_DYNAMIC=\"libvorbisfile-3.dll\" %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\timidity;..\native_midi;../../sdl/include;../../smpeg;../../libogg-1.3.0/include;../../libvorbis-1.3.3/include;../../flac-1.2.1/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;WAV_MUSIC;MOD_MUSIC;MOD_DYNAMIC="libmikmod-2.dll";OGG_MUSIC;OGG_DYNAMIC="libvorbisfile-3.dll";FLAC_MUSIC;FLAC_DYNAMIC="libFLAC-8.dll";MP3_MUSIC;MP3_DYNAMIC="smpeg.dll";MID_MUSIC;USE_TIMIDITY_MIDI;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;WAV_MUSIC;OGG_MUSIC;MP3_MUSIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeaderOutputFile>.\Debug/SDL_mixer.pch</PrecompiledHeaderOutputFile>

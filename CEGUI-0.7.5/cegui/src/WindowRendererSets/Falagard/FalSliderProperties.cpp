@@ -25,8 +25,8 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalSliderProperties.h"
-#include "FalSlider.h"
+#include "falagard/FalSliderProperties.h"
+#include "falagard/FalSlider.h"
 #include "CEGUIPropertyHelper.h"
 
 // Start of CEGUI namespace section

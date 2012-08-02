@@ -30,15 +30,7 @@
 
 #include "../../CEGUIXMLParser.h"
 
-#if (defined( __WIN32__ ) || defined( _WIN32 )) && !defined(CEGUI_STATIC)
-#   ifdef CEGUIRAPIDXMLPARSER_EXPORTS
-#       define CEGUIRAPIDXMLPARSER_API __declspec(dllexport)
-#   else
-#       define CEGUIRAPIDXMLPARSER_API __declspec(dllimport)
-#   endif
-#else
 #   define CEGUIRAPIDXMLPARSER_API
-#endif
 
 // Start of CEGUI namespace section
 namespace CEGUI

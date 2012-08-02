@@ -25,8 +25,8 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalScrollbarProperties.h"
-#include "FalScrollbar.h"
+#include "falagard/FalScrollbarProperties.h"
+#include "falagard/FalScrollbar.h"
 #include "CEGUIPropertyHelper.h"
 
 // Start of CEGUI namespace section

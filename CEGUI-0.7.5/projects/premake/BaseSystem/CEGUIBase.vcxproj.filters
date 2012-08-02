@@ -25,6 +25,12 @@
     <Filter Include="cegui\include\falagard">
       <UniqueIdentifier>{b6ed0b6e-5fe7-424c-ac59-74283d7bafc3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cegui\src\image">
+      <UniqueIdentifier>{846d14e3-9c39-40bf-b735-775b21667fbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\window">
+      <UniqueIdentifier>{92753eed-d518-4675-b66a-607ed78cad19}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\cegui\src\elements\CEGUIButtonBase.cpp">
@@ -378,9 +384,6 @@
     <ClCompile Include="..\..\..\cegui\src\CEGUIDefaultResourceProvider.cpp">
       <Filter>cegui\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\CEGUIDynamicModule.cpp">
-      <Filter>cegui\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\cegui\src\CEGUIEvent.cpp">
       <Filter>cegui\src</Filter>
     </ClCompile>
@@ -581,6 +584,138 @@
     </ClCompile>
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLSerializer.cpp">
       <Filter>cegui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParser.cpp">
+      <Filter>cegui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParserModule.cpp">
+      <Filter>cegui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\CEGUIDynamicModule.cpp">
+      <Filter>cegui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodec.cpp">
+      <Filter>cegui\src\image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodecModule.cpp">
+      <Filter>cegui\src\image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalButton.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalDefault.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalEditbox.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalEditboxProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalFrameWindow.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalItemEntry.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalItemListbox.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListbox.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListHeader.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListHeaderProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListHeaderSegment.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMenubar.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMenuItem.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalModule.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMultiColumnList.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMultiLineEditbox.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMultiLineEditboxProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalPopupMenu.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalProgressBar.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalProgressBarProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalScrollablePane.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalScrollbar.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalScrollbarProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalSlider.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalSliderProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStatic.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticImage.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticImageProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticText.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticTextProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalSystemButton.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTabButton.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTabControl.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTabControlProperties.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTitlebar.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalToggleButton.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTooltip.cpp">
+      <Filter>cegui\src\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTree.cpp">
+      <Filter>cegui\src\window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -945,9 +1080,6 @@
       <Filter>cegui\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cegui\include\CEGUIDefaultResourceProvider.h">
-      <Filter>cegui\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cegui\include\CEGUIDynamicModule.h">
       <Filter>cegui\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cegui\include\CEGUIEvent.h">

@@ -101,8 +101,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../../cegui/include;../../../../zlib;../../../../freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_CONFIG_H;PCRE_STATIC;CEGUIBASE_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../../rapidxml;../../../cegui/include;../../../../zlib;../../../../freetype/include;../../../../freeimage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_CONFIG_H;PCRE_STATIC;_DEBUG;CEGUI_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -234,6 +234,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\cegui\src\CEGUIDynamicModule.cpp" />
     <ClCompile Include="..\..\..\cegui\src\elements\CEGUIButtonBase.cpp" />
     <ClCompile Include="..\..\..\cegui\src\elements\CEGUICheckbox.cpp" />
     <ClCompile Include="..\..\..\cegui\src\elements\CEGUICheckboxProperties.cpp" />
@@ -328,6 +329,8 @@
     <ClCompile Include="..\..\..\cegui\src\falagard\CEGUIFalWidgetLookFeel.cpp" />
     <ClCompile Include="..\..\..\cegui\src\falagard\CEGUIFalWidgetLookManager.cpp" />
     <ClCompile Include="..\..\..\cegui\src\falagard\CEGUIFalXMLEnumHelper.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodec.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodecModule.cpp" />
     <ClCompile Include="..\..\..\cegui\src\minizip\ioapi.cpp" />
     <ClCompile Include="..\..\..\cegui\src\minizip\iowin32.cpp" />
     <ClCompile Include="..\..\..\cegui\src\minizip\unzip.cpp" />
@@ -351,7 +354,6 @@
     <ClCompile Include="..\..\..\cegui\src\CEGUIDefaultLogger.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIDefaultRenderedStringParser.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIDefaultResourceProvider.cpp" />
-    <ClCompile Include="..\..\..\cegui\src\CEGUIDynamicModule.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIEvent.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIEventArgs.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIEventSet.cpp" />
@@ -419,6 +421,47 @@
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLHandler.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLParser.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLSerializer.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalButton.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalDefault.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalEditbox.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalEditboxProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalFrameWindow.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalItemEntry.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalItemListbox.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListbox.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListHeader.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListHeaderProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalListHeaderSegment.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMenubar.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMenuItem.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalModule.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMultiColumnList.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMultiLineEditbox.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalMultiLineEditboxProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalPopupMenu.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalProgressBar.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalProgressBarProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalScrollablePane.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalScrollbar.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalScrollbarProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalSlider.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalSliderProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStatic.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticImage.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticImageProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticText.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalStaticTextProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalSystemButton.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTabButton.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTabControl.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTabControlProperties.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTitlebar.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalToggleButton.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTooltip.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalTree.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParser.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParserModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\cegui\src\minizip\ioapi.h" />
@@ -542,7 +585,6 @@
     <ClInclude Include="..\..\..\cegui\include\CEGUIDefaultLogger.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIDefaultRenderedStringParser.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIDefaultResourceProvider.h" />
-    <ClInclude Include="..\..\..\cegui\include\CEGUIDynamicModule.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIEvent.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIEventArgs.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIEventSet.h" />

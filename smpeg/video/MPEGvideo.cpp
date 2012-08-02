@@ -286,7 +286,7 @@ MPEGvideo:: Play(void)
 #ifdef DISABLE_VIDEO_CALLBACK_THREAD
 		Play_MPEGvideo(this);
 #else
-        _thread = SDL_CreateThread( Play_MPEGvideo, this );
+        _thread = SDL_CreateThread( Play_MPEGvideo, "", this );
         if ( !_thread ) {
             playing = false;
         }

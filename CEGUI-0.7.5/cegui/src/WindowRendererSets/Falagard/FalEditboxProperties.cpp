@@ -25,8 +25,8 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalEditboxProperties.h"
-#include "FalEditbox.h"
+#include "falagard/FalEditboxProperties.h"
+#include "falagard/FalEditbox.h"
 #include "CEGUIPropertyHelper.h"
 
 // Start of CEGUI namespace section

@@ -45,18 +45,8 @@
 	Dynamic Library import / export control conditional
 	(Define CEGUIBASE_EXPORTS to export symbols, else they are imported)
 *************************************************************************/
-#if (defined( __WIN32__ ) || defined( _WIN32 )) && !defined(CEGUI_STATIC)
-#   ifdef CEGUIBASE_EXPORTS
-#       define CEGUIEXPORT __declspec(dllexport)
-#   else
-#       define CEGUIEXPORT __declspec(dllimport)
-#   endif
-#       define CEGUIPRIVATE
-#else
 #       define CEGUIEXPORT
 #       define CEGUIPRIVATE
-#endif
-
 
 // totally kill this warning (debug info truncated to 255 chars etc...) on <= VC6
 #if defined(_MSC_VER) && (_MSC_VER <= 1200)

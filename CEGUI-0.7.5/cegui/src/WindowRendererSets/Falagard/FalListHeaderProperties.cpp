@@ -25,8 +25,8 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "FalListHeaderProperties.h"
-#include "FalListHeader.h"
+#include "falagard/FalListHeaderProperties.h"
+#include "falagard/FalListHeader.h"
 
 // Start of CEGUI namespace section
 namespace CEGUI
