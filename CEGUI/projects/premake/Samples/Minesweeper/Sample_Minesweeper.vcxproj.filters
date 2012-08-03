@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{bae1cf3e-1df3-4513-ab4d-df10e869ff9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\Minesweeper">
+      <UniqueIdentifier>{b01d35e9-2377-4de2-bc4b-e3ee4a8e1e71}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\Minesweeper\Minesweeper_Timer.cpp">
+      <Filter>Samples\Minesweeper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\Minesweeper\Sample_Minesweeper.cpp">
+      <Filter>Samples\Minesweeper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\Minesweeper\Minesweeper_Timer.h">
+      <Filter>Samples\Minesweeper</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

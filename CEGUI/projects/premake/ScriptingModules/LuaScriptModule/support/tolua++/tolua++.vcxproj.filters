@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cegui">
+      <UniqueIdentifier>{6da1ee15-9cf3-477c-936f-9ec9dfba66de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src">
+      <UniqueIdentifier>{9bc6d3d0-a088-4281-bcbe-58952ea02e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ScriptingModules">
+      <UniqueIdentifier>{2b2d29ad-f337-4d26-a5e3-d5701a5d9e2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ScriptingModules\LuaScriptModule">
+      <UniqueIdentifier>{1c81690e-325d-4377-8fc2-492cb82c4187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ScriptingModules\LuaScriptModule\support">
+      <UniqueIdentifier>{7ed5d02d-6e44-48d4-a255-146e25e86f05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ScriptingModules\LuaScriptModule\support\tolua++">
+      <UniqueIdentifier>{635426aa-613c-47b3-aa01-4e12992b01c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include">
+      <UniqueIdentifier>{5ab17b8f-a6d7-4b76-8026-4dcb636928a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ScriptingModules">
+      <UniqueIdentifier>{209da27a-e9f4-4520-affe-582175dabd7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ScriptingModules\LuaScriptModule">
+      <UniqueIdentifier>{e2adbbc5-483f-49de-bfdd-40cdc1be8d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ScriptingModules\LuaScriptModule\support">
+      <UniqueIdentifier>{4d5da0a1-0303-48c0-af97-a6db8b451b21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ScriptingModules\LuaScriptModule\support\tolua++">
+      <UniqueIdentifier>{d1ee4aad-0d13-4a72-b0f3-64a6eecbe4c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\cegui\src\ScriptingModules\LuaScriptModule\support\tolua++\tolua_event.c">
+      <Filter>cegui\src\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\cegui\src\ScriptingModules\LuaScriptModule\support\tolua++\tolua_is.c">
+      <Filter>cegui\src\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\cegui\src\ScriptingModules\LuaScriptModule\support\tolua++\tolua_map.c">
+      <Filter>cegui\src\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\cegui\src\ScriptingModules\LuaScriptModule\support\tolua++\tolua_push.c">
+      <Filter>cegui\src\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\cegui\src\ScriptingModules\LuaScriptModule\support\tolua++\tolua_to.c">
+      <Filter>cegui\src\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\cegui\src\ScriptingModules\LuaScriptModule\support\tolua++\tolua_event.h">
+      <Filter>cegui\src\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\cegui\include\ScriptingModules\LuaScriptModule\support\tolua++\tolua++.h">
+      <Filter>cegui\include\ScriptingModules\LuaScriptModule\support\tolua++</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

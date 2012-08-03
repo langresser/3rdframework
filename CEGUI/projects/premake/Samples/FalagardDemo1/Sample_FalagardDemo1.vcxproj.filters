@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{64f7fd42-f492-40ac-b4da-8f58fe01e3b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\FalagardDemo1">
+      <UniqueIdentifier>{b9d7d1c2-e69a-46aa-a11e-e1c330d645b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\FalagardDemo1\Sample_FalagardDemo1.cpp">
+      <Filter>Samples\FalagardDemo1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\FalagardDemo1\Sample_FalagardDemo1.h">
+      <Filter>Samples\FalagardDemo1</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

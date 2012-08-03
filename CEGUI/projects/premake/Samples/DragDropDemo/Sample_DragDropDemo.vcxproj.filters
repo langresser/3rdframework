@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{dabe4814-4e45-474f-92a0-03ead18d00c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\DragDropDemo">
+      <UniqueIdentifier>{ae34c081-f790-497e-8555-02eff3104287}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\DragDropDemo\Sample_DragDropDemo.cpp">
+      <Filter>Samples\DragDropDemo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\DragDropDemo\Sample_DragDropDemo.h">
+      <Filter>Samples\DragDropDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

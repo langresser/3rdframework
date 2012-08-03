@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{e6d97145-327a-46ac-a6eb-08f72916fccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\TreeDemo">
+      <UniqueIdentifier>{a96d2a71-810c-4695-9e0b-6b47feb58205}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\TreeDemo\Sample_TreeDemo.cpp">
+      <Filter>Samples\TreeDemo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\TreeDemo\Sample_TreeDemo.h">
+      <Filter>Samples\TreeDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

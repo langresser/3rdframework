@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{04f49576-587b-41c9-ab76-910ba6370d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\InventoryDemo">
+      <UniqueIdentifier>{e1d57f87-691d-40f8-9fce-1ee352fe396c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\InventoryDemo\BoolArray2D.cpp">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\InventoryDemo\InventoryBase.cpp">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\InventoryDemo\InventoryItem.cpp">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\InventoryDemo\InventoryItemRenderer.cpp">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\InventoryDemo\InventoryReceiver.cpp">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\InventoryDemo\Sample_InventoryDemo.cpp">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\InventoryDemo\BoolArray2D.h">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\InventoryDemo\InventoryBase.h">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\InventoryDemo\InventoryItem.h">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\InventoryDemo\InventoryItemRenderer.h">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\InventoryDemo\InventoryReceiver.h">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\InventoryDemo\Sample_InventoryDemo.h">
+      <Filter>Samples\InventoryDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

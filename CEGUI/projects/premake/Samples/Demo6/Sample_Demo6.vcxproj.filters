@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{ad601739-584f-48a0-b625-8048d551e77e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\Demo6">
+      <UniqueIdentifier>{07383538-35ee-484a-8b37-77c497409879}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\Demo6\Sample_Demo6.cpp">
+      <Filter>Samples\Demo6</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\Demo6\Sample_Demo6.h">
+      <Filter>Samples\Demo6</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

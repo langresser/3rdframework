@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{a4fab571-3d11-4ecb-82a5-bb47087ac894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\common">
+      <UniqueIdentifier>{8510a7cb-721f-4e9b-b4a3-3ae330302087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\common\src">
+      <UniqueIdentifier>{cf3ef576-edad-42c6-8d05-52f739227669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\common\include">
+      <UniqueIdentifier>{05bbda0f-cf27-4c7c-b237-c63b083ebeae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\common\src\CEGuiBaseApplication.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\common\src\CEGuiD3D9BaseApplication.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\common\src\CEGuiRendererSelector.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\common\src\CEGuiSample.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\common\src\DeviceReset_Direct3D9.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\common\src\Win32AppHelper.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Samples\common\src\Win32CEGuiRendererSelector.cpp">
+      <Filter>Samples\common\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiBaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiD3D10BaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiD3D9BaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiDirectFBBaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiIrrlichtBaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiOgreBaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiOpenGLBaseApplication.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiRendererSelector.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGuiSample.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\CEGUISamplesConfig.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\Win32AppHelper.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Samples\common\include\Win32CEGuiRendererSelector.h">
+      <Filter>Samples\common\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

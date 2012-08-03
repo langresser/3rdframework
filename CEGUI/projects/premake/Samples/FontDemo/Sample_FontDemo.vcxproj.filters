@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{eef372ad-ffd8-46b4-82c0-e3f7adf0965f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples\FontDemo">
+      <UniqueIdentifier>{2c9ab845-a5b8-4faa-a110-211459e2abda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Samples\FontDemo\Sample_FontDemo.cpp">
+      <Filter>Samples\FontDemo</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

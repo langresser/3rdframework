@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cegui">
+      <UniqueIdentifier>{3bb9e141-25d2-4b2a-ae1f-905524ed2b10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src">
+      <UniqueIdentifier>{579078e1-bad4-4fc8-9768-c37f5e2e92db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ImageCodecModules">
+      <UniqueIdentifier>{609007a3-b438-4048-8fb3-3bc78c612d4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ImageCodecModules\STBImageCodec">
+      <UniqueIdentifier>{bd63d0b5-30f5-4207-97aa-b75ded554f52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include">
+      <UniqueIdentifier>{f85b8d60-70fb-4df6-89ee-c50d19742bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ImageCodecModules">
+      <UniqueIdentifier>{1adfaa48-dfcc-41e4-9223-14aa1fd026e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ImageCodecModules\STBImageCodec">
+      <UniqueIdentifier>{db4b7726-243b-4142-a01c-6dd78828e93e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\cegui\src\ImageCodecModules\STBImageCodec\CEGUISTBImageCodec.cpp">
+      <Filter>cegui\src\ImageCodecModules\STBImageCodec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cegui\src\ImageCodecModules\STBImageCodec\CEGUISTBImageCodecModule.cpp">
+      <Filter>cegui\src\ImageCodecModules\STBImageCodec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cegui\src\ImageCodecModules\STBImageCodec\stb_image.cpp">
+      <Filter>cegui\src\ImageCodecModules\STBImageCodec</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\cegui\include\ImageCodecModules\STBImageCodec\CEGUISTBImageCodec.h">
+      <Filter>cegui\include\ImageCodecModules\STBImageCodec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cegui\include\ImageCodecModules\STBImageCodec\CEGUISTBImageCodecModule.h">
+      <Filter>cegui\include\ImageCodecModules\STBImageCodec</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cegui">
+      <UniqueIdentifier>{7e8b5fc1-1b66-4325-a565-8917e3266bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src">
+      <UniqueIdentifier>{c9cf92c1-80d6-4c16-8ae6-6f7828de7f52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ImageCodecModules">
+      <UniqueIdentifier>{482d6d39-c3e4-4b00-bd3a-77c51f58119e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\ImageCodecModules\FreeImageImageCodec">
+      <UniqueIdentifier>{daae7c3c-1b9b-4f18-a1cc-21ef4a8dbcb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include">
+      <UniqueIdentifier>{98f498c9-34a4-4ac2-8b96-f2f118922a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ImageCodecModules">
+      <UniqueIdentifier>{6a95674b-1e59-4d9f-948a-5529399edcd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\ImageCodecModules\FreeImageImageCodec">
+      <UniqueIdentifier>{11523034-6e30-4ec9-a455-f4106710e535}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodec.cpp">
+      <Filter>cegui\src\ImageCodecModules\FreeImageImageCodec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodecModule.cpp">
+      <Filter>cegui\src\ImageCodecModules\FreeImageImageCodec</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\cegui\include\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodec.h">
+      <Filter>cegui\include\ImageCodecModules\FreeImageImageCodec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cegui\include\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodecModule.h">
+      <Filter>cegui\include\ImageCodecModules\FreeImageImageCodec</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
