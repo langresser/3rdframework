@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="iconv">
+      <UniqueIdentifier>{1c9eb2a6-2bab-48ff-bafb-972fd4959a18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libiconv-1.14\localcharset.h">
+      <Filter>iconv</Filter>
+    </ClInclude>
+    <ClInclude Include="libiconv-1.14\relocatable.h">
+      <Filter>iconv</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libiconv-1.14\iconv.c">
+      <Filter>iconv</Filter>
+    </ClCompile>
+    <ClCompile Include="libiconv-1.14\localcharset.c">
+      <Filter>iconv</Filter>
+    </ClCompile>
+    <ClCompile Include="libiconv-1.14\relocatable.c">
+      <Filter>iconv</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libiconv-1.14\libiconv.rc">
+      <Filter>iconv</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
