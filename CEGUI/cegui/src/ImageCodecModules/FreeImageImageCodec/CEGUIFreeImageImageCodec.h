@@ -1,9 +1,9 @@
 /***********************************************************************
-	filename: 	CEGUISILLYImageCodecModule.cpp
-	created:	28/07/2006
-	author:		Olivier Delannoy 
+	filename: 	CEGUIFreeImageImageCodec.h
+	created:	Sun Jun 18th 2006
+	author:		Andrzej Krzysztof Haczewski (aka guyver6)
 	
-	purpose:	This codec provide SILLY based image loading.  
+	purpose:	This codec provide FreeImage based image loading 
 *************************************************************************/
 /***************************************************************************
  *   Copyright (C) 2004 - 2006 Paul D Turner & The CEGUI Development Team
@@ -27,17 +27,33 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUISILLYImageCodecModule.h" 
+#ifndef _CEGUIFreeImageImageCodec_h_
+#define _CEGUIFreeImageImageCodec_h_
+#include "../../CEGUIImageCodec.h"
 
+#   define CEGUIFREEIMAGEIMAGECODEC_API
 
-CEGUI::ImageCodec* createImageCodec(void)
+// Start of CEGUI namespace section
+namespace CEGUI
 {
-  return new CEGUI::SILLYImageCodec();
-}
-
-
-void destroyImageCodec(CEGUI::ImageCodec* imageCodec)
+/*!
+  \brief 
+  Image codec based on the FreeImage library 
+*/
+class CEGUIFREEIMAGEIMAGECODEC_API FreeImageImageCodec : public ImageCodec 
 {
-  delete imageCodec;
-  
-}
+public:
+    FreeImageImageCodec();
+    ~FreeImageImageCodec();
+    
+    Texture* load(const RawDataContainer& data, Texture* result);
+protected:
+
+private:
+
+};    
+
+} // End of CEGUI namespace section 
+
+#endif // end of guard _CEGUIFreeImageImageCodec_h_
+

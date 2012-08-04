@@ -101,7 +101,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../../cegui/include;../../../dependencies/include;../../../../freetype/include;../../../../zlib;../../../cegui/include/RendererModules\Null;../../../cegui/include/RendererModules\OpenGL;../../../cegui/include/ImageCodecModules\FreeImageImageCodec;../../../cegui/include/WindowRendererSets\Falagard;../../../cegui/include/XMLParserModules\RapidXMLParser;../../../../rapidxml;../../../../freeimage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../cegui/include;../../../dependencies/include;../../../../freetype/include;../../../../zlib;../../../cegui/include/RendererModules\Null;../../../cegui/include/RendererModules\OpenGL;../../../cegui/include/WindowRendererSets\Falagard;../../../../rapidxml;../../../../freeimage;../../../../sdl_image;../../../../sdl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_CONFIG_H;CEGUIBASE_EXPORTS;_DEBUG;CEGUI_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -331,8 +331,8 @@
     <ClCompile Include="..\..\..\cegui\src\falagard\CEGUIFalWidgetLookFeel.cpp" />
     <ClCompile Include="..\..\..\cegui\src\falagard\CEGUIFalWidgetLookManager.cpp" />
     <ClCompile Include="..\..\..\cegui\src\falagard\CEGUIFalXMLEnumHelper.cpp" />
-    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodec.cpp" />
-    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\FreeImageImageCodec\CEGUIFreeImageImageCodecModule.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\SDLImageCodec\CEGUISDLImageCodec.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\SDLImageCodec\CEGUISDLCodecModule.cpp" />
     <ClCompile Include="..\..\..\cegui\src\minizip\ioapi.cpp" />
     <ClCompile Include="..\..\..\cegui\src\minizip\iowin32.cpp" />
     <ClCompile Include="..\..\..\cegui\src\minizip\unzip.cpp" />
@@ -468,6 +468,8 @@
     <ClCompile Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParserModule.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\cegui\src\ImageCodecModules\SDLImageCodec\CEGUISDLImageCodec.h" />
+    <ClInclude Include="..\..\..\cegui\src\ImageCodecModules\SDLImageCodec\CEGUISDLImageCodecModule.h" />
     <ClInclude Include="..\..\..\cegui\src\minizip\ioapi.h" />
     <ClInclude Include="..\..\..\cegui\src\minizip\iowin32.h" />
     <ClInclude Include="..\..\..\cegui\src\minizip\unzip.h" />
@@ -689,6 +691,8 @@
     <ClInclude Include="..\..\..\cegui\include\CEGUIXMLHandler.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIXMLParser.h" />
     <ClInclude Include="..\..\..\cegui\include\CEGUIXMLSerializer.h" />
+    <ClInclude Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParser.h" />
+    <ClInclude Include="..\..\..\cegui\src\XMLParserModules\RapidXMLParser\CEGUIRapidXMLParserModule.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\cegui\src\WindowRendererSets\Falagard\Makefile.am" />

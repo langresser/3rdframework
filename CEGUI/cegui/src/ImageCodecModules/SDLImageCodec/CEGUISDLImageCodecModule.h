@@ -1,7 +1,10 @@
 /***********************************************************************
-    filename:   CEGUIExpatParserModule.h
-    created:    Tue Mar 7 2006
-    author:     Paul D Turner <paul@cegui.org.uk>
+	filename: 	CEGUIFreeImageImageCodecModule.h
+	created:	28/07/2006
+	author:		Olivier Delannoy 
+	
+	purpose:	This codec provide FreeImage based image loading.
+                
 *************************************************************************/
 /***************************************************************************
  *   Copyright (C) 2004 - 2006 Paul D Turner & The CEGUI Development Team
@@ -25,23 +28,22 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#ifndef _CEGUIExpatParserModule_h_
-#define _CEGUIExpatParserModule_h_
-
-#include "CEGUIExpatParser.h"
+#ifndef _CEGUIFreeImageImageCodecModule_h_
+#define _CEGUIFreeImageImageCodecModule_h_
+#include "CEGUIImageCodec.h"
+/*! 
+  \brief 
+  exported function that creates the ImageCodec based object and 
+  returns a pointer to that object.
+*/
+extern "C" CEGUI::ImageCodec* createImageCodec(void);
 
 /*!
-\brief
-    exported function that creates an XMLParser based object and returns
-    a pointer to that object.
+  \brief
+  exported function that deletes an ImageCodec based object previously 
+  created by this module.
 */
-extern "C" CEGUIEXPATPARSER_API CEGUI::XMLParser* createParser(void);
+extern "C" void destroyImageCodec(CEGUI::ImageCodec* imageCodec);
 
-/*!
-\brief
-    exported function that deletes an XMLParser based object previously
-    created by this module.
-*/
-extern "C" CEGUIEXPATPARSER_API void destroyParser(CEGUI::XMLParser* parser);
 
-#endif // end of guard _CEGUIExpatParserModule_h_
+#endif // end of guard _CEGUIFreeImageImageCodecModule_h_
