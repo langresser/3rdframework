@@ -102,7 +102,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>../../../cegui/include;../../../dependencies/include;../../../../freetype/include;../../../../zlib;../../../cegui/include/RendererModules\Null;../../../cegui/include/RendererModules\OpenGL;../../../cegui/include/WindowRendererSets\Falagard;../../../../rapidxml;../../../../freeimage;../../../../sdl_image;../../../../sdl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_CONFIG_H;CEGUIBASE_EXPORTS;_DEBUG;CEGUI_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_CONFIG_H;CEGUIBASE_EXPORTS;_DEBUG;CEGUI_STATIC;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -425,6 +425,15 @@
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLHandler.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLParser.cpp" />
     <ClCompile Include="..\..\..\cegui\src\CEGUIXMLSerializer.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLFBOTextureTarget.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLGeometryBuffer.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderer.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderTarget.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTexture.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTextureTarget.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLViewportTarget.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLWGLPBTextureTarget.cpp" />
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\glew.c" />
     <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalButton.cpp" />
     <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalDefault.cpp" />
     <ClCompile Include="..\..\..\cegui\src\WindowRendererSets\Falagard\FalEditbox.cpp" />

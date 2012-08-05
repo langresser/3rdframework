@@ -101,8 +101,8 @@
 #    define ceguimin	std::_cpp_min
 #    define ceguimax	std::_cpp_max
 #else
-#    define ceguimin	std::min
-#    define ceguimax	std::max
+#define ceguimax(a,b)  (((a) > (b)) ? (a) : (b))
+#define ceguimin(a,b)  (((a) < (b)) ? (a) : (b))
 #endif
 
 // CEGUI's Exception macros

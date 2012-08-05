@@ -34,6 +34,9 @@
     <Filter Include="cegui\src\xml">
       <UniqueIdentifier>{e7f23b70-3c70-4aa1-a122-cdc321d1f21a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cegui\src\render">
+      <UniqueIdentifier>{ec3d5e06-07d7-422f-8c7a-12c6bd34679e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\cegui\src\elements\CEGUIButtonBase.cpp">
@@ -722,6 +725,33 @@
     </ClCompile>
     <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\SDLImageCodec\CEGUISDLCodecModule.cpp">
       <Filter>cegui\src\image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLFBOTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLGeometryBuffer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTexture.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLViewportTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLWGLPBTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\glew.c">
+      <Filter>cegui\src\render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
