@@ -34,6 +34,7 @@
 #include "CEGUIDataContainer.h"
 #include "CEGUIString.h"
 #include <vector>
+#include <map>
 
 
 // Start of CEGUI namespace section
@@ -66,47 +67,6 @@ public:
     /*************************************************************************
         Accessor functions
     *************************************************************************/
-
-//    /*!
-//    \brief
-//        Load XML data using InputSource objects.
-//
-//    \param filename
-//        String containing a filename of the resource to be loaded.
-//
-//	\param output
-//		Reference to a InputSourceContainer object to load the data into.
-//   */
-//    virtual void loadInputSourceContainer(const String& filename, InputSourceContainer& output) = 0;
-
-    /*!
-    \brief
-        Load raw binary data.
-
-    \param filename
-        String containing a filename of the resource to be loaded.
-
-	\param output
-        Reference to a RawDataContainer object to load the data into.
-
-    \param resourceGroup
-        Optional String that may be used by implementations to identify the group from
-        which the resource should be loaded.
-    */
-    virtual void loadRawDataContainer(const String& filename, RawDataContainer& output, const String& resourceGroup) = 0;
-
-    /*!
-    \brief
-        Unload raw binary data. This gives the resource provider a change to unload the data
-        in its own way before the data container object is destroyed.  If it does nothing,
-        then the object will release its memory.
-
-	\param data
-        Reference to a RawDataContainer object that is about to be destroyed.
-
-    */
-    virtual void unloadRawDataContainer(RawDataContainer&)  { }
-
     /*!
     \brief
         Return the current default resource group identifier.
@@ -128,13 +88,70 @@ public:
     */
     void    setDefaultResourceGroup(const String& resourceGroup)    { d_defaultResourceGroup = resourceGroup; }
 
-    /** enumerate the files in \a resource_group that match \a file_pattern and
-    append thier names to \a out_vec
+	    /*!
+    \brief
+        Set the directory associated with a given resource group identifier.
+
+    \param resourceGroup
+        The resource group identifier whose directory is to be set.
+
+    \param directory
+        The directory to be associated with resource group identifier
+        \a resourceGroup
+
+    \return
+        Nothing.
     */
-    virtual size_t getResourceGroupFileNames(std::vector<String>& out_vec,
-                                             const String& file_pattern,
-                                             const String& resource_group) = 0;
+    void setResourceGroupDirectory(const String& resourceGroup, const String& directory);
+
+    /*!
+    \brief
+        Return the directory associated with the specified resource group
+        identifier.
+
+    \param resourceGroup
+        The resource group identifier for which the associated directory is to
+        be returned.
+
+    \return
+        String object describing the directory currently associated with resource
+        group identifier \a resourceGroup.
+
+    \note
+        This member is not defined as being const because it may cause
+        creation of an 'empty' directory specification for the resourceGroup
+        if the resourceGroup has not previously been accessed.
+    */
+    const String& getResourceGroupDirectory(const String& resourceGroup);
+
+    /*!
+    \brief
+        clears any currently set directory for the specified resource group
+        identifier.
+
+    \param resourceGroup
+        The resource group identifier for which the associated directory is to
+        be cleared.
+    */
+    void clearResourceGroupDirectory(const String& resourceGroup);
+
+    void loadRawDataContainer(const String& filename, RawDataContainer& output, const String& resourceGroup);
+    void unloadRawDataContainer(RawDataContainer& data);
+    size_t getResourceGroupFileNames(std::vector<String>& out_vec,
+                                     const String& file_pattern,
+                                     const String& resource_group);
+
 protected:
+    /*!
+    \brief
+        Return the final path and filename, taking into account the given
+        resource group identifier that should be used when attempting to
+        load the data.
+    */
+    String getFinalFilename(const String& filename, const String& resourceGroup) const;
+
+    typedef std::map<String, String, String::FastLessCompare> ResourceGroupMap;
+    ResourceGroupMap    d_resourceGroups;
     String  d_defaultResourceGroup;     //!< Default resource group identifier.
 };
 

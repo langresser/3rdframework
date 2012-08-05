@@ -29,7 +29,7 @@
 #include "CEGUIExceptions.h"
 #include "CEGUISystem.h"
 #include "CEGUIXMLAttributes.h"
-#include "CEGUIDefaultResourceProvider.h"
+#include "CEGUIResourceProvider.h"
 #include "CEGUIImagesetManager.h"
 #include "CEGUIFontManager.h"
 #include "CEGUISchemeManager.h"
@@ -245,7 +245,7 @@ void Config_xmlHandler::initialiseResourceGroupDirectories() const
 {
     // if we are called, we dangerously assume that the resource provider is an
     // instace of DefaultResourceProvider...
-    DefaultResourceProvider* rp = static_cast<DefaultResourceProvider*>
+    ResourceProvider* rp = static_cast<ResourceProvider*>
         (System::getSingleton().getResourceProvider());
 
     ResourceDirVector::const_iterator i = d_resourceDirectories.begin();

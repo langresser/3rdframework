@@ -157,7 +157,7 @@ void MinizipResourceProvider::loadRawDataContainer(const String& filename,
 
     if (d_pimpl->d_loadLocal && doesFileExist(final_filename))
     {
-        DefaultResourceProvider::loadRawDataContainer(filename,
+        ResourceProvider::loadRawDataContainer(filename,
                                                       output,
                                                       resourceGroup);
         return;
@@ -233,7 +233,7 @@ size_t MinizipResourceProvider::getResourceGroupFileNames(
 
     // get local (non zip) matches if local mode is set.
     if (d_pimpl->d_loadLocal)
-        entries += DefaultResourceProvider::getResourceGroupFileNames(
+        entries += ResourceProvider::getResourceGroupFileNames(
                                         out_vec, file_pattern, resource_group);
 
     // exit now if no zip file is loaded

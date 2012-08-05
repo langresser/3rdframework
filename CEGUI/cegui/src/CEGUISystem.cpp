@@ -58,7 +58,7 @@
 #include "CEGUIRenderingRoot.h"
 #include "CEGUIRenderingWindow.h"
 #include "CEGUIRenderingContext.h"
-#include "CEGUIDefaultResourceProvider.h"
+#include "CEGUIResourceProvider.h"
 #include "CEGUIImageCodec.h"
 #include "elements/CEGUIAll.h"
 #include <ctime>
@@ -238,7 +238,7 @@ System::System(Renderer& renderer,
     // create default resource provider, unless one was already provided
     if (!d_resourceProvider)
     {
-        d_resourceProvider = new DefaultResourceProvider;
+        d_resourceProvider = new ResourceProvider;
         d_ourResourceProvider = true;
     }
 

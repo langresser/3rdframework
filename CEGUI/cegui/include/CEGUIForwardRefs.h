@@ -48,7 +48,7 @@ class ColourRect;
 class CoordConverter;
 class DefaultLogger;
 class DefaultRenderedStringParser;
-class DefaultResourceProvider;
+class ResourceProvider;
 class DynamicModule;
 class Event;
 class EventArgs;

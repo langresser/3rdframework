@@ -31,7 +31,7 @@
 #define _CEGUIMinizipResourceProvider_h_
 
 #include "CEGUIBase.h"
-#include "CEGUIDefaultResourceProvider.h"
+#include "CEGUIResourceProvider.h"
 
 #if defined(_MSC_VER)
 #   pragma warning(push)
@@ -47,7 +47,7 @@
 // Start of CEGUI namespace section
 namespace CEGUI
 {
-class CEGUIEXPORT MinizipResourceProvider : public DefaultResourceProvider
+class CEGUIEXPORT MinizipResourceProvider : public ResourceProvider
 {
 public:
     /*************************************************************************

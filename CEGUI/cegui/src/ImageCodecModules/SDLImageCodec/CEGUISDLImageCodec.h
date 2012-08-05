@@ -47,6 +47,7 @@ public:
     ~SDLImageCodec();
     
     Texture* load(const RawDataContainer& data, Texture* result);
+	Texture* load(const char* fileName, Texture* result);
 protected:
 
 private:

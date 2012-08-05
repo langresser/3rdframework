@@ -41,7 +41,7 @@
 #include "CEGUIRenderingRoot.h"
 #include "CEGUIOpenGLFBOTextureTarget.h"
 #include "CEGUISystem.h"
-#include "CEGUIDefaultResourceProvider.h"
+#include "CEGUIResourceProvider.h"
 
 #include <sstream>
 #include <algorithm>
@@ -117,7 +117,7 @@ OpenGLRenderer& OpenGLRenderer::bootstrapSystem(const TextureTargetType tt_type)
             "CEGUI::System object is already initialised."));
 
     OpenGLRenderer& renderer(create(tt_type));
-    DefaultResourceProvider* rp = new CEGUI::DefaultResourceProvider();
+    ResourceProvider* rp = new CEGUI::ResourceProvider();
     System::create(renderer, rp);
 
     return renderer;
@@ -132,7 +132,7 @@ OpenGLRenderer& OpenGLRenderer::bootstrapSystem(const Size& display_size,
             "CEGUI::System object is already initialised."));
 
     OpenGLRenderer& renderer(create(display_size, tt_type));
-    DefaultResourceProvider* rp = new CEGUI::DefaultResourceProvider();
+    ResourceProvider* rp = new CEGUI::ResourceProvider();
     System::create(renderer, rp);
 
     return renderer;
@@ -147,8 +147,8 @@ void OpenGLRenderer::destroySystem()
             "CEGUI::System object is not created or was already destroyed."));
 
     OpenGLRenderer* renderer = static_cast<OpenGLRenderer*>(sys->getRenderer());
-    DefaultResourceProvider* rp =
-        static_cast<DefaultResourceProvider*>(sys->getResourceProvider());
+    ResourceProvider* rp =
+        static_cast<ResourceProvider*>(sys->getResourceProvider());
 
     System::destroy();
     delete rp;

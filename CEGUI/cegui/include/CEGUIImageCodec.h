@@ -95,6 +95,7 @@ public:
       \return result on success or 0 if the load failed 
     */
     virtual Texture* load(const RawDataContainer& data, Texture* result) = 0;
+	virtual Texture* load(const char* fileName, Texture* result) = 0;
 
 private:
     String d_identifierString;   //!< display the name of the codec 

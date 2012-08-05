@@ -25,7 +25,7 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUIDefaultResourceProvider.h"
+#include "CEGUIResourceProvider.h"
 #include "CEGUIExceptions.h"
 
 #include <stdio.h>
@@ -82,7 +82,7 @@ namespace CEGUI
 {
 
 //----------------------------------------------------------------------------//
-void DefaultResourceProvider::loadRawDataContainer(const String& filename,
+void ResourceProvider::loadRawDataContainer(const String& filename,
                                                    RawDataContainer& output,
                                                    const String& resourceGroup)
 {
@@ -124,7 +124,7 @@ void DefaultResourceProvider::loadRawDataContainer(const String& filename,
 }
 
 //----------------------------------------------------------------------------//
-void DefaultResourceProvider::unloadRawDataContainer(RawDataContainer& data)
+void ResourceProvider::unloadRawDataContainer(RawDataContainer& data)
 {
     uint8* const ptr = data.getDataPtr();
     delete[] ptr;
@@ -133,7 +133,7 @@ void DefaultResourceProvider::unloadRawDataContainer(RawDataContainer& data)
 }
 
 //----------------------------------------------------------------------------//
-void DefaultResourceProvider::setResourceGroupDirectory(
+void ResourceProvider::setResourceGroupDirectory(
                                                 const String& resourceGroup,
                                                 const String& directory)
 {
@@ -154,14 +154,14 @@ void DefaultResourceProvider::setResourceGroupDirectory(
 }
 
 //----------------------------------------------------------------------------//
-const String& DefaultResourceProvider::getResourceGroupDirectory(
+const String& ResourceProvider::getResourceGroupDirectory(
                                                 const String& resourceGroup)
 {
     return d_resourceGroups[resourceGroup];
 }
 
 //----------------------------------------------------------------------------//
-void DefaultResourceProvider::clearResourceGroupDirectory(
+void ResourceProvider::clearResourceGroupDirectory(
                                                 const String& resourceGroup)
 {
     ResourceGroupMap::iterator iter = d_resourceGroups.find(resourceGroup);
@@ -171,7 +171,7 @@ void DefaultResourceProvider::clearResourceGroupDirectory(
 }
 
 //----------------------------------------------------------------------------//
-String DefaultResourceProvider::getFinalFilename(
+String ResourceProvider::getFinalFilename(
                                             const String& filename,
                                             const String& resourceGroup) const
 {
@@ -196,7 +196,7 @@ String DefaultResourceProvider::getFinalFilename(
 }
 
 //----------------------------------------------------------------------------//
-size_t DefaultResourceProvider::getResourceGroupFileNames(
+size_t ResourceProvider::getResourceGroupFileNames(
     std::vector<String>& out_vec,
     const String& file_pattern,
     const String& resource_group)

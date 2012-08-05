@@ -387,9 +387,6 @@
     <ClCompile Include="..\..\..\cegui\src\CEGUIDefaultRenderedStringParser.cpp">
       <Filter>cegui\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\CEGUIDefaultResourceProvider.cpp">
-      <Filter>cegui\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\cegui\src\CEGUIDynamicModule.cpp">
       <Filter>cegui\src</Filter>
     </ClCompile>
@@ -753,6 +750,24 @@
     <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\glew.c">
       <Filter>cegui\src\render</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\CEGUIResourceProvider.cpp">
+      <Filter>cegui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\Null\CEGUINullGeometryBuffer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\Null\CEGUINullRenderer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\Null\CEGUINullRenderTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\Null\CEGUINullTexture.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\Null\CEGUINullTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\cegui\src\minizip\ioapi.h">
@@ -1113,9 +1128,6 @@
       <Filter>cegui\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cegui\include\CEGUIDefaultRenderedStringParser.h">
-      <Filter>cegui\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\cegui\include\CEGUIDefaultResourceProvider.h">
       <Filter>cegui\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\cegui\include\CEGUIDynamicModule.h">

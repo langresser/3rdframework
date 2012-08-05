@@ -33,7 +33,7 @@
 #include "CEGUIRenderingRoot.h"
 #include "CEGUIExceptions.h"
 #include "CEGUISystem.h"
-#include "CEGUIDefaultResourceProvider.h"
+#include "CEGUIResourceProvider.h"
 
 #include <algorithm>
 
@@ -53,7 +53,7 @@ NullRenderer& NullRenderer::bootstrapSystem()
 
 	NullRenderer& renderer = create();
 	
-	DefaultResourceProvider* rp(new DefaultResourceProvider()); 
+	ResourceProvider* rp(new ResourceProvider()); 
 
 	// TODO: Create image codec?
 	// NullImageCodec& ic = createNullImageCodec();
