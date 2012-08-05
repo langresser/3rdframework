@@ -25,10 +25,10 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUI/RendererModules/OpenGLES/Texture.h"
-#include "CEGUI/Exceptions.h"
-#include "CEGUI/System.h"
-#include "CEGUI/ImageCodec.h"
+#include "RendererModules/OpenGLES/Texture.h"
+#include "CEGUIExceptions.h"
+#include "CEGUISystem.h"
+#include "CEGUIImageCodec.h"
 
 // Start of CEGUI namespace section
 namespace CEGUI
@@ -63,7 +63,7 @@ OpenGLESTexture::OpenGLESTexture(OpenGLESRenderer& owner, const String& name,
 
 //----------------------------------------------------------------------------//
 OpenGLESTexture::OpenGLESTexture(OpenGLESRenderer& owner, const String& name,
-                                 const Sizef& size) :
+                                 const Size& size) :
     d_size(0, 0),
     d_grabBuffer(0),
     d_dataSize(0, 0),
@@ -77,7 +77,7 @@ OpenGLESTexture::OpenGLESTexture(OpenGLESRenderer& owner, const String& name,
 
 //----------------------------------------------------------------------------//
 OpenGLESTexture::OpenGLESTexture(OpenGLESRenderer& owner, const String& name,
-                                 GLuint tex, const Sizef& size) :
+                                 GLuint tex, const Size& size) :
     d_ogltexture(tex),
     d_size(size),
     d_grabBuffer(0),
@@ -102,19 +102,19 @@ const String& OpenGLESTexture::getName() const
 }
 
 //----------------------------------------------------------------------------//
-const Sizef& OpenGLESTexture::getSize() const
+const Size& OpenGLESTexture::getSize() const
 {
     return d_size;
 }
 
 //----------------------------------------------------------------------------//
-const Sizef& OpenGLESTexture::getOriginalDataSize() const
+const Size& OpenGLESTexture::getOriginalDataSize() const
 {
     return d_dataSize;
 }
 
 //----------------------------------------------------------------------------//
-const Vector2f& OpenGLESTexture::getTexelScaling() const
+const Vector2& OpenGLESTexture::getTexelScaling() const
 {
     return d_texelScaling;
 }
@@ -156,7 +156,7 @@ void OpenGLESTexture::loadFromFile(const String& filename,
 
 //----------------------------------------------------------------------------//
 void OpenGLESTexture::loadFromMemory(const void* buffer,
-                                     const Sizef& buffer_size,
+                                     const Size& buffer_size,
                                      PixelFormat pixel_format)
 {
     if (!isPixelFormatSupported(pixel_format))
@@ -188,7 +188,7 @@ void OpenGLESTexture::loadFromMemory(const void* buffer,
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESTexture::loadUncompressedTextureBuffer(const Sizef& buffer_size,
+void OpenGLESTexture::loadUncompressedTextureBuffer(const Size& buffer_size,
                                                     const void* buffer) const
 {
     GLint old_pack;
@@ -205,7 +205,7 @@ void OpenGLESTexture::loadUncompressedTextureBuffer(const Sizef& buffer_size,
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESTexture::loadCompressedTextureBuffer(const Sizef& buffer_size,
+void OpenGLESTexture::loadCompressedTextureBuffer(const Size& buffer_size,
                                                   const void* buffer) const
 {
     // Calculate buffer size in bytes
@@ -224,7 +224,7 @@ void OpenGLESTexture::loadCompressedTextureBuffer(const Sizef& buffer_size,
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESTexture::blitFromMemory(void* sourceData, const Rectf& area)
+void OpenGLESTexture::blitFromMemory(void* sourceData, const Rect& area)
 {
     // store size of original data we are loading
     d_dataSize = area.getSize();
@@ -255,7 +255,7 @@ void OpenGLESTexture::blitToMemory(void* targetData)
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESTexture::setTextureSize(const Sizef& sz)
+void OpenGLESTexture::setTextureSize(const Size& sz)
 {
     initPixelFormatFields(PF_RGBA);
 
@@ -266,9 +266,9 @@ void OpenGLESTexture::setTextureSize(const Sizef& sz)
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESTexture::setTextureSize_impl(const Sizef& sz)
+void OpenGLESTexture::setTextureSize_impl(const Size& sz)
 {
-    const Sizef size(d_owner.getAdjustedTextureSize(sz));
+    const Size size(d_owner.getAdjustedTextureSize(sz));
 
     if (!d_isCompressed)
     {
@@ -371,7 +371,7 @@ GLuint OpenGLESTexture::getOpenGLESTexture() const
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESTexture::setOpenGLESTexture(GLuint tex, const Sizef& size)
+void OpenGLESTexture::setOpenGLESTexture(GLuint tex, const Size& size)
 {
     if (d_ogltexture != tex)
     {
@@ -392,14 +392,16 @@ bool OpenGLESTexture::isPixelFormatSupported(const PixelFormat fmt) const
     {
     case PF_RGBA:
     case PF_RGB:
+#if 0
     case PF_RGBA_4444:
     case PF_RGB_565:
+#endif
         return true;
-
+#if 0
     case PF_PVRTC4:
     case PF_PVRTC2:
         return d_owner.isGLExtensionSupported("GL_IMG_texture_compression_pvrtc");
-
+#endif
     default:
         return false;
     }
@@ -421,7 +423,7 @@ void OpenGLESTexture::initPixelFormatFields(const PixelFormat fmt)
         d_format = GL_RGB;
         d_subpixelFormat = GL_UNSIGNED_BYTE;
         break;
-
+#if 0
     case PF_RGB_565:
         d_format = GL_RGB;
         d_subpixelFormat = GL_UNSIGNED_SHORT_5_6_5;
@@ -443,6 +445,7 @@ void OpenGLESTexture::initPixelFormatFields(const PixelFormat fmt)
         d_subpixelFormat = GL_UNSIGNED_BYTE; // not really, but set for completeness.
         d_isCompressed = true;
         break;
+#endif
     }
 }
 

@@ -28,11 +28,11 @@
 #ifndef _CEGUIOpenGLESRenderer_h_
 #define _CEGUIOpenGLESRenderer_h_
 
-#include "CEGUI/Base.h"
-#include "CEGUI/Renderer.h"
-#include "CEGUI/Size.h"
-#include "CEGUI/Vector.h"
-#include "CEGUI/RendererModules/OpenGLES/GLES.h"
+#include "CEGUIBase.h"
+#include "CEGUIRenderer.h"
+#include "CEGUISize.h"
+#include "CEGUIVector.h"
+#include "RendererModules/OpenGLES/GLES.h"
 #include <vector>
 #include <map>
 
@@ -51,6 +51,7 @@
 #   pragma warning(disable : 4251)
 #endif
 
+#define CEGUI_VERSION_ABI 0
 
 // Start of CEGUI namespace section
 namespace CEGUI
@@ -134,7 +135,7 @@ public:
         Reference to the CEGUI::OpenGLESRenderer object that was created.
     */
     static OpenGLESRenderer& bootstrapSystem(
-                                const Sizef& display_size,
+                                const Size& display_size,
                                 const TextureTargetType tt_type = TTT_AUTO,
                                 const int abi = CEGUI_VERSION_ABI);
 
@@ -183,7 +184,7 @@ public:
     \param abi
         This must be set to CEGUI_VERSION_ABI
     */
-    static OpenGLESRenderer& create(const Sizef& display_size,
+    static OpenGLESRenderer& create(const Size& display_size,
                                     const TextureTargetType tt_type = TTT_AUTO,
                                     const int abi = CEGUI_VERSION_ABI);
 
@@ -214,11 +215,11 @@ public:
     TextureTarget* createTextureTarget();
     void destroyTextureTarget(TextureTarget* target);
     void destroyAllTextureTargets();
-    Texture& createTexture(const String& name);
-    Texture& createTexture(const String& name,
+    Texture& createTexture();
+    Texture& createTexture(
                            const String& filename,
                            const String& resourceGroup);
-    Texture& createTexture(const String& name, const Sizef& size);
+    Texture& createTexture(const Size& size);
     void destroyTexture(Texture& texture);
     void destroyTexture(const String& name);
     void destroyAllTextures();
@@ -226,11 +227,14 @@ public:
     bool isTextureDefined(const String& name) const;
     void beginRendering();
     void endRendering();
-    void setDisplaySize(const Sizef& sz);
-    const Sizef& getDisplaySize() const;
-    const Vector2f& getDisplayDPI() const;
+    void setDisplaySize(const Size& sz);
+    const Size& getDisplaySize() const;
+    const Vector2& getDisplayDPI() const;
     uint getMaxTextureSize() const;
     const String& getIdentifierString() const;
+   
+    void setRotation(const Vector3& r) {};
+    RenderingRoot& getDefaultRenderingRoot();
 
     /*!
     \brief
@@ -246,7 +250,7 @@ public:
         Texture object that wraps the OpenGLES texture \a tex, and whose size is
         specified to be \a sz.
     */
-    Texture& createTexture(const String& name, GLuint tex, const Sizef& sz);
+    Texture& createTexture(const String& name, GLuint tex, const Size& sz);
 
     /*!
     \brief
@@ -288,7 +292,7 @@ public:
     \return
         Size object containing - possibly different - output size.
     */
-    Sizef getAdjustedTextureSize(const Sizef& sz) const;
+    Size getAdjustedTextureSize(const Size& sz) const;
 
     /*!
     \brief
@@ -319,7 +323,7 @@ private:
         Specifies one of the TextureTargetType enumerated values indicating the
         desired TextureTarget type to be used.
     */
-    OpenGLESRenderer(const Sizef& display_size, const TextureTargetType tt_type);
+    OpenGLESRenderer(const Size& display_size, const TextureTargetType tt_type);
 
     /*!
     \brief
@@ -353,9 +357,9 @@ private:
     //! String holding the renderer identification text.
     static String d_rendererID;
     //! What the renderer considers to be the current display size.
-    Sizef d_displaySize;
+    Size d_displaySize;
     //! What the renderer considers to be the current display DPI resolution.
-    Vector2f d_displayDPI;
+    Vector2 d_displayDPI;
     //! The default RenderTarget
     RenderTarget* d_defaultTarget;
     //! container type used to hold TextureTargets we create.
@@ -367,8 +371,7 @@ private:
     //! Container used to track geometry buffers.
     GeometryBufferList d_geometryBuffers;
     //! container type used to hold Textures we create.
-    typedef std::map<String, OpenGLESTexture*, StringFastLessCompare
-                     CEGUI_MAP_ALLOC(String, OpenGLESTexture*)> TextureMap;
+    typedef std::map<String, OpenGLESTexture*> TextureMap;
     //! Container used to track textures.
     TextureMap d_textures;
     //! What the renderer thinks the max texture size is.
@@ -377,6 +380,8 @@ private:
     bool d_initExtraStates;
     //! pointer to a helper that creates TextureTargets supported by the system.
     OGLTextureTargetFactory* d_textureTargetFactory;
+    
+    RenderingRoot* d_defaultRoot;
   };
 
 } // End of  CEGUI namespace section

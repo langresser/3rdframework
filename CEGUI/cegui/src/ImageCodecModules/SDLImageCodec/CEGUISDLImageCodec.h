@@ -29,7 +29,7 @@
  ***************************************************************************/
 #ifndef _CEGUIFreeImageImageCodec_h_
 #define _CEGUIFreeImageImageCodec_h_
-#include "../../CEGUIImageCodec.h"
+#include "CEGUIImageCodec.h"
 
 #   define CEGUIFREEIMAGEIMAGECODEC_API
 

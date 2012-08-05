@@ -28,10 +28,10 @@
 #ifndef _CEGUIOpenGLESTexture_h_
 #define _CEGUIOpenGLESTexture_h_
 
-#include "CEGUI/Base.h"
-#include "CEGUI/Renderer.h"
-#include "CEGUI/Texture.h"
-#include "CEGUI/RendererModules/OpenGLES/Renderer.h"
+#include "CEGUIBase.h"
+#include "CEGUIRenderer.h"
+#include "CEGUITexture.h"
+#include "RendererModules/OpenGLES/Renderer.h"
 
 // Start of CEGUI namespace section
 namespace CEGUI
@@ -45,7 +45,7 @@ public:
         set the openGL texture that this Texture is based on to the specified
         texture, with the specified size.
     */
-    void setOpenGLESTexture(GLuint tex, const Sizef& size);
+    void setOpenGLESTexture(GLuint tex, const Size& size);
 
     /*!
     \brief
@@ -76,7 +76,7 @@ public:
     \return
         Nothing.
     */
-    void setTextureSize(const Sizef& sz);
+    void setTextureSize(const Size& sz);
 
     /*!
     \brief
@@ -96,22 +96,22 @@ public:
 
     // implement abstract members from base class.
     const String& getName() const;
-    const Sizef& getSize() const;
-    const Sizef& getOriginalDataSize() const;
-    const Vector2f& getTexelScaling() const;
+    const Size& getSize() const;
+    const Size& getOriginalDataSize() const;
+    const Vector2& getTexelScaling() const;
     void loadFromFile(const String& filename, const String& resourceGroup);
-    void loadFromMemory(const void* buffer, const Sizef& buffer_size,
+    void loadFromMemory(const void* buffer, const Size& buffer_size,
                         PixelFormat pixel_format);
-    void blitFromMemory(void* sourceData, const Rectf& area);
+    void blitFromMemory(void* sourceData, const Rect& area);
     void blitToMemory(void* targetData);
     bool isPixelFormatSupported(const PixelFormat fmt) const;
-
+    void saveToMemory(void* buffer) {};
 protected:
     // Friends (to allow construction and destruction)
-    friend Texture& OpenGLESRenderer::createTexture(const String&);
-    friend Texture& OpenGLESRenderer::createTexture(const String&, const String&, const String&);
-    friend Texture& OpenGLESRenderer::createTexture(const String&, const Sizef&);
-    friend Texture& OpenGLESRenderer::createTexture(const String&, GLuint, const Sizef&);
+    friend Texture& OpenGLESRenderer::createTexture();
+    friend Texture& OpenGLESRenderer::createTexture(const String&, const String&);
+    friend Texture& OpenGLESRenderer::createTexture(const Size&);
+    friend Texture& OpenGLESRenderer::createTexture(const String&, GLuint, const Size&);
     friend void OpenGLESRenderer::destroyTexture(const String&);
     friend void OpenGLESRenderer::destroyTexture(Texture&);
 
@@ -122,10 +122,10 @@ protected:
                   const String& filename, const String& resourceGroup);
     //! Constructor that creates a Texture with a given size.
     OpenGLESTexture(OpenGLESRenderer& owner, const String& name,
-                    const Sizef& size);
+                    const Size& size);
     //! Constructor that wraps an existing GL texture.
     OpenGLESTexture(OpenGLESRenderer& owner, const String& name, GLuint tex,
-                    const Sizef& size);
+                    const Size& size);
     //! Destructor.
     virtual ~OpenGLESTexture();
 
@@ -142,26 +142,26 @@ protected:
     void initPixelFormatFields(const PixelFormat fmt);
 
     //! internal texture resize function (does not reset format or other fields)
-    void setTextureSize_impl(const Sizef& sz);
+    void setTextureSize_impl(const Size& sz);
 
     //! load uncompressed data from buffer to GL texture.
-    void loadUncompressedTextureBuffer(const Sizef& buffer_size,
+    void loadUncompressedTextureBuffer(const Size& buffer_size,
                                        const void* buffer) const;
 
     //! load uncompressed data from buffer to GL texture.
-    void loadCompressedTextureBuffer(const Sizef& buffer_size,
+    void loadCompressedTextureBuffer(const Size& buffer_size,
                                      const void* buffer) const;
 
     //! The OpenGLES texture we're wrapping.
     GLuint d_ogltexture;
     //! Size of the texture.
-    Sizef d_size;
+    Size d_size;
     //! cached image data for restoring the texture.
     uint8* d_grabBuffer;
     //! original pixel of size data loaded into texture
-    Sizef d_dataSize;
+    Size d_dataSize;
     //! cached pixel to texel mapping scale values.
-    Vector2f d_texelScaling;
+    Vector2 d_texelScaling;
     //! OpenGLESRenderer that created and owns this OpenGLESTexture
     OpenGLESRenderer& d_owner;
     //! Name of the texture given when it was created.

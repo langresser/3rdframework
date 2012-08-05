@@ -49,13 +49,23 @@
 #    define DYNLIB_GETSYM( a, b ) dlsym( a, b )
 #    define DYNLIB_UNLOAD( a ) dlclose( a )
 #    define DYNLIB_ERROR( ) dlerror( )
-
 #elif defined(__APPLE_CC__)
+/* lets us know what version of Mac OS X we're compiling on */
+#include "AvailabilityMacros.h"
+#include "TargetConditionals.h"
+#ifdef TARGET_OS_IPHONE
+#    define DYNLIB_HANDLE void*
+#    define DYNLIB_LOAD( a ) NULL
+#    define DYNLIB_GETSYM( a, b ) NULL
+#    define DYNLIB_UNLOAD( a )
+#    define DYNLIB_ERROR( ) ""
+#else
 #    define DYNLIB_HANDLE CFBundleRef
 #    define DYNLIB_LOAD( a ) mac_loadExeBundle( a )
 #    define DYNLIB_GETSYM( a, b ) mac_getBundleSym( a, b )
 #    define DYNLIB_UNLOAD( a ) mac_unloadExeBundle( a )
 #    define DYNLIB_ERROR( ) mac_errorBundle()
+#endif
 #endif
 
 // Start of CEGUI namespace section

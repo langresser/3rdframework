@@ -25,23 +25,24 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUI/RendererModules/OpenGLES/Renderer.h"
-#include "CEGUI/RendererModules/OpenGLES/Texture.h"
-#include "CEGUI/Exceptions.h"
-#include "CEGUI/EventArgs.h"
-#include "CEGUI/ImageCodec.h"
-#include "CEGUI/DynamicModule.h"
-#include "CEGUI/RendererModules/OpenGLES/ViewportTarget.h"
-#include "CEGUI/RendererModules/OpenGLES/GeometryBuffer.h"
-#include "CEGUI/RendererModules/OpenGLES/FBOTextureTarget.h"
-#include "CEGUI/Logger.h"
-#include "CEGUI/System.h"
-#include "CEGUI/DefaultResourceProvider.h"
+#include "RendererModules/OpenGLES/Renderer.h"
+#include "RendererModules/OpenGLES/Texture.h"
+#include "CEGUIExceptions.h"
+#include "CEGUIEventArgs.h"
+#include "CEGUIImageCodec.h"
+#include "CEGUIDynamicModule.h"
+#include "RendererModules/OpenGLES/ViewportTarget.h"
+#include "RendererModules/OpenGLES/GeometryBuffer.h"
+#include "RendererModules/OpenGLES/FBOTextureTarget.h"
+#include "CEGUILogger.h"
+#include "CEGUISystem.h"
+#include "CEGUIResourceProvider.h"
+#include "CEGUIRenderingRoot.h"
 
 #include <sstream>
 #include <algorithm>
 
-#include "CEGUI/RendererModules/OpenGLES/FBOTextureTarget.h"
+#include "RendererModules/OpenGLES/FBOTextureTarget.h"
 
 // Start of CEGUI namespace section
 namespace CEGUI
@@ -97,14 +98,14 @@ OpenGLESRenderer& OpenGLESRenderer::bootstrapSystem(
                                         const TextureTargetType tt_type,
                                         const int abi)
 {
-    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
+//    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
 
     if (System::getSingletonPtr())
         CEGUI_THROW(InvalidRequestException(
             "CEGUI::System object is already initialised."));
 
     OpenGLESRenderer& renderer(create(tt_type));
-    DefaultResourceProvider* rp = new CEGUI::DefaultResourceProvider();
+    ResourceProvider* rp = new CEGUI::ResourceProvider();
     System::create(renderer, rp);
 
     return renderer;
@@ -112,18 +113,18 @@ OpenGLESRenderer& OpenGLESRenderer::bootstrapSystem(
 
 //----------------------------------------------------------------------------//
 OpenGLESRenderer& OpenGLESRenderer::bootstrapSystem(
-                                        const Sizef& display_size,
+                                        const Size& display_size,
                                         const TextureTargetType tt_type,
                                         const int abi)
 {
-    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
+//    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
 
     if (System::getSingletonPtr())
         CEGUI_THROW(InvalidRequestException(
             "CEGUI::System object is already initialised."));
 
     OpenGLESRenderer& renderer(create(display_size, tt_type));
-    DefaultResourceProvider* rp = new CEGUI::DefaultResourceProvider();
+    ResourceProvider* rp = new CEGUI::ResourceProvider();
     System::create(renderer, rp);
 
     return renderer;
@@ -139,8 +140,8 @@ void OpenGLESRenderer::destroySystem()
 
     OpenGLESRenderer* renderer = 
         static_cast<OpenGLESRenderer*>(sys->getRenderer());
-    DefaultResourceProvider* rp =
-        static_cast<DefaultResourceProvider*>(sys->getResourceProvider());
+    ResourceProvider* rp =
+        static_cast<ResourceProvider*>(sys->getResourceProvider());
 
     System::destroy();
     delete rp;
@@ -151,19 +152,24 @@ void OpenGLESRenderer::destroySystem()
 OpenGLESRenderer& OpenGLESRenderer::create(const TextureTargetType tt_type,
                                            const int abi)
 {
-    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
+//    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
 
     return *new OpenGLESRenderer(tt_type);
 }
 
 //----------------------------------------------------------------------------//
-OpenGLESRenderer& OpenGLESRenderer::create(const Sizef& display_size,
+OpenGLESRenderer& OpenGLESRenderer::create(const Size& display_size,
                                            const TextureTargetType tt_type,
                                            const int abi)
 {
-    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
+//    System::performVersionTest(CEGUI_VERSION_ABI, abi, CEGUI_FUNCTION_NAME);
 
     return *new OpenGLESRenderer(display_size, tt_type);
+}
+
+RenderingRoot& OpenGLESRenderer::getDefaultRenderingRoot()
+{
+    return *d_defaultRoot;
 }
 
 //----------------------------------------------------------------------------//
@@ -214,7 +220,7 @@ OpenGLESRenderer::OpenGLESRenderer(const TextureTargetType tt_type) :
     // initialise display size
     GLint vp[4];
     glGetIntegerv(GL_VIEWPORT, vp);
-    d_displaySize = Sizef(static_cast<float>(vp[2]), static_cast<float>(vp[3]));
+    d_displaySize = Size(static_cast<float>(vp[2]), static_cast<float>(vp[3]));
 
     initialiseTextureTargetFactory(tt_type);
 
@@ -222,7 +228,7 @@ OpenGLESRenderer::OpenGLESRenderer(const TextureTargetType tt_type) :
 }
 
 //----------------------------------------------------------------------------//
-OpenGLESRenderer::OpenGLESRenderer(const Sizef& display_size,
+OpenGLESRenderer::OpenGLESRenderer(const Size& display_size,
                                    const TextureTargetType tt_type) :
     d_displaySize(display_size),
     d_displayDPI(96, 96),
@@ -236,6 +242,7 @@ OpenGLESRenderer::OpenGLESRenderer(const Sizef& display_size,
     initialiseTextureTargetFactory(tt_type);
 
     d_defaultTarget = new OpenGLESViewportTarget(*this);
+    d_defaultRoot = new RenderingRoot(*d_defaultTarget);
 }
 
 //----------------------------------------------------------------------------//
@@ -246,6 +253,7 @@ OpenGLESRenderer::~OpenGLESRenderer()
     destroyAllTextures();
 
     delete d_defaultTarget;
+    delete d_defaultRoot;
     delete d_textureTargetFactory;
 }
 
@@ -314,29 +322,28 @@ void OpenGLESRenderer::destroyAllTextureTargets()
 }
 
 //----------------------------------------------------------------------------//
-Texture& OpenGLESRenderer::createTexture(const String& name)
+Texture& OpenGLESRenderer::createTexture()
 {
-    OpenGLESTexture* tex = new OpenGLESTexture(*this, name);
-    d_textures[name] = tex;
+    OpenGLESTexture* tex = new OpenGLESTexture(*this, "");
+//    d_textures[name] = tex;
     return *tex;
 }
 
 //----------------------------------------------------------------------------//
-Texture& OpenGLESRenderer::createTexture(const String& name,
-                                         const String& filename,
+Texture& OpenGLESRenderer::createTexture(const String& filename,
                                          const String& resourceGroup)
 {
-    OpenGLESTexture* tex = new OpenGLESTexture(*this, name, filename,
+    OpenGLESTexture* tex = new OpenGLESTexture(*this, filename, filename,
                                                resourceGroup);
-    d_textures[name] = tex;
+    d_textures[filename] = tex;
     return *tex;
 }
 
 //----------------------------------------------------------------------------//
-Texture& OpenGLESRenderer::createTexture(const String& name, const Sizef& size)
+Texture& OpenGLESRenderer::createTexture(const Size& size)
 {
-    OpenGLESTexture* tex = new OpenGLESTexture(*this, name, size);
-    d_textures[name] = tex;
+    OpenGLESTexture* tex = new OpenGLESTexture(*this, "", size);
+//    d_textures[name] = tex;
     return *tex;
 }
 
@@ -364,7 +371,7 @@ void OpenGLESRenderer::logTextureDestruction(const String& name)
 //----------------------------------------------------------------------------//
 void OpenGLESRenderer::destroyTexture(Texture& texture)
 {
-    destroyTexture(texture.getName());
+//    destroyTexture(texture.getName());
 }
 
 //----------------------------------------------------------------------------//
@@ -472,13 +479,13 @@ void OpenGLESRenderer::endRendering()
 }
 
 //----------------------------------------------------------------------------//
-const Sizef& OpenGLESRenderer::getDisplaySize() const
+const Size& OpenGLESRenderer::getDisplaySize() const
 {
     return d_displaySize;
 }
 
 //----------------------------------------------------------------------------//
-const Vector2f& OpenGLESRenderer::getDisplayDPI() const
+const Vector2& OpenGLESRenderer::getDisplayDPI() const
 {
     return d_displayDPI;
 }
@@ -497,7 +504,7 @@ const String& OpenGLESRenderer::getIdentifierString() const
 
 //----------------------------------------------------------------------------//
 Texture& OpenGLESRenderer::createTexture(const String& name, GLuint tex,
-                                         const Sizef& sz)
+                                         const Size& sz)
 {
     OpenGLESTexture* t = new OpenGLESTexture(*this, name, tex, sz);
     d_textures[name] = t;
@@ -505,14 +512,14 @@ Texture& OpenGLESRenderer::createTexture(const String& name, GLuint tex,
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESRenderer::setDisplaySize(const Sizef& sz)
+void OpenGLESRenderer::setDisplaySize(const Size& sz)
 {
     if (sz != d_displaySize)
     {
         d_displaySize = sz;
 
         // update the default target's area
-        Rectf area(d_defaultTarget->getArea());
+        Rect area(d_defaultTarget->getArea());
         area.setSize(sz);
         d_defaultTarget->setArea(area);
     }
@@ -594,9 +601,9 @@ void OpenGLESRenderer::initialiseTextureTargetFactory(
 }
 
 //----------------------------------------------------------------------------//
-Sizef OpenGLESRenderer::getAdjustedTextureSize(const Sizef& sz) const
+Size OpenGLESRenderer::getAdjustedTextureSize(const Size& sz) const
 {
-    Sizef out(sz);
+    Size out(sz);
     out.d_width = getNextPOTSize(out.d_width);
     out.d_height = getNextPOTSize(out.d_height);
     return out;

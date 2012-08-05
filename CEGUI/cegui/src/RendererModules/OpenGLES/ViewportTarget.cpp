@@ -25,11 +25,11 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUI/RendererModules/OpenGLES/ViewportTarget.h"
-#include "CEGUI/RenderQueue.h"
-#include "CEGUI/GeometryBuffer.h"
-#include "CEGUI/RendererModules/OpenGLES/GLES.h"
-#include "CEGUI/Exceptions.h"
+#include "RendererModules/OpenGLES/ViewportTarget.h"
+#include "CEGUIRenderQueue.h"
+#include "CEGUIGeometryBuffer.h"
+#include "RendererModules/OpenGLES/GLES.h"
+#include "CEGUIExceptions.h"
 
 // Start of CEGUI namespace section
 namespace CEGUI
@@ -42,15 +42,15 @@ OpenGLESViewportTarget::OpenGLESViewportTarget(OpenGLESRenderer& owner) :
     GLint vp[4];
     glGetIntegerv(GL_VIEWPORT, vp);
 
-    Rectf init_area(Vector2f(static_cast<float>(vp[0]), static_cast<float>(vp[1])),
-                   Sizef(static_cast<float>(vp[2]), static_cast<float>(vp[3])));
+    Rect init_area(Vector2(static_cast<float>(vp[0]), static_cast<float>(vp[1])),
+                   Size(static_cast<float>(vp[2]), static_cast<float>(vp[3])));
 
     setArea(init_area);
 }
 
 //----------------------------------------------------------------------------//
 OpenGLESViewportTarget::OpenGLESViewportTarget(OpenGLESRenderer& owner,
-                                               const Rectf& area) :
+                                               const Rect& area) :
         OpenGLESRenderTarget<>(owner)
 {
     setArea(area);

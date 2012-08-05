@@ -24,7 +24,6 @@
 
 #include "SDL.h"
 #include "SDL_syswm.h"
-#include "SDL_compat.h"
 
 #include "video/SDL_sysvideo.h"
 #include "video/SDL_pixels_c.h"
@@ -42,13 +41,7 @@ static SDL_Rect SDL_VideoViewport;
 static char *wm_title = NULL;
 static SDL_Surface *SDL_VideoIcon;
 static int SDL_enabled_UNICODE = 0;
-int g_isInBackground = SDL_FALSE;
-Uint32 g_windowId = 0;
-
-int IsInBackground()
-{
-	return g_isInBackground;
-}
+Uint32 g_windowId;
 
 const char *
 SDL_AudioDriverName(char *namebuf, int maxlen)
@@ -472,14 +465,8 @@ SDL_SetVideoMode(int width, int height, int bpp, Uint32 flags)
 {
     SDL_DisplayMode desktop_mode;
     int display = GetVideoDisplay();
-
-#ifdef __WIN32__
-	int window_x = SDL_WINDOWPOS_UNDEFINED_DISPLAY(display);
-    int window_y = SDL_WINDOWPOS_UNDEFINED_DISPLAY(display);
-#else
     int window_x = 0;//SDL_WINDOWPOS_UNDEFINED_DISPLAY(display);
     int window_y = 0;//SDL_WINDOWPOS_UNDEFINED_DISPLAY(display);
-#endif
     int window_w;
     int window_h;
     Uint32 window_flags;
@@ -558,6 +545,7 @@ SDL_SetVideoMode(int width, int height, int bpp, Uint32 flags)
     }
     
     g_windowId = SDL_VideoWindow->id;
+
     SDL_SetWindowIcon(SDL_VideoWindow, SDL_VideoIcon);
 
     SetupScreenSaver(flags);

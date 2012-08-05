@@ -25,14 +25,14 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUI/RendererModules/OpenGLES/FBOTextureTarget.h"
-#include "CEGUI/Exceptions.h"
-#include "CEGUI/RenderQueue.h"
-#include "CEGUI/GeometryBuffer.h"
-#include "CEGUI/PropertyHelper.h"
+#include "RendererModules/OpenGLES/FBOTextureTarget.h"
+#include "CEGUIExceptions.h"
+#include "CEGUIRenderQueue.h"
+#include "CEGUIGeometryBuffer.h"
+#include "CEGUIPropertyHelper.h"
 
-#include "CEGUI/RendererModules/OpenGLES/Renderer.h"
-#include "CEGUI/RendererModules/OpenGLES/Texture.h"
+#include "RendererModules/OpenGLES/Renderer.h"
+#include "RendererModules/OpenGLES/Texture.h"
 
 #ifndef __APPLE__
 #include "EGL/egl.h"
@@ -93,14 +93,14 @@ OpenGLESFBOTextureTarget::OpenGLESFBOTextureTarget(OpenGLESRenderer& owner) :
     initialiseRenderTexture();
 
     // setup area and cause the initial texture to be generated.
-    declareRenderSize(Sizef(DEFAULT_SIZE, DEFAULT_SIZE));
+    declareRenderSize(Size(DEFAULT_SIZE, DEFAULT_SIZE));
 }
 
 //----------------------------------------------------------------------------//
 String OpenGLESFBOTextureTarget::generateTextureName()
 {
     String tmp("_gles_tt_tex_");
-    tmp.append(PropertyHelper<uint>::toString(s_textureNumber++));
+    tmp.append(PropertyHelper::uintToString(s_textureNumber++));
 
     return tmp;
 }
@@ -113,13 +113,13 @@ OpenGLESFBOTextureTarget::~OpenGLESFBOTextureTarget()
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESFBOTextureTarget::declareRenderSize(const Sizef& sz)
+void OpenGLESFBOTextureTarget::declareRenderSize(const Size& sz)
 {
     // exit if current size is enough
     if ((d_area.getWidth() >= sz.d_width) && (d_area.getHeight() >=sz.d_height))
         return;
 
-    setArea(Rectf(d_area.getPosition(), d_owner.getAdjustedTextureSize(sz)));
+    setArea(Rect(d_area.getPosition(), d_owner.getAdjustedTextureSize(sz)));
     resizeRenderTexture();
 }
 
@@ -222,7 +222,7 @@ void OpenGLESFBOTextureTarget::resizeRenderTexture()
     GLuint old_tex;
     glGetIntegerv(GL_TEXTURE_BINDING_2D, reinterpret_cast<GLint*>(&old_tex));
 
-    const Sizef sz(d_area.getSize());
+    const Size sz(d_area.getSize());
 
     // set the texture to the required size
     glBindTexture(GL_TEXTURE_2D, d_texture);

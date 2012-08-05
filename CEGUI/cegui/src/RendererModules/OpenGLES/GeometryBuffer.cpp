@@ -25,10 +25,10 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUI/RendererModules/OpenGLES/GeometryBuffer.h"
-#include "CEGUI/RenderEffect.h"
-#include "CEGUI/RendererModules/OpenGLES/Texture.h"
-#include "CEGUI/Vertex.h"
+#include "RendererModules/OpenGLES/GeometryBuffer.h"
+#include "CEGUIRenderEffect.h"
+#include "RendererModules/OpenGLES/Texture.h"
+#include "CEGUIVertex.h"
 
 // Start of CEGUI namespace section
 namespace CEGUI
@@ -59,8 +59,8 @@ void OpenGLESGeometryBuffer::draw() const
     // setup clip region
     GLint vp[4];
     glGetIntegerv(GL_VIEWPORT, vp);
-    glScissor(static_cast<GLint>(d_clipRect.left()),
-              static_cast<GLint>(vp[3] - d_clipRect.bottom()),
+    glScissor(static_cast<GLint>(d_clipRect.d_left),
+              static_cast<GLint>(vp[3] - d_clipRect.d_bottom),
               static_cast<GLint>(d_clipRect.getWidth()),
               static_cast<GLint>(d_clipRect.getHeight()));
 
@@ -103,7 +103,7 @@ void OpenGLESGeometryBuffer::draw() const
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESGeometryBuffer::setTranslation(const Vector3f& v)
+void OpenGLESGeometryBuffer::setTranslation(const Vector3& v)
 {
     d_translation = v;
     d_matrixValid = false;
@@ -117,14 +117,14 @@ void OpenGLESGeometryBuffer::setRotation(const Quaternion& r)
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESGeometryBuffer::setPivot(const Vector3f& p)
+void OpenGLESGeometryBuffer::setPivot(const Vector3& p)
 {
-    d_pivot = Vector3f(p.d_x, p.d_y, p.d_z);
+    d_pivot = Vector3(p.d_x, p.d_y, p.d_z);
     d_matrixValid = false;
 }
 
 //----------------------------------------------------------------------------//
-void OpenGLESGeometryBuffer::setClippingRegion(const Rectf& region)
+void OpenGLESGeometryBuffer::setClippingRegion(const Rect& region)
 {
     d_clipRect = region;
 }
@@ -229,7 +229,7 @@ void OpenGLESGeometryBuffer::updateMatrix() const
     glMatrixMode(GL_MODELVIEW);
     glPushMatrix();
 
-    const Vector3f final_trans(d_translation.d_x + d_pivot.d_x,
+    const Vector3 final_trans(d_translation.d_x + d_pivot.d_x,
                                d_translation.d_y + d_pivot.d_y,
                                d_translation.d_z + d_pivot.d_z);
 

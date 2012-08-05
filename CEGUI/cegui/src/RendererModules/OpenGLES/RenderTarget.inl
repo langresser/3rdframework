@@ -25,10 +25,10 @@
  *   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  *   OTHER DEALINGS IN THE SOFTWARE.
  ***************************************************************************/
-#include "CEGUI/RendererModules/OpenGLES/RenderTarget.h"
-#include "CEGUI/RenderQueue.h"
-#include "CEGUI/RendererModules/OpenGLES/GeometryBuffer.h"
-#include "CEGUI/RendererModules/OpenGLES/GLES.h"
+#include "RendererModules/OpenGLES/RenderTarget.h"
+#include "CEGUIRenderQueue.h"
+#include "RendererModules/OpenGLES/GeometryBuffer.h"
+#include "RendererModules/OpenGLES/GLES.h"
 #include <cmath>
 
 // Start of CEGUI namespace section
@@ -67,18 +67,18 @@ void OpenGLESRenderTarget<T>::draw(const RenderQueue& queue)
 
 //----------------------------------------------------------------------------//
 template <typename T>
-void OpenGLESRenderTarget<T>::setArea(const Rectf& area)
+void OpenGLESRenderTarget<T>::setArea(const Rect& area)
 {
     d_area = area;
     d_matrixValid = false;
 
-    RenderTargetEventArgs args(this);
-    T::fireEvent(RenderTarget::EventAreaChanged, args);
+//    RenderTargetEventArgs args(this);
+//    T::fireEvent(RenderTarget::EventAreaChanged, args);
 }
 
 //----------------------------------------------------------------------------//
 template <typename T>
-const Rectf& OpenGLESRenderTarget<T>::getArea() const
+const Rect& OpenGLESRenderTarget<T>::getArea() const
 {
     return d_area;
 }
@@ -87,8 +87,8 @@ const Rectf& OpenGLESRenderTarget<T>::getArea() const
 template <typename T>
 void OpenGLESRenderTarget<T>::activate()
 {
-	glViewport(static_cast<GLsizei>(d_area.left()),
-               static_cast<GLsizei>(d_area.top()),
+	glViewport(static_cast<GLsizei>(d_area.d_left),
+               static_cast<GLsizei>(d_area.d_top),
                static_cast<GLsizei>(d_area.getWidth()),
                static_cast<GLsizei>(d_area.getHeight()));
 
@@ -129,7 +129,7 @@ gluPerspective(GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar);
 //----------------------------------------------------------------------------//
 template <typename T>
 void OpenGLESRenderTarget<T>::unprojectPoint(const GeometryBuffer& buff,
-    const Vector2f& p_in, Vector2f& p_out) const
+    const Vector2& p_in, Vector2& p_out) const
 {
     if (!d_matrixValid)
         updateMatrix();
@@ -138,8 +138,8 @@ void OpenGLESRenderTarget<T>::unprojectPoint(const GeometryBuffer& buff,
         static_cast<const OpenGLESGeometryBuffer&>(buff);
 
     const GLint vp[4] = {
-        static_cast<GLint>(d_area.left()),
-        static_cast<GLint>(d_area.top()),
+        static_cast<GLint>(d_area.d_left),
+        static_cast<GLint>(d_area.d_top),
         static_cast<GLint>(d_area.getWidth()),
         static_cast<GLint>(d_area.getHeight())
     };

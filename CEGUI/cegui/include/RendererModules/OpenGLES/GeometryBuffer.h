@@ -28,10 +28,10 @@
 #ifndef _CEGUIOpenGLESGeometryBuffer_h_
 #define _CEGUIOpenGLESGeometryBuffer_h_
 
-#include "CEGUI/GeometryBuffer.h"
-#include "CEGUI/RendererModules/OpenGLES/Renderer.h"
-#include "CEGUI/Rect.h"
-#include "CEGUI/Quaternion.h"
+#include "CEGUIGeometryBuffer.h"
+#include "RendererModules/OpenGLES/Renderer.h"
+#include "CEGUIRect.h"
+#include "Quaternion.h"
 
 #include <utility>
 #include <vector>
@@ -58,10 +58,10 @@ public:
 
     // implementation of abstract members from GeometryBuffer
     void draw() const;
-    void setTranslation(const Vector3f& t);
+    void setTranslation(const Vector3& t);
     void setRotation(const Quaternion& r);
-    void setPivot(const Vector3f& p);
-    void setClippingRegion(const Rectf& region);
+    void setPivot(const Vector3& p);
+    void setClippingRegion(const Rect& region);
     void appendVertex(const Vertex& vertex);
     void appendGeometry(const Vertex* const vbuff, uint vertex_count);
     void setActiveTexture(Texture* texture);
@@ -74,6 +74,7 @@ public:
 
     //! return the GL modelview matrix used for this buffer.
 	const float* getMatrix() const;
+    void setRotation(const Vector3& r){};
 
 protected:
     //! perform batch management operations prior to adding new geometry.
@@ -103,13 +104,13 @@ protected:
     //! container where added geometry is stored.
     VertexList d_vertices;
     //! rectangular clip region
-    Rectf d_clipRect;
+    Rect d_clipRect;
     //! translation vector
-    Vector3f d_translation;
+    Vector3 d_translation;
     //! rotation quaternion
     Quaternion d_rotation;
     //! pivot point for rotation
-    Vector3f d_pivot;
+    Vector3 d_pivot;
     //! RenderEffect that will be used by the GeometryBuffer
     RenderEffect* d_effect;
     //! model matrix cache

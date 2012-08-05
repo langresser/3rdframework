@@ -28,10 +28,10 @@
 #ifndef _CEGUIOpenGLESFBOTextureTarget_h_
 #define _CEGUIOpenGLESFBOTextureTarget_h_
 
-#include "CEGUI/RendererModules/OpenGLES/RenderTarget.h"
-#include "CEGUI/TextureTarget.h"
-#include "CEGUI/Rect.h"
-#include "CEGUI/RendererModules/OpenGLES/GLES.h"
+#include "RendererModules/OpenGLES/RenderTarget.h"
+#include "CEGUITextureTarget.h"
+#include "CEGUIRect.h"
+#include "RendererModules/OpenGLES/GLES.h"
 
 #if defined(_MSC_VER)
 #   pragma warning(push)
@@ -59,7 +59,7 @@ public:
     // implementation of TextureTarget interface
     void clear();
     Texture& getTexture() const;
-    void declareRenderSize(const Sizef& sz);
+    void declareRenderSize(const Size& sz);
     bool isRenderingInverted() const;
 
 	//! initialize FBO extension functions pointers
