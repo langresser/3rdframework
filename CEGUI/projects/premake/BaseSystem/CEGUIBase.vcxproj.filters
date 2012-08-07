@@ -723,33 +723,6 @@
     <ClCompile Include="..\..\..\cegui\src\ImageCodecModules\SDLImageCodec\CEGUISDLCodecModule.cpp">
       <Filter>cegui\src\image</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLFBOTextureTarget.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLGeometryBuffer.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderer.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderTarget.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTexture.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTextureTarget.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLViewportTarget.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLWGLPBTextureTarget.cpp">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\glew.c">
-      <Filter>cegui\src\render</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\cegui\src\CEGUIResourceProvider.cpp">
       <Filter>cegui\src</Filter>
     </ClCompile>
@@ -766,6 +739,21 @@
       <Filter>cegui\src\render</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\cegui\src\RendererModules\Null\CEGUINullTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGLES\FBOTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGLES\GeometryBuffer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGLES\Renderer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGLES\Texture.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGLES\ViewportTarget.cpp">
       <Filter>cegui\src\render</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1449,6 +1437,9 @@
     </None>
     <None Include="..\..\..\cegui\src\WindowRendererSets\Falagard\Makefile.in">
       <Filter>cegui\src\widget</Filter>
+    </None>
+    <None Include="..\..\..\cegui\src\RendererModules\OpenGLES\RenderTarget.inl">
+      <Filter>cegui\src\render</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -212,9 +212,11 @@ void OpenGLESTexture::loadCompressedTextureBuffer(const Size& buffer_size,
     GLsizei image_space = 
         static_cast<GLsizei>(buffer_size.d_width * buffer_size.d_height);
 
+#if 0
     GLsizei num_bits =
         (d_format == GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG ? 4 : 2);
-
+#endif
+	GLsizei num_bits = 4;
     GLsizei image_size = (image_space * num_bits + 7) / 8;
 
     glCompressedTexImage2D(GL_TEXTURE_2D, 0, d_format, 
