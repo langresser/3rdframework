@@ -33,6 +33,6 @@
 #include <GLES/glext.h>
 #endif
 
-#ifndef APIENTRY
-#define APIENTRY
+#ifndef WIN32
+//#define APIENTRY
 #endif

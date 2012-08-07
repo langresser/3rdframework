@@ -109,6 +109,7 @@ typedef struct
         SDL_bool tex_coords;
     } current;
 
+#define APIENTRY
 #define SDL_PROC(ret,func,params) ret (APIENTRY *func) params;
 #include "SDL_glesfuncs.h"
 #undef SDL_PROC
@@ -866,6 +867,8 @@ GLES_RenderCopy(SDL_Renderer * renderer, SDL_Texture * texture,
                         dstrect->w, dstrect->h);
         }
     } else {
+		GLshort vertices[8];
+		GLfloat texCoords[8];
 
         minx = dstrect->x;
         miny = dstrect->y;
@@ -880,9 +883,6 @@ GLES_RenderCopy(SDL_Renderer * renderer, SDL_Texture * texture,
         minv *= texturedata->texh;
         maxv = (GLfloat) (srcrect->y + srcrect->h) / texture->h;
         maxv *= texturedata->texh;
-
-        GLshort vertices[8];
-        GLfloat texCoords[8];
 
         vertices[0] = minx;
         vertices[1] = miny;
@@ -974,6 +974,8 @@ GLES_RenderCopyEx(SDL_Renderer * renderer, SDL_Texture * texture,
     int minx, miny, maxx, maxy;
     GLfloat minu, maxu, minv, maxv;
     GLfloat centerx, centery;
+	GLshort vertices[8];
+	GLfloat texCoords[8];
     
     GLES_ActivateRenderer(renderer);
 
@@ -1025,9 +1027,6 @@ GLES_RenderCopyEx(SDL_Renderer * renderer, SDL_Texture * texture,
     minv *= texturedata->texh;
     maxv = (GLfloat) (srcrect->y + srcrect->h) / texture->h;
     maxv *= texturedata->texh;
-
-    GLshort vertices[8];
-    GLfloat texCoords[8];
 
     vertices[0] = minx;
     vertices[1] = miny;
