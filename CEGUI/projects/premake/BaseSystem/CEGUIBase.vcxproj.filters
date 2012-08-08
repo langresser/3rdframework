@@ -756,6 +756,33 @@
     <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGLES\ViewportTarget.cpp">
       <Filter>cegui\src\render</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLFBOTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLGeometryBuffer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderer.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLRenderTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTexture.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLViewportTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\CEGUIOpenGLWGLPBTextureTarget.cpp">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\cegui\src\RendererModules\OpenGL\glew.c">
+      <Filter>cegui\src\render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\cegui\src\minizip\ioapi.h">

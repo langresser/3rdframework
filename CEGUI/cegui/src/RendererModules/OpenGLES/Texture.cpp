@@ -128,30 +128,9 @@ void OpenGLESTexture::loadFromFile(const String& filename,
     // ImageCodec classes - we have intimate knowledge of how they are
     // implemented and that knowledge is relied upon in an unhealthy way; this
     // should be addressed at some stage.
-
-    // load file to memory via resource provider
-    RawDataContainer texFile;
-    System::getSingleton().getResourceProvider()->
-        loadRawDataContainer(filename, texFile, resourceGroup);
-
-    // get and check existence of CEGUI::System (needed to access ImageCodec)
-    System* sys = System::getSingletonPtr();
-    if (!sys)
-        CEGUI_THROW(RendererException(
-            "CEGUI::System object has not been created: "
-            "unable to access ImageCodec."));
-
-    Texture* res = sys->getImageCodec().load(texFile, this);
-
-    // unload file data buffer
-    System::getSingleton().getResourceProvider()->
-        unloadRawDataContainer(texFile);
-
-    if (!res)
-        // It's an error
-        CEGUI_THROW(RendererException(
-            sys->getImageCodec().getIdentifierString() +
-            " failed to load image '" + filename + "'."));
+	String dir = System::getSingleton().getResourceProvider()->getResourceGroupDirectory(resourceGroup);
+	String finalFileName = dir + filename;
+	Texture* res = System::getSingleton().getImageCodec().load(finalFileName.c_str(), this);
 }
 
 //----------------------------------------------------------------------------//

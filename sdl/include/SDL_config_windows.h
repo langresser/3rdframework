@@ -184,23 +184,23 @@ typedef unsigned int uintptr_t;
 #endif
 
 /* Enable OpenGL support */
-// #ifndef _WIN32_WCE
-// #ifndef SDL_VIDEO_OPENGL
-// #define SDL_VIDEO_OPENGL	1
-// #endif
-// #ifndef SDL_VIDEO_OPENGL_WGL
-// #define SDL_VIDEO_OPENGL_WGL	1
-// #endif
-// #ifndef SDL_VIDEO_RENDER_OGL
-// #define SDL_VIDEO_RENDER_OGL	1
-// #endif
-// #endif
+#ifndef _WIN32_WCE
+#ifndef SDL_VIDEO_OPENGL
+#define SDL_VIDEO_OPENGL	1
+#endif
+#ifndef SDL_VIDEO_OPENGL_WGL
+#define SDL_VIDEO_OPENGL_WGL	1
+#endif
+#ifndef SDL_VIDEO_RENDER_OGL
+#define SDL_VIDEO_RENDER_OGL	1
+#endif
+#endif
 
 // opengles
-#define SDL_VIDEO_OPENGL_EGL	1
-#define SDL_VIDEO_OPENGL_ES	1
-#define SDL_VIDEO_RENDER_OGL_ES	1
-#undef SDL_VIDEO_RENDER_OGL_ES2
+// #define SDL_VIDEO_OPENGL_EGL	1
+// #define SDL_VIDEO_OPENGL_ES	1
+// #define SDL_VIDEO_RENDER_OGL_ES	1
+// #undef SDL_VIDEO_RENDER_OGL_ES2
 
 /* Enable system power support */
 #define SDL_POWER_WINDOWS 1
