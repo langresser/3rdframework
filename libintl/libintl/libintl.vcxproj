@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FFC053A8-0AC3-4928-ABD1-5783048150FB}</ProjectGuid>
+    <ProjectGuid>{F425E6C6-40A7-4ACF-B4B0-F8C4D78BEB74}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>test_iconv</RootNamespace>
-    <ProjectName>iconv</ProjectName>
+    <RootNamespace>libintl</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -23,7 +22,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
@@ -39,53 +38,84 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>../libs</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../libs</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>E:\devandroid\test_iconv\test_iconv\libiconv-1.14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDOWS;WINDOWS;WIN32;DEBUG;_DEBUG;BUILDING_LIBICONV;BUILDING_LIBCHARSET;USING_STATIC_LIBICONV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="libiconv-1.14\localcharset.h" />
-    <ClInclude Include="libiconv-1.14\relocatable.h" />
-    <ClInclude Include="targetver.h" />
+    <ClCompile Include="..\bindtextdom.c" />
+    <ClCompile Include="..\dcgettext.c" />
+    <ClCompile Include="..\dcigettext.c" />
+    <ClCompile Include="..\dcngettext.c" />
+    <ClCompile Include="..\dgettext.c" />
+    <ClCompile Include="..\dngettext.c" />
+    <ClCompile Include="..\explodename.c" />
+    <ClCompile Include="..\finddomain.c" />
+    <ClCompile Include="..\gettext.c" />
+    <ClCompile Include="..\intl-compat.c" />
+    <ClCompile Include="..\l10nflist.c" />
+    <ClCompile Include="..\langprefs.c" />
+    <ClCompile Include="..\loadmsgcat.c" />
+    <ClCompile Include="..\localcharset.c" />
+    <ClCompile Include="..\localealias.c" />
+    <ClCompile Include="..\localename.c" />
+    <ClCompile Include="..\log.c" />
+    <ClCompile Include="..\ngettext.c" />
+    <ClCompile Include="..\os2compat.c" />
+    <ClCompile Include="..\osdep.c" />
+    <ClCompile Include="..\plural-exp.c" />
+    <ClCompile Include="..\plural.c" />
+    <ClCompile Include="..\printf-args.c" />
+    <ClCompile Include="..\printf-parse.c" />
+    <ClCompile Include="..\printf.c" />
+    <ClCompile Include="..\relocatable.c" />
+    <ClCompile Include="..\textdomain.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="libiconv-1.14\iconv.c" />
-    <ClCompile Include="libiconv-1.14\localcharset.c" />
-    <ClCompile Include="libiconv-1.14\relocatable.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="libiconv-1.14\libiconv.rc" />
+    <ClInclude Include="..\eval-plural.h" />
+    <ClInclude Include="..\gettextP.h" />
+    <ClInclude Include="..\gmo.h" />
+    <ClInclude Include="..\hash-string.h" />
+    <ClInclude Include="..\libintl.h" />
+    <ClInclude Include="..\loadinfo.h" />
+    <ClInclude Include="..\localcharset.h" />
+    <ClInclude Include="..\os2compat.h" />
+    <ClInclude Include="..\plural-exp.h" />
+    <ClInclude Include="..\printf-args.h" />
+    <ClInclude Include="..\printf-parse.h" />
+    <ClInclude Include="..\relocatable.h" />
+    <ClInclude Include="..\vasnprintf.h" />
+    <ClInclude Include="..\vasnwprintf.h" />
+    <ClInclude Include="..\wprintf-parse.h" />
+    <ClInclude Include="..\xsize.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
