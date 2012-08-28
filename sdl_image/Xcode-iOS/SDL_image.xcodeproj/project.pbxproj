@@ -236,9 +236,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				PRODUCT_NAME = SDL_image;
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -277,9 +279,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				PRODUCT_NAME = SDL_image;
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

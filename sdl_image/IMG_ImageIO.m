@@ -245,7 +245,10 @@ static SDL_Surface* Create_SDL_Surface_From_CGImage_RGB(CGImageRef image_ref)
     Rmask = 0x00FF0000;
     Gmask = 0x0000FF00;
     Bmask = 0x000000FF;
-    
+
+//    Rmask = 0x000000ff;
+//    Gmask = 0x0000FF00;
+//    Bmask = 0x00ff0000;
     surface = SDL_CreateRGBSurface(SDL_SWSURFACE, w, h, 32, Rmask, Gmask, Bmask, Amask);
     if (surface)
     {
@@ -264,7 +267,7 @@ static SDL_Surface* Create_SDL_Surface_From_CGImage_RGB(CGImageRef image_ref)
         CGContextDrawImage(bitmap_context, rect, image_ref);
         
         CGContextRelease(bitmap_context);
-        
+
         // FIXME: Reverse the premultiplied alpha
         if ((bitmap_info & kCGBitmapAlphaInfoMask) == kCGImageAlphaPremultipliedFirst) {
             int i, j;

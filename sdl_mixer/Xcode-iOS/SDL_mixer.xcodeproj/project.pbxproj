@@ -377,9 +377,11 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = SDL_mixer;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -388,9 +390,11 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = SDL_mixer;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};

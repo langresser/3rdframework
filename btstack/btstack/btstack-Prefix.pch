@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'btstack' target in the 'btstack' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

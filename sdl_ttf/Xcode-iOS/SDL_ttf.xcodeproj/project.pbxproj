@@ -161,8 +161,10 @@
 					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_2)",
 					../../freetype/include,
 				);
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				PRODUCT_NAME = SDL_ttf;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -176,8 +178,10 @@
 					"$(HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_2)",
 					../../freetype/include,
 				);
+				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				PRODUCT_NAME = SDL_ttf;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

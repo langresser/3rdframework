@@ -34,5 +34,5 @@
 #endif
 
 #ifndef WIN32
-//#define APIENTRY
+#define APIENTRY
 #endif

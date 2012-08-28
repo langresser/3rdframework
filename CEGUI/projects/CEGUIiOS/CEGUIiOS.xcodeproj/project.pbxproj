@@ -2491,9 +2491,11 @@
 					../../../sdl/include,
 					../../../rapidxml,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2503,6 +2505,7 @@
 				DSTROOT = /tmp/CEGUIiOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CEGUIiOS/CEGUIiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = CEGUI_STATIC;
 				HEADER_SEARCH_PATHS = (
 					../../cegui/include,
 					../../../freetype/include,
@@ -2510,9 +2513,11 @@
 					../../../sdl/include,
 					../../../rapidxml,
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

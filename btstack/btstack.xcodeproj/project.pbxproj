@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B22129515DFB1FD00219D4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B22129415DFB1FD00219D4B /* Foundation.framework */; };
+		3B2212F215DFB64100219D4B /* bt_control_iphone.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212C615DFB64100219D4B /* bt_control_iphone.h */; };
+		3B2212F315DFB64100219D4B /* bt_control_iphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212C715DFB64100219D4B /* bt_control_iphone.m */; };
+		3B2212F415DFB64100219D4B /* bt_control.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212C815DFB64100219D4B /* bt_control.h */; };
+		3B2212F515DFB64100219D4B /* btstack_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212C915DFB64100219D4B /* btstack_memory.c */; };
+		3B2212F615DFB64100219D4B /* btstack_memory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212CA15DFB64100219D4B /* btstack_memory.h */; };
+		3B2212F715DFB64100219D4B /* btstack.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212CB15DFB64100219D4B /* btstack.c */; };
+		3B2212F815DFB64100219D4B /* daemon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212CC15DFB64100219D4B /* daemon.c */; };
+		3B2212F915DFB64100219D4B /* debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212CD15DFB64100219D4B /* debug.h */; };
+		3B2212FA15DFB64100219D4B /* hci_cmds.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212CE15DFB64100219D4B /* hci_cmds.c */; };
+		3B2212FB15DFB64100219D4B /* hci_dump.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212CF15DFB64100219D4B /* hci_dump.c */; };
+		3B2212FC15DFB64100219D4B /* hci_dump.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212D015DFB64100219D4B /* hci_dump.h */; };
+		3B2212FD15DFB64100219D4B /* hci_transport_h4_dma.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212D115DFB64100219D4B /* hci_transport_h4_dma.c */; };
+		3B2212FE15DFB64100219D4B /* hci_transport_h4_ehcill_dma.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212D215DFB64100219D4B /* hci_transport_h4_ehcill_dma.c */; };
+		3B2212FF15DFB64100219D4B /* hci_transport_h4_iphone.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212D315DFB64100219D4B /* hci_transport_h4_iphone.c */; };
+		3B22130315DFB64100219D4B /* hci_transport.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212D715DFB64100219D4B /* hci_transport.h */; };
+		3B22130415DFB64100219D4B /* hci.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212D815DFB64100219D4B /* hci.c */; };
+		3B22130515DFB64100219D4B /* hci.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212D915DFB64100219D4B /* hci.h */; };
+		3B22130615DFB64100219D4B /* l2cap_signaling.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212DA15DFB64100219D4B /* l2cap_signaling.c */; };
+		3B22130715DFB64100219D4B /* l2cap_signaling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212DB15DFB64100219D4B /* l2cap_signaling.h */; };
+		3B22130815DFB64100219D4B /* l2cap.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212DC15DFB64100219D4B /* l2cap.c */; };
+		3B22130915DFB64100219D4B /* l2cap.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212DD15DFB64100219D4B /* l2cap.h */; };
+		3B22130A15DFB64100219D4B /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212DE15DFB64100219D4B /* linked_list.c */; };
+		3B22130B15DFB64100219D4B /* memory_pool.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212DF15DFB64100219D4B /* memory_pool.c */; };
+		3B22130C15DFB64100219D4B /* platform_iphone.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212E015DFB64100219D4B /* platform_iphone.h */; };
+		3B22130D15DFB64100219D4B /* platform_iphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E115DFB64100219D4B /* platform_iphone.m */; };
+		3B22130E15DFB64100219D4B /* remote_device_db_iphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E215DFB64100219D4B /* remote_device_db_iphone.m */; };
+		3B22130F15DFB64100219D4B /* remote_device_db_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E315DFB64100219D4B /* remote_device_db_memory.c */; };
+		3B22131015DFB64100219D4B /* remote_device_db.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212E415DFB64100219D4B /* remote_device_db.h */; };
+		3B22131115DFB64100219D4B /* rfcomm.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E515DFB64100219D4B /* rfcomm.c */; };
+		3B22131215DFB64100219D4B /* rfcomm.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212E615DFB64100219D4B /* rfcomm.h */; };
+		3B22131315DFB64100219D4B /* run_loop_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E715DFB64100219D4B /* run_loop_cocoa.m */; };
+		3B22131415DFB64100219D4B /* run_loop_embedded.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E815DFB64100219D4B /* run_loop_embedded.c */; };
+		3B22131515DFB64100219D4B /* run_loop_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212E915DFB64100219D4B /* run_loop_posix.c */; };
+		3B22131615DFB64100219D4B /* run_loop_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212EA15DFB64100219D4B /* run_loop_private.h */; };
+		3B22131715DFB64100219D4B /* run_loop.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212EB15DFB64100219D4B /* run_loop.c */; };
+		3B22131815DFB64100219D4B /* sdp_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212EC15DFB64100219D4B /* sdp_util.c */; };
+		3B22131915DFB64100219D4B /* sdp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212ED15DFB64100219D4B /* sdp.c */; };
+		3B22131A15DFB64100219D4B /* sdp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212EE15DFB64100219D4B /* sdp.h */; };
+		3B22131B15DFB64100219D4B /* socket_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212EF15DFB64100219D4B /* socket_connection.c */; };
+		3B22131C15DFB64100219D4B /* socket_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2212F015DFB64100219D4B /* socket_connection.h */; };
+		3B22131D15DFB64100219D4B /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2212F115DFB64100219D4B /* utils.c */; };
+		3B22135A15DFB90800219D4B /* btstack.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22134F15DFB90800219D4B /* btstack.h */; };
+		3B22135B15DFB90800219D4B /* hal_cpu.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135015DFB90800219D4B /* hal_cpu.h */; };
+		3B22135C15DFB90800219D4B /* hal_tick.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135115DFB90800219D4B /* hal_tick.h */; };
+		3B22135D15DFB90800219D4B /* hal_uart_dma.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135215DFB90800219D4B /* hal_uart_dma.h */; };
+		3B22135E15DFB90800219D4B /* hci_cmds.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135315DFB90800219D4B /* hci_cmds.h */; };
+		3B22135F15DFB90800219D4B /* linked_list.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135415DFB90800219D4B /* linked_list.h */; };
+		3B22136015DFB90800219D4B /* memory_pool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135515DFB90800219D4B /* memory_pool.h */; };
+		3B22136115DFB90800219D4B /* run_loop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135615DFB90800219D4B /* run_loop.h */; };
+		3B22136215DFB90800219D4B /* sdp_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135715DFB90800219D4B /* sdp_util.h */; };
+		3B22136315DFB90800219D4B /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135815DFB90800219D4B /* utils.h */; };
+		3B22136415DFB90800219D4B /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22135915DFB90800219D4B /* version.h */; };
+		3B22136715DFB9DE00219D4B /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22136615DFB9DE00219D4B /* config.h */; };
+		3B22137615DFBA3900219D4B /* SpringBoardAccess.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B22136F15DFBA3900219D4B /* SpringBoardAccess.c */; };
+		3B22137815DFBA3900219D4B /* SpringBoardAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22137115DFBA3900219D4B /* SpringBoardAccess.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B22129115DFB1FD00219D4B /* libbtstack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbtstack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B22129415DFB1FD00219D4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B22129815DFB1FD00219D4B /* btstack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "btstack-Prefix.pch"; sourceTree = "<group>"; };
+		3B2212C615DFB64100219D4B /* bt_control_iphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bt_control_iphone.h; path = src/bt_control_iphone.h; sourceTree = "<group>"; };
+		3B2212C715DFB64100219D4B /* bt_control_iphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bt_control_iphone.m; path = src/bt_control_iphone.m; sourceTree = "<group>"; };
+		3B2212C815DFB64100219D4B /* bt_control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bt_control.h; path = src/bt_control.h; sourceTree = "<group>"; };
+		3B2212C915DFB64100219D4B /* btstack_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = btstack_memory.c; path = src/btstack_memory.c; sourceTree = "<group>"; };
+		3B2212CA15DFB64100219D4B /* btstack_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = btstack_memory.h; path = src/btstack_memory.h; sourceTree = "<group>"; };
+		3B2212CB15DFB64100219D4B /* btstack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = btstack.c; path = src/btstack.c; sourceTree = "<group>"; };
+		3B2212CC15DFB64100219D4B /* daemon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = daemon.c; path = src/daemon.c; sourceTree = "<group>"; };
+		3B2212CD15DFB64100219D4B /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = debug.h; path = src/debug.h; sourceTree = "<group>"; };
+		3B2212CE15DFB64100219D4B /* hci_cmds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hci_cmds.c; path = src/hci_cmds.c; sourceTree = "<group>"; };
+		3B2212CF15DFB64100219D4B /* hci_dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hci_dump.c; path = src/hci_dump.c; sourceTree = "<group>"; };
+		3B2212D015DFB64100219D4B /* hci_dump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hci_dump.h; path = src/hci_dump.h; sourceTree = "<group>"; };
+		3B2212D115DFB64100219D4B /* hci_transport_h4_dma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hci_transport_h4_dma.c; path = src/hci_transport_h4_dma.c; sourceTree = "<group>"; };
+		3B2212D215DFB64100219D4B /* hci_transport_h4_ehcill_dma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hci_transport_h4_ehcill_dma.c; path = src/hci_transport_h4_ehcill_dma.c; sourceTree = "<group>"; };
+		3B2212D315DFB64100219D4B /* hci_transport_h4_iphone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hci_transport_h4_iphone.c; path = src/hci_transport_h4_iphone.c; sourceTree = "<group>"; };
+		3B2212D715DFB64100219D4B /* hci_transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hci_transport.h; path = src/hci_transport.h; sourceTree = "<group>"; };
+		3B2212D815DFB64100219D4B /* hci.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hci.c; path = src/hci.c; sourceTree = "<group>"; };
+		3B2212D915DFB64100219D4B /* hci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hci.h; path = src/hci.h; sourceTree = "<group>"; };
+		3B2212DA15DFB64100219D4B /* l2cap_signaling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = l2cap_signaling.c; path = src/l2cap_signaling.c; sourceTree = "<group>"; };
+		3B2212DB15DFB64100219D4B /* l2cap_signaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l2cap_signaling.h; path = src/l2cap_signaling.h; sourceTree = "<group>"; };
+		3B2212DC15DFB64100219D4B /* l2cap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = l2cap.c; path = src/l2cap.c; sourceTree = "<group>"; };
+		3B2212DD15DFB64100219D4B /* l2cap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = l2cap.h; path = src/l2cap.h; sourceTree = "<group>"; };
+		3B2212DE15DFB64100219D4B /* linked_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = linked_list.c; path = src/linked_list.c; sourceTree = "<group>"; };
+		3B2212DF15DFB64100219D4B /* memory_pool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memory_pool.c; path = src/memory_pool.c; sourceTree = "<group>"; };
+		3B2212E015DFB64100219D4B /* platform_iphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_iphone.h; path = src/platform_iphone.h; sourceTree = "<group>"; };
+		3B2212E115DFB64100219D4B /* platform_iphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = platform_iphone.m; path = src/platform_iphone.m; sourceTree = "<group>"; };
+		3B2212E215DFB64100219D4B /* remote_device_db_iphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = remote_device_db_iphone.m; path = src/remote_device_db_iphone.m; sourceTree = "<group>"; };
+		3B2212E315DFB64100219D4B /* remote_device_db_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = remote_device_db_memory.c; path = src/remote_device_db_memory.c; sourceTree = "<group>"; };
+		3B2212E415DFB64100219D4B /* remote_device_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = remote_device_db.h; path = src/remote_device_db.h; sourceTree = "<group>"; };
+		3B2212E515DFB64100219D4B /* rfcomm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rfcomm.c; path = src/rfcomm.c; sourceTree = "<group>"; };
+		3B2212E615DFB64100219D4B /* rfcomm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rfcomm.h; path = src/rfcomm.h; sourceTree = "<group>"; };
+		3B2212E715DFB64100219D4B /* run_loop_cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = run_loop_cocoa.m; path = src/run_loop_cocoa.m; sourceTree = "<group>"; };
+		3B2212E815DFB64100219D4B /* run_loop_embedded.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = run_loop_embedded.c; path = src/run_loop_embedded.c; sourceTree = "<group>"; };
+		3B2212E915DFB64100219D4B /* run_loop_posix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = run_loop_posix.c; path = src/run_loop_posix.c; sourceTree = "<group>"; };
+		3B2212EA15DFB64100219D4B /* run_loop_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = run_loop_private.h; path = src/run_loop_private.h; sourceTree = "<group>"; };
+		3B2212EB15DFB64100219D4B /* run_loop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = run_loop.c; path = src/run_loop.c; sourceTree = "<group>"; };
+		3B2212EC15DFB64100219D4B /* sdp_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sdp_util.c; path = src/sdp_util.c; sourceTree = "<group>"; };
+		3B2212ED15DFB64100219D4B /* sdp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sdp.c; path = src/sdp.c; sourceTree = "<group>"; };
+		3B2212EE15DFB64100219D4B /* sdp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sdp.h; path = src/sdp.h; sourceTree = "<group>"; };
+		3B2212EF15DFB64100219D4B /* socket_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = socket_connection.c; path = src/socket_connection.c; sourceTree = "<group>"; };
+		3B2212F015DFB64100219D4B /* socket_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socket_connection.h; path = src/socket_connection.h; sourceTree = "<group>"; };
+		3B2212F115DFB64100219D4B /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utils.c; path = src/utils.c; sourceTree = "<group>"; };
+		3B22134F15DFB90800219D4B /* btstack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btstack.h; sourceTree = "<group>"; };
+		3B22135015DFB90800219D4B /* hal_cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hal_cpu.h; sourceTree = "<group>"; };
+		3B22135115DFB90800219D4B /* hal_tick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hal_tick.h; sourceTree = "<group>"; };
+		3B22135215DFB90800219D4B /* hal_uart_dma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hal_uart_dma.h; sourceTree = "<group>"; };
+		3B22135315DFB90800219D4B /* hci_cmds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hci_cmds.h; sourceTree = "<group>"; };
+		3B22135415DFB90800219D4B /* linked_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linked_list.h; sourceTree = "<group>"; };
+		3B22135515DFB90800219D4B /* memory_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_pool.h; sourceTree = "<group>"; };
+		3B22135615DFB90800219D4B /* run_loop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = run_loop.h; sourceTree = "<group>"; };
+		3B22135715DFB90800219D4B /* sdp_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdp_util.h; sourceTree = "<group>"; };
+		3B22135815DFB90800219D4B /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		3B22135915DFB90800219D4B /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		3B22136615DFB9DE00219D4B /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		3B22136F15DFBA3900219D4B /* SpringBoardAccess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SpringBoardAccess.c; sourceTree = "<group>"; };
+		3B22137115DFBA3900219D4B /* SpringBoardAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAccess.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B22128E15DFB1FD00219D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B22129515DFB1FD00219D4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B22128615DFB1FD00219D4B = {
+			isa = PBXGroup;
+			children = (
+				3B22136815DFBA3900219D4B /* SpringBoardAccess */,
+				3B22134D15DFB90800219D4B /* include */,
+				3B2212C515DFB5CE00219D4B /* src */,
+				3B22129615DFB1FD00219D4B /* btstack */,
+				3B22129315DFB1FD00219D4B /* Frameworks */,
+				3B22129215DFB1FD00219D4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B22129215DFB1FD00219D4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B22129115DFB1FD00219D4B /* libbtstack.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B22129315DFB1FD00219D4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B22129415DFB1FD00219D4B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B22129615DFB1FD00219D4B /* btstack */ = {
+			isa = PBXGroup;
+			children = (
+				3B22129715DFB1FD00219D4B /* Supporting Files */,
+			);
+			path = btstack;
+			sourceTree = "<group>";
+		};
+		3B22129715DFB1FD00219D4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B22129815DFB1FD00219D4B /* btstack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B2212C515DFB5CE00219D4B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3B2212C615DFB64100219D4B /* bt_control_iphone.h */,
+				3B2212C715DFB64100219D4B /* bt_control_iphone.m */,
+				3B2212C815DFB64100219D4B /* bt_control.h */,
+				3B2212C915DFB64100219D4B /* btstack_memory.c */,
+				3B2212CA15DFB64100219D4B /* btstack_memory.h */,
+				3B2212CB15DFB64100219D4B /* btstack.c */,
+				3B2212CC15DFB64100219D4B /* daemon.c */,
+				3B2212CD15DFB64100219D4B /* debug.h */,
+				3B2212CE15DFB64100219D4B /* hci_cmds.c */,
+				3B2212CF15DFB64100219D4B /* hci_dump.c */,
+				3B2212D015DFB64100219D4B /* hci_dump.h */,
+				3B2212D115DFB64100219D4B /* hci_transport_h4_dma.c */,
+				3B2212D215DFB64100219D4B /* hci_transport_h4_ehcill_dma.c */,
+				3B2212D315DFB64100219D4B /* hci_transport_h4_iphone.c */,
+				3B2212D715DFB64100219D4B /* hci_transport.h */,
+				3B2212D815DFB64100219D4B /* hci.c */,
+				3B2212D915DFB64100219D4B /* hci.h */,
+				3B2212DA15DFB64100219D4B /* l2cap_signaling.c */,
+				3B2212DB15DFB64100219D4B /* l2cap_signaling.h */,
+				3B2212DC15DFB64100219D4B /* l2cap.c */,
+				3B2212DD15DFB64100219D4B /* l2cap.h */,
+				3B2212DE15DFB64100219D4B /* linked_list.c */,
+				3B2212DF15DFB64100219D4B /* memory_pool.c */,
+				3B2212E015DFB64100219D4B /* platform_iphone.h */,
+				3B2212E115DFB64100219D4B /* platform_iphone.m */,
+				3B2212E215DFB64100219D4B /* remote_device_db_iphone.m */,
+				3B2212E315DFB64100219D4B /* remote_device_db_memory.c */,
+				3B2212E415DFB64100219D4B /* remote_device_db.h */,
+				3B2212E515DFB64100219D4B /* rfcomm.c */,
+				3B2212E615DFB64100219D4B /* rfcomm.h */,
+				3B2212E715DFB64100219D4B /* run_loop_cocoa.m */,
+				3B2212E815DFB64100219D4B /* run_loop_embedded.c */,
+				3B2212E915DFB64100219D4B /* run_loop_posix.c */,
+				3B2212EA15DFB64100219D4B /* run_loop_private.h */,
+				3B2212EB15DFB64100219D4B /* run_loop.c */,
+				3B2212EC15DFB64100219D4B /* sdp_util.c */,
+				3B2212ED15DFB64100219D4B /* sdp.c */,
+				3B2212EE15DFB64100219D4B /* sdp.h */,
+				3B2212EF15DFB64100219D4B /* socket_connection.c */,
+				3B2212F015DFB64100219D4B /* socket_connection.h */,
+				3B2212F115DFB64100219D4B /* utils.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		3B22134D15DFB90800219D4B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3B22136615DFB9DE00219D4B /* config.h */,
+				3B22134E15DFB90800219D4B /* btstack */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3B22134E15DFB90800219D4B /* btstack */ = {
+			isa = PBXGroup;
+			children = (
+				3B22134F15DFB90800219D4B /* btstack.h */,
+				3B22135015DFB90800219D4B /* hal_cpu.h */,
+				3B22135115DFB90800219D4B /* hal_tick.h */,
+				3B22135215DFB90800219D4B /* hal_uart_dma.h */,
+				3B22135315DFB90800219D4B /* hci_cmds.h */,
+				3B22135415DFB90800219D4B /* linked_list.h */,
+				3B22135515DFB90800219D4B /* memory_pool.h */,
+				3B22135615DFB90800219D4B /* run_loop.h */,
+				3B22135715DFB90800219D4B /* sdp_util.h */,
+				3B22135815DFB90800219D4B /* utils.h */,
+				3B22135915DFB90800219D4B /* version.h */,
+			);
+			path = btstack;
+			sourceTree = "<group>";
+		};
+		3B22136815DFBA3900219D4B /* SpringBoardAccess */ = {
+			isa = PBXGroup;
+			children = (
+				3B22136F15DFBA3900219D4B /* SpringBoardAccess.c */,
+				3B22137115DFBA3900219D4B /* SpringBoardAccess.h */,
+			);
+			path = SpringBoardAccess;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3B22128F15DFB1FD00219D4B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2212F215DFB64100219D4B /* bt_control_iphone.h in Headers */,
+				3B2212F415DFB64100219D4B /* bt_control.h in Headers */,
+				3B2212F615DFB64100219D4B /* btstack_memory.h in Headers */,
+				3B2212F915DFB64100219D4B /* debug.h in Headers */,
+				3B2212FC15DFB64100219D4B /* hci_dump.h in Headers */,
+				3B22130315DFB64100219D4B /* hci_transport.h in Headers */,
+				3B22130515DFB64100219D4B /* hci.h in Headers */,
+				3B22130715DFB64100219D4B /* l2cap_signaling.h in Headers */,
+				3B22130915DFB64100219D4B /* l2cap.h in Headers */,
+				3B22130C15DFB64100219D4B /* platform_iphone.h in Headers */,
+				3B22131015DFB64100219D4B /* remote_device_db.h in Headers */,
+				3B22131215DFB64100219D4B /* rfcomm.h in Headers */,
+				3B22131615DFB64100219D4B /* run_loop_private.h in Headers */,
+				3B22131A15DFB64100219D4B /* sdp.h in Headers */,
+				3B22131C15DFB64100219D4B /* socket_connection.h in Headers */,
+				3B22135A15DFB90800219D4B /* btstack.h in Headers */,
+				3B22135B15DFB90800219D4B /* hal_cpu.h in Headers */,
+				3B22135C15DFB90800219D4B /* hal_tick.h in Headers */,
+				3B22135D15DFB90800219D4B /* hal_uart_dma.h in Headers */,
+				3B22135E15DFB90800219D4B /* hci_cmds.h in Headers */,
+				3B22135F15DFB90800219D4B /* linked_list.h in Headers */,
+				3B22136015DFB90800219D4B /* memory_pool.h in Headers */,
+				3B22136115DFB90800219D4B /* run_loop.h in Headers */,
+				3B22136215DFB90800219D4B /* sdp_util.h in Headers */,
+				3B22136315DFB90800219D4B /* utils.h in Headers */,
+				3B22136415DFB90800219D4B /* version.h in Headers */,
+				3B22136715DFB9DE00219D4B /* config.h in Headers */,
+				3B22137815DFBA3900219D4B /* SpringBoardAccess.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3B22129015DFB1FD00219D4B /* btstack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B22129E15DFB1FD00219D4B /* Build configuration list for PBXNativeTarget "btstack" */;
+			buildPhases = (
+				3B22128D15DFB1FD00219D4B /* Sources */,
+				3B22128E15DFB1FD00219D4B /* Frameworks */,
+				3B22128F15DFB1FD00219D4B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = btstack;
+			productName = btstack;
+			productReference = 3B22129115DFB1FD00219D4B /* libbtstack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B22128815DFB1FD00219D4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3B22128B15DFB1FD00219D4B /* Build configuration list for PBXProject "btstack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B22128615DFB1FD00219D4B;
+			productRefGroup = 3B22129215DFB1FD00219D4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B22129015DFB1FD00219D4B /* btstack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B22128D15DFB1FD00219D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2212F315DFB64100219D4B /* bt_control_iphone.m in Sources */,
+				3B2212F515DFB64100219D4B /* btstack_memory.c in Sources */,
+				3B2212F715DFB64100219D4B /* btstack.c in Sources */,
+				3B2212F815DFB64100219D4B /* daemon.c in Sources */,
+				3B2212FA15DFB64100219D4B /* hci_cmds.c in Sources */,
+				3B2212FB15DFB64100219D4B /* hci_dump.c in Sources */,
+				3B2212FD15DFB64100219D4B /* hci_transport_h4_dma.c in Sources */,
+				3B2212FE15DFB64100219D4B /* hci_transport_h4_ehcill_dma.c in Sources */,
+				3B2212FF15DFB64100219D4B /* hci_transport_h4_iphone.c in Sources */,
+				3B22130415DFB64100219D4B /* hci.c in Sources */,
+				3B22130615DFB64100219D4B /* l2cap_signaling.c in Sources */,
+				3B22130815DFB64100219D4B /* l2cap.c in Sources */,
+				3B22130A15DFB64100219D4B /* linked_list.c in Sources */,
+				3B22130B15DFB64100219D4B /* memory_pool.c in Sources */,
+				3B22130D15DFB64100219D4B /* platform_iphone.m in Sources */,
+				3B22130E15DFB64100219D4B /* remote_device_db_iphone.m in Sources */,
+				3B22130F15DFB64100219D4B /* remote_device_db_memory.c in Sources */,
+				3B22131115DFB64100219D4B /* rfcomm.c in Sources */,
+				3B22131315DFB64100219D4B /* run_loop_cocoa.m in Sources */,
+				3B22131415DFB64100219D4B /* run_loop_embedded.c in Sources */,
+				3B22131515DFB64100219D4B /* run_loop_posix.c in Sources */,
+				3B22131715DFB64100219D4B /* run_loop.c in Sources */,
+				3B22131815DFB64100219D4B /* sdp_util.c in Sources */,
+				3B22131915DFB64100219D4B /* sdp.c in Sources */,
+				3B22131B15DFB64100219D4B /* socket_connection.c in Sources */,
+				3B22131D15DFB64100219D4B /* utils.c in Sources */,
+				3B22137615DFBA3900219D4B /* SpringBoardAccess.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3B22129C15DFB1FD00219D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B22129D15DFB1FD00219D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B22129F15DFB1FD00219D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/btstack.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "btstack/btstack-Prefix.pch";
+				HEADER_SEARCH_PATHS = ./inlcude/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SpringBoardAccess\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3B2212A015DFB1FD00219D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/btstack.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "btstack/btstack-Prefix.pch";
+				HEADER_SEARCH_PATHS = ./inlcude/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SpringBoardAccess\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B22128B15DFB1FD00219D4B /* Build configuration list for PBXProject "btstack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B22129C15DFB1FD00219D4B /* Debug */,
+				3B22129D15DFB1FD00219D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B22129E15DFB1FD00219D4B /* Build configuration list for PBXNativeTarget "btstack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B22129F15DFB1FD00219D4B /* Debug */,
+				3B2212A015DFB1FD00219D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B22128815DFB1FD00219D4B /* Project object */;
+}

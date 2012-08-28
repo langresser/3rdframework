@@ -1081,6 +1081,7 @@ SDL_UpdateFullscreenMode(SDL_Window * window, SDL_bool fullscreen)
                 }
                 display->fullscreen_window = other;
 
+#ifndef __IPHONEOS__
                 /* Generate a mode change event here */
                 if (resized) {
                     SDL_SendWindowEvent(other, SDL_WINDOWEVENT_RESIZED,
@@ -1088,6 +1089,7 @@ SDL_UpdateFullscreenMode(SDL_Window * window, SDL_bool fullscreen)
                 } else {
                     SDL_OnWindowResized(other);
                 }
+#endif
 
                 SDL_RestoreMousePosition(other);
                 return;
@@ -1127,9 +1129,11 @@ SDL_FinishWindowCreation(SDL_Window *window, Uint32 flags)
     if (flags & SDL_WINDOW_MINIMIZED) {
         SDL_MinimizeWindow(window);
     }
+    
     if (flags & SDL_WINDOW_FULLSCREEN) {
         SDL_SetWindowFullscreen(window, SDL_TRUE);
     }
+    
     if (flags & SDL_WINDOW_INPUT_GRABBED) {
         SDL_SetWindowGrab(window, SDL_TRUE);
     }
