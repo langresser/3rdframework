@@ -65,13 +65,9 @@
 		3B44F8F915ED36BC003E18FA /* vorbis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vorbis.h; sourceTree = "<group>"; };
 		3B44F8FA15ED36BC003E18FA /* vorbis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vorbis.m; sourceTree = "<group>"; };
 		3B44F90515ED377F003E18FA /* config_types.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config_types.h.in; sourceTree = "<group>"; };
-		3B44F90615ED377F003E18FA /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
-		3B44F90715ED377F003E18FA /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
 		3B44F90815ED377F003E18FA /* ogg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg.h; sourceTree = "<group>"; };
 		3B44F90915ED377F003E18FA /* os_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os_types.h; sourceTree = "<group>"; };
 		3B44F90B15ED377F003E18FA /* codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codec.h; sourceTree = "<group>"; };
-		3B44F90C15ED377F003E18FA /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
-		3B44F90D15ED377F003E18FA /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
 		3B44F90E15ED377F003E18FA /* vorbisenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisenc.h; sourceTree = "<group>"; };
 		3B44F90F15ED377F003E18FA /* vorbisfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisfile.h; sourceTree = "<group>"; };
 		3B44F91115ED377F003E18FA /* analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = analysis.c; sourceTree = "<group>"; };
@@ -189,8 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				3B44F90515ED377F003E18FA /* config_types.h.in */,
-				3B44F90615ED377F003E18FA /* Makefile.am */,
-				3B44F90715ED377F003E18FA /* Makefile.in */,
 				3B44F90815ED377F003E18FA /* ogg.h */,
 				3B44F90915ED377F003E18FA /* os_types.h */,
 			);
@@ -201,8 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				3B44F90B15ED377F003E18FA /* codec.h */,
-				3B44F90C15ED377F003E18FA /* Makefile.am */,
-				3B44F90D15ED377F003E18FA /* Makefile.in */,
 				3B44F90E15ED377F003E18FA /* vorbisenc.h */,
 				3B44F90F15ED377F003E18FA /* vorbisfile.h */,
 			);
@@ -458,6 +450,7 @@
 				3B44F90015ED36BC003E18FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

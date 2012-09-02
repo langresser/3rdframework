@@ -1080,6 +1080,7 @@
 				3B44F6E415ED2C83003E18FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
