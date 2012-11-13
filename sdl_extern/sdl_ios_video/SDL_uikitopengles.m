@@ -130,8 +130,10 @@ SDL_GLContext UIKit_GL_CreateContext(_THIS, SDL_Window * window)
         [view->viewcontroller retain];
     }
 
-    /* add the view to our window */
-    [uiwindow addSubview: view ];
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 6.0) {
+        /* add the view to our window */
+        [uiwindow addSubview: view ];
+    }
 
     if ( UIKit_GL_MakeCurrent(_this, window, view) < 0 ) {
         UIKit_GL_DeleteContext(_this, view);

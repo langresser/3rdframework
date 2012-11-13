@@ -34,8 +34,8 @@ png_default_warning PNGARG((png_structp png_ptr,
  * you should supply a replacement error function and use png_set_error_fn()
  * to replace the error function at run-time.
  */
-#define PNG_NO_ERROR_TEXT
-#define PNG_NO_WARNINGS
+//#define PNG_NO_ERROR_TEXT
+//#define PNG_NO_WARNINGS
 
 #ifndef PNG_NO_ERROR_TEXT
 void PNGAPI

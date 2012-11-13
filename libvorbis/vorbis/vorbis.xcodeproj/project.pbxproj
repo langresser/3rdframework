@@ -16,7 +16,6 @@
 		3B44F96A15ED377F003E18FA /* vorbisfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B44F90F15ED377F003E18FA /* vorbisfile.h */; };
 		3B44F96B15ED377F003E18FA /* analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F91115ED377F003E18FA /* analysis.c */; };
 		3B44F96C15ED377F003E18FA /* backends.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B44F91215ED377F003E18FA /* backends.h */; };
-		3B44F96D15ED377F003E18FA /* barkmel.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F91315ED377F003E18FA /* barkmel.c */; };
 		3B44F96E15ED377F003E18FA /* bitrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F91415ED377F003E18FA /* bitrate.c */; };
 		3B44F96F15ED377F003E18FA /* bitrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B44F91515ED377F003E18FA /* bitrate.h */; };
 		3B44F97015ED377F003E18FA /* block.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F91615ED377F003E18FA /* block.c */; };
@@ -52,10 +51,11 @@
 		3B44F9A615ED377F003E18FA /* smallft.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F95E15ED377F003E18FA /* smallft.c */; };
 		3B44F9A715ED377F003E18FA /* smallft.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B44F95F15ED377F003E18FA /* smallft.h */; };
 		3B44F9A815ED377F003E18FA /* synthesis.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F96015ED377F003E18FA /* synthesis.c */; };
-		3B44F9A915ED377F003E18FA /* tone.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F96115ED377F003E18FA /* tone.c */; };
 		3B44F9AB15ED377F003E18FA /* vorbisfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F96315ED377F003E18FA /* vorbisfile.c */; };
 		3B44F9AC15ED377F003E18FA /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B44F96415ED377F003E18FA /* window.c */; };
 		3B44F9AD15ED377F003E18FA /* window.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B44F96515ED377F003E18FA /* window.h */; };
+		3BB0039A15F7A8C500785134 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0039815F7A8C500785134 /* bitwise.c */; };
+		3BB0039B15F7A8C500785134 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0039915F7A8C500785134 /* framing.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,7 +72,6 @@
 		3B44F90F15ED377F003E18FA /* vorbisfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisfile.h; sourceTree = "<group>"; };
 		3B44F91115ED377F003E18FA /* analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = analysis.c; sourceTree = "<group>"; };
 		3B44F91215ED377F003E18FA /* backends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backends.h; sourceTree = "<group>"; };
-		3B44F91315ED377F003E18FA /* barkmel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = barkmel.c; sourceTree = "<group>"; };
 		3B44F91415ED377F003E18FA /* bitrate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitrate.c; sourceTree = "<group>"; };
 		3B44F91515ED377F003E18FA /* bitrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitrate.h; sourceTree = "<group>"; };
 		3B44F91615ED377F003E18FA /* block.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = block.c; sourceTree = "<group>"; };
@@ -108,10 +107,11 @@
 		3B44F95E15ED377F003E18FA /* smallft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = smallft.c; sourceTree = "<group>"; };
 		3B44F95F15ED377F003E18FA /* smallft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smallft.h; sourceTree = "<group>"; };
 		3B44F96015ED377F003E18FA /* synthesis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = synthesis.c; sourceTree = "<group>"; };
-		3B44F96115ED377F003E18FA /* tone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tone.c; sourceTree = "<group>"; };
 		3B44F96315ED377F003E18FA /* vorbisfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vorbisfile.c; sourceTree = "<group>"; };
 		3B44F96415ED377F003E18FA /* window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = window.c; sourceTree = "<group>"; };
 		3B44F96515ED377F003E18FA /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		3BB0039815F7A8C500785134 /* bitwise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwise.c; sourceTree = "<group>"; };
+		3BB0039915F7A8C500785134 /* framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = framing.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +129,7 @@
 		3B44F8E615ED36BC003E18FA = {
 			isa = PBXGroup;
 			children = (
+				3BB0039715F7A8C500785134 /* ogg */,
 				3B44F90115ED377F003E18FA /* include */,
 				3B44F91015ED377F003E18FA /* lib */,
 				3B44F8F615ED36BC003E18FA /* vorbis */,
@@ -206,7 +207,6 @@
 			children = (
 				3B44F91115ED377F003E18FA /* analysis.c */,
 				3B44F91215ED377F003E18FA /* backends.h */,
-				3B44F91315ED377F003E18FA /* barkmel.c */,
 				3B44F91415ED377F003E18FA /* bitrate.c */,
 				3B44F91515ED377F003E18FA /* bitrate.h */,
 				3B44F91615ED377F003E18FA /* block.c */,
@@ -242,13 +242,22 @@
 				3B44F95E15ED377F003E18FA /* smallft.c */,
 				3B44F95F15ED377F003E18FA /* smallft.h */,
 				3B44F96015ED377F003E18FA /* synthesis.c */,
-				3B44F96115ED377F003E18FA /* tone.c */,
 				3B44F96315ED377F003E18FA /* vorbisfile.c */,
 				3B44F96415ED377F003E18FA /* window.c */,
 				3B44F96515ED377F003E18FA /* window.h */,
 			);
 			name = lib;
 			path = ../lib;
+			sourceTree = "<group>";
+		};
+		3BB0039715F7A8C500785134 /* ogg */ = {
+			isa = PBXGroup;
+			children = (
+				3BB0039815F7A8C500785134 /* bitwise.c */,
+				3BB0039915F7A8C500785134 /* framing.c */,
+			);
+			name = ogg;
+			path = ../ogg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +346,6 @@
 			files = (
 				3B44F8FB15ED36BC003E18FA /* vorbis.m in Sources */,
 				3B44F96B15ED377F003E18FA /* analysis.c in Sources */,
-				3B44F96D15ED377F003E18FA /* barkmel.c in Sources */,
 				3B44F96E15ED377F003E18FA /* bitrate.c in Sources */,
 				3B44F97015ED377F003E18FA /* block.c in Sources */,
 				3B44F97515ED377F003E18FA /* codebook.c in Sources */,
@@ -356,9 +364,10 @@
 				3B44F9A515ED377F003E18FA /* sharedbook.c in Sources */,
 				3B44F9A615ED377F003E18FA /* smallft.c in Sources */,
 				3B44F9A815ED377F003E18FA /* synthesis.c in Sources */,
-				3B44F9A915ED377F003E18FA /* tone.c in Sources */,
 				3B44F9AB15ED377F003E18FA /* vorbisfile.c in Sources */,
 				3B44F9AC15ED377F003E18FA /* window.c in Sources */,
+				3BB0039A15F7A8C500785134 /* bitwise.c in Sources */,
+				3BB0039B15F7A8C500785134 /* framing.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

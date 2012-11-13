@@ -102,7 +102,7 @@ CG_SetError(const char *prefix, CGDisplayErr result)
     case kCGErrorCannotComplete:
         error = "kCGErrorCannotComplete";
         break;
-    case kCGErrorNameTooLong:
+    case errFSNameTooLong:
         error = "kCGErrorNameTooLong";
         break;
     case kCGErrorNotImplemented:
@@ -114,9 +114,9 @@ CG_SetError(const char *prefix, CGDisplayErr result)
     case kCGErrorTypeCheck:
         error = "kCGErrorTypeCheck";
         break;
-    case kCGErrorNoCurrentPoint:
-        error = "kCGErrorNoCurrentPoint";
-        break;
+//    case kCGErrorNoCurrentPoint:
+//        error = "kCGErrorNoCurrentPoint";
+//        break;
     case kCGErrorInvalidOperation:
         error = "kCGErrorInvalidOperation";
         break;

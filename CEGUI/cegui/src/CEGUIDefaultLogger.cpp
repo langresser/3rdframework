@@ -31,6 +31,8 @@
 #include <ctime>
 #include <iomanip>
 
+//#define ENABLE_LOG
+
 // Start of CEGUI namespace section
 namespace CEGUI
 {
@@ -56,6 +58,7 @@ namespace CEGUI
     *************************************************************************/
     DefaultLogger::~DefaultLogger(void)
     {
+#ifdef ENABLE_LOG
         if (d_ostream.is_open())
         {
             char addr_buff[32];
@@ -63,6 +66,7 @@ namespace CEGUI
             logEvent("CEGUI::Logger singleton destroyed. " + String(addr_buff));
             d_ostream.close();
         }
+#endif
     }
 
     /*************************************************************************
@@ -70,6 +74,7 @@ namespace CEGUI
     *************************************************************************/
     void DefaultLogger::logEvent(const String& message, LoggingLevel level /* = Standard */)
     {
+#ifdef ENABLE_LOG
         using namespace std;
 
         time_t  et;
@@ -133,10 +138,12 @@ namespace CEGUI
                 d_ostream.flush();
             }
         }
+#endif
     }
 
     void DefaultLogger::setLogFilename(const String& filename, bool append)
     {
+#ifdef ENABLE_LOG
         // close current log file (if any)
         if (d_ostream.is_open())
         {
@@ -175,6 +182,7 @@ namespace CEGUI
 
             d_cache.clear();
         }
+#endif
     }
 
 } // End of  CEGUI namespace section

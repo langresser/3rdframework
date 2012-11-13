@@ -74,7 +74,6 @@
 		3B2218BB15DFBDC800219D4B /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22175215DFBDC800219D4B /* zlib.h */; };
 		3B2218BD15DFBDC800219D4B /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22175415DFBDC800219D4B /* zutil.h */; };
 		3B2218BE15DFBDC800219D4B /* ftlzw.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B22175615DFBDC800219D4B /* ftlzw.c */; };
-		3B2218BF15DFBDC800219D4B /* ftzopen.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B22175715DFBDC800219D4B /* ftzopen.c */; };
 		3B2218C015DFBDC800219D4B /* ftzopen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22175815DFBDC800219D4B /* ftzopen.h */; };
 		3B2218C115DFBDC800219D4B /* otvalid.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B22175A15DFBDC800219D4B /* otvalid.c */; };
 		3B2218C215DFBDC800219D4B /* otvalid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22175B15DFBDC800219D4B /* otvalid.h */; };
@@ -170,40 +169,27 @@
 		3B22196115DFBDC900219D4B /* winfnt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B22181515DFBDC800219D4B /* winfnt.h */; };
 		3B2219E615DFBFE100219D4B /* basepic.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219BF15DFBFE100219D4B /* basepic.c */; };
 		3B2219E715DFBFE100219D4B /* basepic.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2219C015DFBFE100219D4B /* basepic.h */; };
-		3B2219E815DFBFE100219D4B /* ftadvanc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C115DFBFE100219D4B /* ftadvanc.c */; };
 		3B2219E915DFBFE100219D4B /* ftapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C215DFBFE100219D4B /* ftapi.c */; };
 		3B2219EA15DFBFE100219D4B /* ftbase.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C315DFBFE100219D4B /* ftbase.c */; };
 		3B2219EB15DFBFE100219D4B /* ftbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2219C415DFBFE100219D4B /* ftbase.h */; };
 		3B2219EC15DFBFE100219D4B /* ftbbox.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C515DFBFE100219D4B /* ftbbox.c */; };
 		3B2219ED15DFBFE100219D4B /* ftbdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C615DFBFE100219D4B /* ftbdf.c */; };
 		3B2219EE15DFBFE100219D4B /* ftbitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C715DFBFE100219D4B /* ftbitmap.c */; };
-		3B2219EF15DFBFE100219D4B /* ftcalc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C815DFBFE100219D4B /* ftcalc.c */; };
-		3B2219F015DFBFE100219D4B /* ftcid.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219C915DFBFE100219D4B /* ftcid.c */; };
-		3B2219F115DFBFE100219D4B /* ftdbgmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219CA15DFBFE100219D4B /* ftdbgmem.c */; };
 		3B2219F215DFBFE100219D4B /* ftdebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219CB15DFBFE100219D4B /* ftdebug.c */; };
 		3B2219F315DFBFE100219D4B /* ftfstype.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219CC15DFBFE100219D4B /* ftfstype.c */; };
 		3B2219F415DFBFE100219D4B /* ftgasp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219CD15DFBFE100219D4B /* ftgasp.c */; };
-		3B2219F515DFBFE100219D4B /* ftgloadr.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219CE15DFBFE100219D4B /* ftgloadr.c */; };
 		3B2219F615DFBFE100219D4B /* ftglyph.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219CF15DFBFE100219D4B /* ftglyph.c */; };
 		3B2219F715DFBFE100219D4B /* ftgxval.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D015DFBFE100219D4B /* ftgxval.c */; };
 		3B2219F815DFBFE100219D4B /* ftinit.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D115DFBFE100219D4B /* ftinit.c */; };
 		3B2219F915DFBFE100219D4B /* ftlcdfil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D215DFBFE100219D4B /* ftlcdfil.c */; };
 		3B2219FB15DFBFE100219D4B /* ftmm.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D415DFBFE100219D4B /* ftmm.c */; };
-		3B2219FC15DFBFE100219D4B /* ftobjs.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D515DFBFE100219D4B /* ftobjs.c */; };
 		3B2219FD15DFBFE100219D4B /* ftotval.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D615DFBFE100219D4B /* ftotval.c */; };
-		3B2219FE15DFBFE100219D4B /* ftoutln.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D715DFBFE100219D4B /* ftoutln.c */; };
 		3B2219FF15DFBFE100219D4B /* ftpatent.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D815DFBFE100219D4B /* ftpatent.c */; };
 		3B221A0015DFBFE100219D4B /* ftpfr.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219D915DFBFE100219D4B /* ftpfr.c */; };
-		3B221A0115DFBFE100219D4B /* ftpic.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219DA15DFBFE100219D4B /* ftpic.c */; };
-		3B221A0215DFBFE100219D4B /* ftrfork.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219DB15DFBFE100219D4B /* ftrfork.c */; };
-		3B221A0315DFBFE100219D4B /* ftsnames.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219DC15DFBFE100219D4B /* ftsnames.c */; };
-		3B221A0415DFBFE100219D4B /* ftstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219DD15DFBFE100219D4B /* ftstream.c */; };
 		3B221A0515DFBFE100219D4B /* ftstroke.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219DE15DFBFE100219D4B /* ftstroke.c */; };
 		3B221A0615DFBFE100219D4B /* ftsynth.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219DF15DFBFE100219D4B /* ftsynth.c */; };
 		3B221A0715DFBFE100219D4B /* ftsystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219E015DFBFE100219D4B /* ftsystem.c */; };
-		3B221A0815DFBFE100219D4B /* fttrigon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219E115DFBFE100219D4B /* fttrigon.c */; };
 		3B221A0915DFBFE100219D4B /* fttype1.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219E215DFBFE100219D4B /* fttype1.c */; };
-		3B221A0A15DFBFE100219D4B /* ftutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219E315DFBFE100219D4B /* ftutil.c */; };
 		3B221A0B15DFBFE100219D4B /* ftwinfnt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219E415DFBFE100219D4B /* ftwinfnt.c */; };
 		3B221A0C15DFBFE100219D4B /* ftxf86.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2219E515DFBFE100219D4B /* ftxf86.c */; };
 /* End PBXBuildFile section */
@@ -362,7 +348,6 @@
 		3B22175215DFBDC800219D4B /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zlib.h; sourceTree = "<group>"; };
 		3B22175415DFBDC800219D4B /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zutil.h; sourceTree = "<group>"; };
 		3B22175615DFBDC800219D4B /* ftlzw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftlzw.c; sourceTree = "<group>"; };
-		3B22175715DFBDC800219D4B /* ftzopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftzopen.c; sourceTree = "<group>"; };
 		3B22175815DFBDC800219D4B /* ftzopen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftzopen.h; sourceTree = "<group>"; };
 		3B22175A15DFBDC800219D4B /* otvalid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = otvalid.c; sourceTree = "<group>"; };
 		3B22175B15DFBDC800219D4B /* otvalid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = otvalid.h; sourceTree = "<group>"; };
@@ -458,40 +443,27 @@
 		3B22181515DFBDC800219D4B /* winfnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winfnt.h; sourceTree = "<group>"; };
 		3B2219BF15DFBFE100219D4B /* basepic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = basepic.c; sourceTree = "<group>"; };
 		3B2219C015DFBFE100219D4B /* basepic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basepic.h; sourceTree = "<group>"; };
-		3B2219C115DFBFE100219D4B /* ftadvanc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftadvanc.c; sourceTree = "<group>"; };
 		3B2219C215DFBFE100219D4B /* ftapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftapi.c; sourceTree = "<group>"; };
 		3B2219C315DFBFE100219D4B /* ftbase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbase.c; sourceTree = "<group>"; };
 		3B2219C415DFBFE100219D4B /* ftbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftbase.h; sourceTree = "<group>"; };
 		3B2219C515DFBFE100219D4B /* ftbbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbbox.c; sourceTree = "<group>"; };
 		3B2219C615DFBFE100219D4B /* ftbdf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbdf.c; sourceTree = "<group>"; };
 		3B2219C715DFBFE100219D4B /* ftbitmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbitmap.c; sourceTree = "<group>"; };
-		3B2219C815DFBFE100219D4B /* ftcalc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftcalc.c; sourceTree = "<group>"; };
-		3B2219C915DFBFE100219D4B /* ftcid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftcid.c; sourceTree = "<group>"; };
-		3B2219CA15DFBFE100219D4B /* ftdbgmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftdbgmem.c; sourceTree = "<group>"; };
 		3B2219CB15DFBFE100219D4B /* ftdebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftdebug.c; sourceTree = "<group>"; };
 		3B2219CC15DFBFE100219D4B /* ftfstype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftfstype.c; sourceTree = "<group>"; };
 		3B2219CD15DFBFE100219D4B /* ftgasp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftgasp.c; sourceTree = "<group>"; };
-		3B2219CE15DFBFE100219D4B /* ftgloadr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftgloadr.c; sourceTree = "<group>"; };
 		3B2219CF15DFBFE100219D4B /* ftglyph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftglyph.c; sourceTree = "<group>"; };
 		3B2219D015DFBFE100219D4B /* ftgxval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftgxval.c; sourceTree = "<group>"; };
 		3B2219D115DFBFE100219D4B /* ftinit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftinit.c; sourceTree = "<group>"; };
 		3B2219D215DFBFE100219D4B /* ftlcdfil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftlcdfil.c; sourceTree = "<group>"; };
 		3B2219D415DFBFE100219D4B /* ftmm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftmm.c; sourceTree = "<group>"; };
-		3B2219D515DFBFE100219D4B /* ftobjs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftobjs.c; sourceTree = "<group>"; };
 		3B2219D615DFBFE100219D4B /* ftotval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftotval.c; sourceTree = "<group>"; };
-		3B2219D715DFBFE100219D4B /* ftoutln.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftoutln.c; sourceTree = "<group>"; };
 		3B2219D815DFBFE100219D4B /* ftpatent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftpatent.c; sourceTree = "<group>"; };
 		3B2219D915DFBFE100219D4B /* ftpfr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftpfr.c; sourceTree = "<group>"; };
-		3B2219DA15DFBFE100219D4B /* ftpic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftpic.c; sourceTree = "<group>"; };
-		3B2219DB15DFBFE100219D4B /* ftrfork.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftrfork.c; sourceTree = "<group>"; };
-		3B2219DC15DFBFE100219D4B /* ftsnames.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftsnames.c; sourceTree = "<group>"; };
-		3B2219DD15DFBFE100219D4B /* ftstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftstream.c; sourceTree = "<group>"; };
 		3B2219DE15DFBFE100219D4B /* ftstroke.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftstroke.c; sourceTree = "<group>"; };
 		3B2219DF15DFBFE100219D4B /* ftsynth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftsynth.c; sourceTree = "<group>"; };
 		3B2219E015DFBFE100219D4B /* ftsystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftsystem.c; sourceTree = "<group>"; };
-		3B2219E115DFBFE100219D4B /* fttrigon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fttrigon.c; sourceTree = "<group>"; };
 		3B2219E215DFBFE100219D4B /* fttype1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fttype1.c; sourceTree = "<group>"; };
-		3B2219E315DFBFE100219D4B /* ftutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftutil.c; sourceTree = "<group>"; };
 		3B2219E415DFBFE100219D4B /* ftwinfnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftwinfnt.c; sourceTree = "<group>"; };
 		3B2219E515DFBFE100219D4B /* ftxf86.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftxf86.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -733,40 +705,27 @@
 			children = (
 				3B2219BF15DFBFE100219D4B /* basepic.c */,
 				3B2219C015DFBFE100219D4B /* basepic.h */,
-				3B2219C115DFBFE100219D4B /* ftadvanc.c */,
 				3B2219C215DFBFE100219D4B /* ftapi.c */,
 				3B2219C315DFBFE100219D4B /* ftbase.c */,
 				3B2219C415DFBFE100219D4B /* ftbase.h */,
 				3B2219C515DFBFE100219D4B /* ftbbox.c */,
 				3B2219C615DFBFE100219D4B /* ftbdf.c */,
 				3B2219C715DFBFE100219D4B /* ftbitmap.c */,
-				3B2219C815DFBFE100219D4B /* ftcalc.c */,
-				3B2219C915DFBFE100219D4B /* ftcid.c */,
-				3B2219CA15DFBFE100219D4B /* ftdbgmem.c */,
 				3B2219CB15DFBFE100219D4B /* ftdebug.c */,
 				3B2219CC15DFBFE100219D4B /* ftfstype.c */,
 				3B2219CD15DFBFE100219D4B /* ftgasp.c */,
-				3B2219CE15DFBFE100219D4B /* ftgloadr.c */,
 				3B2219CF15DFBFE100219D4B /* ftglyph.c */,
 				3B2219D015DFBFE100219D4B /* ftgxval.c */,
 				3B2219D115DFBFE100219D4B /* ftinit.c */,
 				3B2219D215DFBFE100219D4B /* ftlcdfil.c */,
 				3B2219D415DFBFE100219D4B /* ftmm.c */,
-				3B2219D515DFBFE100219D4B /* ftobjs.c */,
 				3B2219D615DFBFE100219D4B /* ftotval.c */,
-				3B2219D715DFBFE100219D4B /* ftoutln.c */,
 				3B2219D815DFBFE100219D4B /* ftpatent.c */,
 				3B2219D915DFBFE100219D4B /* ftpfr.c */,
-				3B2219DA15DFBFE100219D4B /* ftpic.c */,
-				3B2219DB15DFBFE100219D4B /* ftrfork.c */,
-				3B2219DC15DFBFE100219D4B /* ftsnames.c */,
-				3B2219DD15DFBFE100219D4B /* ftstream.c */,
 				3B2219DE15DFBFE100219D4B /* ftstroke.c */,
 				3B2219DF15DFBFE100219D4B /* ftsynth.c */,
 				3B2219E015DFBFE100219D4B /* ftsystem.c */,
-				3B2219E115DFBFE100219D4B /* fttrigon.c */,
 				3B2219E215DFBFE100219D4B /* fttype1.c */,
-				3B2219E315DFBFE100219D4B /* ftutil.c */,
 				3B2219E415DFBFE100219D4B /* ftwinfnt.c */,
 				3B2219E515DFBFE100219D4B /* ftxf86.c */,
 			);
@@ -876,7 +835,6 @@
 			isa = PBXGroup;
 			children = (
 				3B22175615DFBDC800219D4B /* ftlzw.c */,
-				3B22175715DFBDC800219D4B /* ftzopen.c */,
 				3B22175815DFBDC800219D4B /* ftzopen.h */,
 			);
 			path = lzw;
@@ -1273,7 +1231,6 @@
 				3B22188F15DFBDC800219D4B /* gxvalid.c in Sources */,
 				3B2218AF15DFBDC800219D4B /* ftgzip.c in Sources */,
 				3B2218BE15DFBDC800219D4B /* ftlzw.c in Sources */,
-				3B2218BF15DFBDC800219D4B /* ftzopen.c in Sources */,
 				3B2218C115DFBDC800219D4B /* otvalid.c in Sources */,
 				3B2218CF15DFBDC800219D4B /* pcf.c in Sources */,
 				3B2218D815DFBDC900219D4B /* pfr.c in Sources */,
@@ -1288,39 +1245,26 @@
 				3B22195E15DFBDC900219D4B /* type42.c in Sources */,
 				3B22196015DFBDC900219D4B /* winfnt.c in Sources */,
 				3B2219E615DFBFE100219D4B /* basepic.c in Sources */,
-				3B2219E815DFBFE100219D4B /* ftadvanc.c in Sources */,
 				3B2219E915DFBFE100219D4B /* ftapi.c in Sources */,
 				3B2219EA15DFBFE100219D4B /* ftbase.c in Sources */,
 				3B2219EC15DFBFE100219D4B /* ftbbox.c in Sources */,
 				3B2219ED15DFBFE100219D4B /* ftbdf.c in Sources */,
 				3B2219EE15DFBFE100219D4B /* ftbitmap.c in Sources */,
-				3B2219EF15DFBFE100219D4B /* ftcalc.c in Sources */,
-				3B2219F015DFBFE100219D4B /* ftcid.c in Sources */,
-				3B2219F115DFBFE100219D4B /* ftdbgmem.c in Sources */,
 				3B2219F215DFBFE100219D4B /* ftdebug.c in Sources */,
 				3B2219F315DFBFE100219D4B /* ftfstype.c in Sources */,
 				3B2219F415DFBFE100219D4B /* ftgasp.c in Sources */,
-				3B2219F515DFBFE100219D4B /* ftgloadr.c in Sources */,
 				3B2219F615DFBFE100219D4B /* ftglyph.c in Sources */,
 				3B2219F715DFBFE100219D4B /* ftgxval.c in Sources */,
 				3B2219F815DFBFE100219D4B /* ftinit.c in Sources */,
 				3B2219F915DFBFE100219D4B /* ftlcdfil.c in Sources */,
 				3B2219FB15DFBFE100219D4B /* ftmm.c in Sources */,
-				3B2219FC15DFBFE100219D4B /* ftobjs.c in Sources */,
 				3B2219FD15DFBFE100219D4B /* ftotval.c in Sources */,
-				3B2219FE15DFBFE100219D4B /* ftoutln.c in Sources */,
 				3B2219FF15DFBFE100219D4B /* ftpatent.c in Sources */,
 				3B221A0015DFBFE100219D4B /* ftpfr.c in Sources */,
-				3B221A0115DFBFE100219D4B /* ftpic.c in Sources */,
-				3B221A0215DFBFE100219D4B /* ftrfork.c in Sources */,
-				3B221A0315DFBFE100219D4B /* ftsnames.c in Sources */,
-				3B221A0415DFBFE100219D4B /* ftstream.c in Sources */,
 				3B221A0515DFBFE100219D4B /* ftstroke.c in Sources */,
 				3B221A0615DFBFE100219D4B /* ftsynth.c in Sources */,
 				3B221A0715DFBFE100219D4B /* ftsystem.c in Sources */,
-				3B221A0815DFBFE100219D4B /* fttrigon.c in Sources */,
 				3B221A0915DFBFE100219D4B /* fttype1.c in Sources */,
-				3B221A0A15DFBFE100219D4B /* ftutil.c in Sources */,
 				3B221A0B15DFBFE100219D4B /* ftwinfnt.c in Sources */,
 				3B221A0C15DFBFE100219D4B /* ftxf86.c in Sources */,
 			);
