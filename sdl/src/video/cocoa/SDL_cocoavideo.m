@@ -26,6 +26,7 @@
 #include <altivec.h>
 #undef bool
 #undef vector
+#undef pixel
 #endif
 
 #include "SDL.h"
@@ -94,12 +95,14 @@ Cocoa_CreateDevice(int devindex)
     device->SetWindowIcon = Cocoa_SetWindowIcon;
     device->SetWindowPosition = Cocoa_SetWindowPosition;
     device->SetWindowSize = Cocoa_SetWindowSize;
+    device->SetWindowMinimumSize = Cocoa_SetWindowMinimumSize;
     device->ShowWindow = Cocoa_ShowWindow;
     device->HideWindow = Cocoa_HideWindow;
     device->RaiseWindow = Cocoa_RaiseWindow;
     device->MaximizeWindow = Cocoa_MaximizeWindow;
     device->MinimizeWindow = Cocoa_MinimizeWindow;
     device->RestoreWindow = Cocoa_RestoreWindow;
+    device->SetWindowBordered = Cocoa_SetWindowBordered;
     device->SetWindowFullscreen = Cocoa_SetWindowFullscreen;
     device->SetWindowGammaRamp = Cocoa_SetWindowGammaRamp;
     device->GetWindowGammaRamp = Cocoa_GetWindowGammaRamp;
@@ -214,6 +217,22 @@ Cocoa_CreateImage(SDL_Surface * surface)
         [img addRepresentation: imgrep];
     }
     return img;
+}
+
+/*
+ * Mac OS X log support.
+ *
+ * This doesn't really have aything to do with the interfaces of the SDL video
+ *  subsystem, but we need to stuff this into an Objective-C source code file.
+ */
+
+void SDL_NSLog(const char *text)
+{
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+    NSLog(@"%@", [[NSString alloc] initWithUTF8String:text]);
+
+    [pool release];
 }
 
 /*

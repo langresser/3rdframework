@@ -23,3 +23,4 @@ sdl_mixer/Xcode-iOS/SDL_mixer.xcodeproj/xcuserdata/
 xcuserdata
 .DS_Store
 project.xcworkspace
+sdl/.hg/

@@ -809,6 +809,14 @@
 			>
 		</File>
 		<File
+			RelativePath="..\..\src\events\SDL_dropevents.c"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\events\SDL_dropevents_c.h"
+			>
+		</File>
+		<File
 			RelativePath="..\..\src\audio\dummy\SDL_dummyaudio.c"
 			>
 		</File>
@@ -1206,6 +1214,14 @@
 		</File>
 		<File
 			RelativePath="..\..\src\video\windows\SDL_windowskeyboard.h"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\video\windows\SDL_windowsmessagebox.c"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\video\windows\SDL_windowsmessagebox.h"
 			>
 		</File>
 		<File

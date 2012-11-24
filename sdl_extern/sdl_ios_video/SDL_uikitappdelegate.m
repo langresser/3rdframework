@@ -117,8 +117,6 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [MobClick startWithAppkey:@"50477a6b52701578de00001e"];
-    extern void InitCrashReport();
-    InitCrashReport();
 
     /* Set working directory to resource path */
     [[NSFileManager defaultManager] changeCurrentDirectoryPath: [[NSBundle mainBundle] resourcePath]];

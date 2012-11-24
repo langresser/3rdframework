@@ -23,6 +23,10 @@ build
 *.pbxuser
 (^|/)build($|/)
 .DS_Store
+Xcode/SDL/SDL.xcodeproj/xcuserdata
+Xcode/SDL/SDL.xcodeproj/project.xcworkspace/xcuserdata
+Xcode/SDL/SDLTest.xcodeproj/xcuserdata
+Xcode/SDL/SDLTest.xcodeproj/project.xcworkspace/xcuserdata
 
 # for Visual C++
 Debug
@@ -56,11 +60,14 @@ test/testjoystick
 test/testkeys
 test/testloadso
 test/testlock
+test/testmessage
 test/testmultiaudio
 test/testnative
 test/testoverlay2
 test/testplatform
 test/testpower
+test/testrelative
+test/testrendercopyex
 test/testrendertarget
 test/testresample
 test/testrumble

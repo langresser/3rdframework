@@ -20,36 +20,10 @@
 */
 #include "SDL_config.h"
 
-#ifndef _SDL_windowsopengles_h
-#define _SDL_windowsopengles_h
+#if SDL_VIDEO_DRIVER_WINDOWS
 
-#if SDL_VIDEO_OPENGL_EGL
+extern int WIN_ShowMessageBox(const SDL_MessageBoxData *messageboxdata, int *buttonid);
 
-struct SDL_GLDriverData
-{
-	EGLDisplay m_eglDisplay;
-	EGLContext m_eglContext;
-	EGLSurface m_eglSurface;
-	EGLConfig m_eglConfig[1];
-	EGLint nConfigs;
-};
-
-/* OpenGL functions */
-extern int WIN_GL_LoadLibrary(_THIS, const char *path);
-extern void *WIN_GL_GetProcAddress(_THIS, const char *proc);
-extern void WIN_GL_UnloadLibrary(_THIS);
-extern int WIN_GL_SetupWindow(_THIS, SDL_Window * window);
-extern SDL_GLContext WIN_GL_CreateContext(_THIS, SDL_Window * window);
-extern int WIN_GL_MakeCurrent(_THIS, SDL_Window * window,
-                              SDL_GLContext context);
-extern int WIN_GL_SetSwapInterval(_THIS, int interval);
-extern int WIN_GL_GetSwapInterval(_THIS);
-extern void WIN_GL_SwapWindow(_THIS, SDL_Window * window);
-extern void WIN_GL_DeleteContext(_THIS, SDL_GLContext context);
-
-
-#endif /* SDL_VIDEO_OPENGL_WGL */
-
-#endif /* _SDL_windowsopengl_h */
+#endif /* SDL_VIDEO_DRIVER_WINDOWS */
 
 /* vi: set ts=4 sw=4 expandtab: */

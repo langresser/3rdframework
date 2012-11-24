@@ -77,7 +77,7 @@ typedef unsigned int uintptr_t;
 #endif
 
 /* Enabled for SDL 1.2 (binary compatibility) */
-#define HAVE_LIBC     1
+//#define HAVE_LIBC     1
 #ifdef HAVE_LIBC
 /* Useful headers */
 #define HAVE_STDIO_H 1
@@ -85,9 +85,7 @@ typedef unsigned int uintptr_t;
 #define HAVE_STRING_H 1
 #define HAVE_CTYPE_H 1
 #define HAVE_MATH_H 1
-#ifndef _WIN32_WCE
 #define HAVE_SIGNAL_H 1
-#endif
 
 /* C library functions */
 #define HAVE_MALLOC 1
@@ -122,7 +120,7 @@ typedef unsigned int uintptr_t;
 #define HAVE__STRICMP 1
 #define HAVE__STRNICMP 1
 #define HAVE_SSCANF 1
-//#define HAVE_M_PI 1
+#define HAVE_M_PI 1
 #define HAVE_ATAN 1
 #define HAVE_ATAN2 1
 #define HAVE_CEIL 1
@@ -143,8 +141,8 @@ typedef unsigned int uintptr_t;
 #endif
 
 /* Enable various audio drivers */
-#ifndef _WIN32_WCE
 #define SDL_AUDIO_DRIVER_DSOUND	1
+#ifndef __GNUC__
 #define SDL_AUDIO_DRIVER_XAUDIO2	1
 #endif
 #define SDL_AUDIO_DRIVER_WINMM	1
@@ -152,11 +150,11 @@ typedef unsigned int uintptr_t;
 #define SDL_AUDIO_DRIVER_DUMMY	1
 
 /* Enable various input drivers */
-#ifdef _WIN32_WCE
-#define SDL_JOYSTICK_DISABLED	1
-#define SDL_HAPTIC_DUMMY	1
-#else
 #define SDL_JOYSTICK_DINPUT	1
+#ifdef __GNUC__
+/* There isn't a compatible dinput.h for mingw as far as I know */
+#define SDL_HAPTIC_DISABLED	1
+#else
 #define SDL_HAPTIC_DINPUT	1
 #endif
 
@@ -167,24 +165,17 @@ typedef unsigned int uintptr_t;
 #define SDL_THREAD_WINDOWS	1
 
 /* Enable various timer systems */
-#ifdef _WIN32_WCE
-#define SDL_TIMER_WINCE	1
-#else
 #define SDL_TIMER_WINDOWS	1
-#endif
 
 /* Enable various video drivers */
 #define SDL_VIDEO_DRIVER_DUMMY	1
 #define SDL_VIDEO_DRIVER_WINDOWS	1
 
-#ifndef _WIN32_WCE
 #ifndef SDL_VIDEO_RENDER_D3D
 #define SDL_VIDEO_RENDER_D3D	1
 #endif
-#endif
 
 /* Enable OpenGL support */
-#ifndef _WIN32_WCE
 #ifndef SDL_VIDEO_OPENGL
 #define SDL_VIDEO_OPENGL	1
 #endif
@@ -194,13 +185,6 @@ typedef unsigned int uintptr_t;
 #ifndef SDL_VIDEO_RENDER_OGL
 #define SDL_VIDEO_RENDER_OGL	1
 #endif
-#endif
-
-// opengles
-// #define SDL_VIDEO_OPENGL_EGL	1
-// #define SDL_VIDEO_OPENGL_ES	1
-// #define SDL_VIDEO_RENDER_OGL_ES	1
-// #undef SDL_VIDEO_RENDER_OGL_ES2
 
 /* Enable system power support */
 #define SDL_POWER_WINDOWS 1
