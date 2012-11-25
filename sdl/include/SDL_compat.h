@@ -341,7 +341,6 @@ extern DECLSPEC void SDLCALL SDL_GetKeyRepeat(int *delay, int *interval);
 extern DECLSPEC int SDLCALL SDL_EnableUNICODE(int enable);
 
 typedef SDL_Window* SDL_WindowID;
-extern    Uint32 g_windowId;
 
 #define SDL_KillThread(X)
 

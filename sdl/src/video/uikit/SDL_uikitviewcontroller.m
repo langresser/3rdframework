@@ -35,8 +35,7 @@
 
 
 @implementation SDL_uikitviewcontroller
-
-@synthesize window;
+@synthesize window, glView;
 
 - (id)initWithSDLWindow:(SDL_Window *)_window
 {
@@ -51,27 +50,22 @@
 
 - (void)loadView
 {
-    // do nothing.
+    CGRect rect  = [UIScreen mainScreen].bounds;
+    self.view = [[UIView alloc]initWithFrame:rect];
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
-- (void)viewDidLayoutSubviews
+-(BOOL)shouldAutorotate
 {
-    if (self->window->flags & SDL_WINDOW_RESIZABLE) {
-        SDL_WindowData *data = self->window->driverdata;
-        SDL_VideoDisplay *display = SDL_GetDisplayForWindow(self->window);
-        SDL_DisplayModeData *displaymodedata = (SDL_DisplayModeData *) display->current_mode.driverdata;
-        const CGSize size = data->view.bounds.size;
-        int w, h;
-        
-        w = (int)(size.width * displaymodedata->scale);
-        h = (int)(size.height * displaymodedata->scale);
-        
-        SDL_SendWindowEvent(self->window, SDL_WINDOWEVENT_RESIZED, w, h);
-    }
+    return YES;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
+    if (!self->window) {
+        return UIInterfaceOrientationMaskAll;
+    }
+
     NSUInteger orientationMask = 0;
     
     const char *orientationsCString;

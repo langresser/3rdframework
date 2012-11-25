@@ -48,6 +48,7 @@
       majorVersion:(int)majorVersion
 {
     depthBufferFormat = 0;
+    self.backgroundColor = [UIColor greenColor];
 
     if ((self = [super initWithFrame:frame])) {
         const BOOL useStencilBuffer = (stencilBits != 0);

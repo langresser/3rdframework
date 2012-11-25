@@ -20,11 +20,17 @@
 */
 
 #import <UIKit/UIKit.h>
+#import "SDL_uikitviewcontroller.h"
 
 @interface SDLUIKitDelegate : NSObject<UIApplicationDelegate> {
+    UIWindow* uiwindow;
+    SDL_uikitviewcontroller* viewController;
 }
 
-+ (id) sharedAppDelegate;
+@property(nonatomic, retain) UIWindow* uiwindow;
+@property(nonatomic, retain) SDL_uikitviewcontroller* viewController;
+
++ (SDLUIKitDelegate*) sharedAppDelegate;
 + (NSString *)getAppDelegateClassName;
 
 @end

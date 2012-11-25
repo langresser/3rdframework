@@ -267,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/libpng.dst;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libpng/libpng-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -279,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/libpng.dst;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libpng/libpng-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
