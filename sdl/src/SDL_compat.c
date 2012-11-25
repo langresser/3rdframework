@@ -1817,4 +1817,70 @@ SDL_putenv(const char *_var)
     return 0;
 }
 
+char g_resource_dir_sdl[256] = {0};
+char g_application_dir_sdl[256] = {0};
+
+static char* my_strlwr(char* str)
+{
+    char* orig = str;
+    //   process   the   string
+    for (; *str != '\0'; str++)
+        *str = tolower(*str);
+    return orig;
+}
+
+FILE* SDL_openFile(const char* file_name, const char* read_mode)
+{
+    char szFileName[256] = {0};
+	char szTemp[256] = {0};
+	FILE* fp = NULL;
+    
+#ifdef __IPHONEOS__
+    if (g_resource_dir_sdl[0] == 0) {
+        SDL_initDir();
+    }
+#endif
+    
+	strncpy(szFileName, file_name, sizeof(szFileName) - 1);
+    my_strlwr(szFileName);
+    
+	// 先查找资源目录，资源目录要求是可以读写的。如果有相同文件，优先读取资源目录下的。（更新文件）
+	snprintf(szTemp, sizeof(szTemp) - 1, "%s%s", g_resource_dir_sdl, szFileName);
+	fp = fopen(szTemp, read_mode);
+    
+	if (fp) {
+		return fp;
+	}
+    
+#ifdef __IPHONEOS__
+    // 写文件只能写在document目录
+    if (strchr(read_mode, 'w') != 0) {
+        // 从外部拷贝进来的存档可能因为文件所属不是mobile导致无法写入。删除旧文件，重新创建新文件
+        remove(szTemp);
+        
+        fp = fopen(szTemp, read_mode);
+        if (fp) {
+            return fp;
+        }
+        
+        return NULL;
+    }
+#endif
+    
+#ifdef __ANDROID__
+    return NULL;
+#endif
+    
+	snprintf(szTemp, sizeof(szTemp) - 1, "%s%s", g_application_dir_sdl, szFileName);
+    //    printf("open_file in app:%s\n", szTemp);
+	fp = fopen(szTemp, read_mode);
+	if (fp) {
+		return fp;
+	}
+    
+    printf("file not found:%s\n", szTemp);
+    
+	return NULL;
+}
+
 /* vi: set ts=4 sw=4 expandtab: */

@@ -377,6 +377,12 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					WAV_MUSIC,
+					MID_MUSIC,
+					OGG_MUSIC,
+					USE_TIMIDITY_MIDI,
+				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "";
@@ -390,6 +396,12 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					WAV_MUSIC,
+					MID_MUSIC,
+					OGG_MUSIC,
+					USE_TIMIDITY_MIDI,
+				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "";

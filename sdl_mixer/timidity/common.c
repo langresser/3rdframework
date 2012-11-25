@@ -15,6 +15,7 @@
 #include "common.h"
 #include "output.h"
 #include "ctrlmode.h"
+#include "SDL.h"
 
 /* I guess "rb" should be right for any libc */
 #define OPEN_MODE "rb"
@@ -29,7 +30,7 @@ static FILE *try_to_open(const char *name, int decompress, int noise_mode)
 {
   FILE *fp;
 
-  fp=fopen(name, OPEN_MODE); /* First just check that the file exists */
+  fp=SDL_openFile(name, OPEN_MODE); /* First just check that the file exists */
 
   if (!fp)
     return 0;
@@ -85,7 +86,7 @@ static FILE *try_to_open(const char *name, int decompress, int noise_mode)
 
 /* This is meant to find and open files for reading, possibly piping
    them through a decompressor. */
-FILE *open_file(const char *name, int decompress, int noise_mode)
+FILE *topen_file(const char *name, int decompress, int noise_mode)
 {
   FILE *fp;
   PathList *plp;

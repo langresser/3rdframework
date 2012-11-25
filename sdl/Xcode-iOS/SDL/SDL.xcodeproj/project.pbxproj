@@ -92,6 +92,7 @@
 		04FFAB8B12E23B8D00BA343D /* SDL_atomic.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAB8912E23B8D00BA343D /* SDL_atomic.c */; };
 		04FFAB8C12E23B8D00BA343D /* SDL_spinlock.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAB8A12E23B8D00BA343D /* SDL_spinlock.c */; };
 		22C905CD13A22646003FE4E4 /* SDL_hints_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 22C905CC13A22646003FE4E4 /* SDL_hints_c.h */; };
+		3B1E687C1662A886006BE78A /* SDL_compat_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E687B1662A886006BE78A /* SDL_compat_ios.m */; };
 		3BD2CAD01652C81500E46E11 /* SDL_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CACF1652C81500E46E11 /* SDL_compat.c */; };
 		3BD2CAD31652C81F00E46E11 /* SDL_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD2CAD21652C81F00E46E11 /* SDL_compat.h */; };
 		56EA86FB13E9EC2B002E47EB /* SDL_coreaudio.c in Sources */ = {isa = PBXBuildFile; fileRef = 56EA86F913E9EC2B002E47EB /* SDL_coreaudio.c */; };
@@ -352,6 +353,7 @@
 		04FFAB8912E23B8D00BA343D /* SDL_atomic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_atomic.c; sourceTree = "<group>"; };
 		04FFAB8A12E23B8D00BA343D /* SDL_spinlock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SDL_spinlock.c; sourceTree = "<group>"; };
 		22C905CC13A22646003FE4E4 /* SDL_hints_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_hints_c.h; path = ../../src/SDL_hints_c.h; sourceTree = "<group>"; };
+		3B1E687B1662A886006BE78A /* SDL_compat_ios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDL_compat_ios.m; path = ../../src/SDL_compat_ios.m; sourceTree = "<group>"; };
 		3BD2CACF1652C81500E46E11 /* SDL_compat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_compat.c; path = ../../src/SDL_compat.c; sourceTree = "<group>"; };
 		3BD2CAD21652C81F00E46E11 /* SDL_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_compat.h; sourceTree = "<group>"; };
 		56EA86F913E9EC2B002E47EB /* SDL_coreaudio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_coreaudio.c; path = coreaudio/SDL_coreaudio.c; sourceTree = "<group>"; };
@@ -964,6 +966,7 @@
 		FD99B8BD0DD52E6D00FB1D6B /* Library Source */ = {
 			isa = PBXGroup;
 			children = (
+				3B1E687B1662A886006BE78A /* SDL_compat_ios.m */,
 				3BD2CACF1652C81500E46E11 /* SDL_compat.c */,
 				04B2ECEF1025CEB900F9BC5F /* atomic */,
 				FD99B8FB0DD52EDC00FB1D6B /* audio */,
@@ -1486,6 +1489,7 @@
 				AA704DD7162AA90A0076D1C1 /* SDL_dropevents.c in Sources */,
 				AABCC3951640643D00AB8930 /* SDL_uikitmessagebox.m in Sources */,
 				3BD2CAD01652C81500E46E11 /* SDL_compat.c in Sources */,
+				3B1E687C1662A886006BE78A /* SDL_compat_ios.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

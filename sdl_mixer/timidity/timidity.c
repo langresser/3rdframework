@@ -48,7 +48,7 @@ static int read_config_file(const char *name)
     return (-1);
    }
 
-  if (!(fp=open_file(name, 1, OF_VERBOSE)))
+  if (!(fp=topen_file(name, 1, OF_VERBOSE)))
    return -1;
 
   while (fgets(tmp, sizeof(tmp), fp))

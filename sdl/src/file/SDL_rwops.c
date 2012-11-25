@@ -28,6 +28,7 @@
 
 #include "SDL_endian.h"
 #include "SDL_rwops.h"
+#include "SDL_compat.h"
 
 #ifdef __APPLE__
 #include "cocoa/SDL_rwopsbundlesupport.h"
@@ -531,7 +532,11 @@ SDL_RWFromFile(const char *file, const char *mode)
 #elif HAVE_STDIO_H
     {
     	#ifdef __APPLE__
+#ifdef __IPHONEOS__
+        FILE* fp = SDL_openFile(file, mode);
+#else
     	FILE *fp = SDL_OpenFPFromBundleOrFallback(file, mode);
+#endif
         #else
     	FILE *fp = fopen(file, mode);
     	#endif

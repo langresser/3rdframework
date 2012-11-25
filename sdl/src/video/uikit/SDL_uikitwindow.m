@@ -148,14 +148,6 @@ UIKit_CreateWindow(_THIS, SDL_Window *window)
         }
     }
     
-    if (data->uiscreen == [UIScreen mainScreen]) {
-        if (window->flags & (SDL_WINDOW_FULLSCREEN|SDL_WINDOW_BORDERLESS)) {
-            [UIApplication sharedApplication].statusBarHidden = YES;
-        } else {
-            [UIApplication sharedApplication].statusBarHidden = NO;
-        }
-    }
-    
     if (!(window->flags & SDL_WINDOW_RESIZABLE)) {
         if (window->w > window->h) {
             if (!UIKit_IsDisplayLandscape(data->uiscreen)) {

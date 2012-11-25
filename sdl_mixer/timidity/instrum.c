@@ -254,7 +254,7 @@ static InstrumentLayer *load_instrument(const char *name, int font_type, int per
   if (!name) return 0;
   
   /* Open patch file */
-  if ((fp=open_file(name, 1, OF_NORMAL)) == NULL)
+  if ((fp=topen_file(name, 1, OF_NORMAL)) == NULL)
     {
       noluck=1;
 #ifdef PATCH_EXT_LIST
@@ -266,7 +266,7 @@ static InstrumentLayer *load_instrument(const char *name, int font_type, int per
               char path[PATH_MAX];
 	      strcpy(path, name);
 	      strcat(path, patch_ext[i]);
-	      if ((fp=open_file(path, 1, OF_NORMAL)) != NULL)
+	      if ((fp=topen_file(path, 1, OF_NORMAL)) != NULL)
 		{
 		  noluck=0;
 		  break;

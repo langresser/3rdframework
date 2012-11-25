@@ -341,6 +341,10 @@ extern DECLSPEC void SDLCALL SDL_GetKeyRepeat(int *delay, int *interval);
 extern DECLSPEC int SDLCALL SDL_EnableUNICODE(int enable);
 
 typedef SDL_Window* SDL_WindowID;
+    
+    
+extern FILE* SDL_openFile(const char* file_name, const char* read_mode);
+extern void SDL_initDir();
 
 #define SDL_KillThread(X)
 

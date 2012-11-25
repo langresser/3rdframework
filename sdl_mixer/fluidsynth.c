@@ -36,7 +36,7 @@ static int freq;
 
 int fluidsynth_check_soundfont(const char *path, void *data)
 {
-	FILE *file = fopen(path, "r");
+	FILE *file = SDL_openFile(path, "r");
 
 	if (file) {
 		fclose(file);
