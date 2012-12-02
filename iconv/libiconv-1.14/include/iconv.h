@@ -81,6 +81,7 @@ extern "C" {
 
 /* Allocates descriptor for code conversion from encoding ‘fromcode’ to
    encoding ‘tocode’. */
+#define LIBICONV_PLUG 1
 #ifndef LIBICONV_PLUG
 #define iconv_open libiconv_open
 #endif

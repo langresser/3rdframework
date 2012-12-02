@@ -78,6 +78,10 @@
 # include <iconv.h>
 #endif
 
+#ifndef M_PI
+#define M_PI    3.14159265358979323846264338327950288   /* pi */
+#endif
+
 /**
  *  The number of elements in an array.
  */

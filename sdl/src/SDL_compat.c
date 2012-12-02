@@ -30,7 +30,6 @@
 #include "video/SDL_pixels_c.h"
 #include "render/SDL_yuv_sw_c.h"
 
-
 static SDL_Window *SDL_VideoWindow = NULL;
 static SDL_Surface *SDL_WindowSurface = NULL;
 static SDL_Surface *SDL_VideoSurface = NULL;
@@ -42,6 +41,10 @@ static SDL_Rect SDL_VideoViewport;
 static char *wm_title = NULL;
 static SDL_Surface *SDL_VideoIcon;
 static int SDL_enabled_UNICODE = 0;
+
+#ifdef WIN32
+#define snprintf _snprintf
+#endif
 
 const char *
 SDL_AudioDriverName(char *namebuf, int maxlen)

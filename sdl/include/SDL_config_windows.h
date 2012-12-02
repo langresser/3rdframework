@@ -77,7 +77,7 @@ typedef unsigned int uintptr_t;
 #endif
 
 /* Enabled for SDL 1.2 (binary compatibility) */
-//#define HAVE_LIBC     1
+#define HAVE_LIBC     1
 #ifdef HAVE_LIBC
 /* Useful headers */
 #define HAVE_STDIO_H 1
@@ -120,6 +120,7 @@ typedef unsigned int uintptr_t;
 #define HAVE__STRICMP 1
 #define HAVE__STRNICMP 1
 #define HAVE_SSCANF 1
+#define HAVE_STDLIB_H 1
 #define HAVE_M_PI 1
 #define HAVE_ATAN 1
 #define HAVE_ATAN2 1
