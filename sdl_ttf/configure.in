@@ -13,9 +13,9 @@ dnl Set various version strings - taken gratefully from the GTk sources
 
 MAJOR_VERSION=2
 MINOR_VERSION=0
-MICRO_VERSION=11
-INTERFACE_AGE=1
-BINARY_AGE=11
+MICRO_VERSION=12
+INTERFACE_AGE=2
+BINARY_AGE=12
 VERSION=$MAJOR_VERSION.$MINOR_VERSION.$MICRO_VERSION
 
 AC_SUBST(MAJOR_VERSION)
@@ -42,7 +42,7 @@ dnl Detect the canonical build and host environments
 AC_CANONICAL_HOST
 
 dnl Setup for automake
-AM_INIT_AUTOMAKE(SDL_ttf, $VERSION)
+AM_INIT_AUTOMAKE(SDL2_ttf, $VERSION)
 
 dnl Check for tools
 AC_PROG_LIBTOOL
@@ -64,10 +64,6 @@ case "$host" in
 	;;
 esac
 
-
-dnl Check for iconv (character conversion library; see iconv.m4)
-dnl This isn't available on many systems
-dnl AM_ICONV
 
 case "$host" in
     *-*-beos*)
@@ -125,9 +121,9 @@ else
 fi
 
 dnl Check for SDL
-SDL_VERSION=1.2.4
+SDL_VERSION=2.0.0
 AC_SUBST(SDL_VERSION)
-AM_PATH_SDL($SDL_VERSION,
+AM_PATH_SDL2($SDL_VERSION,
             :,
 	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
 )
@@ -189,6 +185,6 @@ AC_SUBST([WINDRES])
 # Finally create all the generated files
 AC_OUTPUT([
 Makefile
-SDL_ttf.spec
-SDL_ttf.pc
+SDL2_ttf.spec
+SDL2_ttf.pc
 ])

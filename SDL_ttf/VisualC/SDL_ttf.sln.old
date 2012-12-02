@@ -1,13 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL2_ttf", "SDL_ttf.vcxproj", "{DDDBD07D-DC76-4AF6-8D02-3E2DEB6EE255}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL_ttf", "SDL_ttf.vcproj", "{DDDBD07D-DC76-4AF6-8D02-3E2DEB6EE255}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "showfont", "showfont\showfont.vcxproj", "{7B1F60CD-2A09-4514-937C-D9DD044428FB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "showfont", "showfont\showfont.vcproj", "{7B1F60CD-2A09-4514-937C-D9DD044428FB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DDDBD07D-DC76-4AF6-8D02-3E2DEB6EE255} = {DDDBD07D-DC76-4AF6-8D02-3E2DEB6EE255}
+	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfont", "glfont\glfont.vcxproj", "{3BEF6A23-3BB6-4400-9421-D055B36466DC}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL", "..\..\SDL\VisualC\SDL\SDL_VS2010.vcxproj", "{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfont", "glfont\glfont.vcproj", "{3BEF6A23-3BB6-4400-9421-D055B36466DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DDDBD07D-DC76-4AF6-8D02-3E2DEB6EE255} = {DDDBD07D-DC76-4AF6-8D02-3E2DEB6EE255}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,14 +45,6 @@ Global
 		{3BEF6A23-3BB6-4400-9421-D055B36466DC}.Release|Win32.Build.0 = Release|Win32
 		{3BEF6A23-3BB6-4400-9421-D055B36466DC}.Release|x64.ActiveCfg = Release|x64
 		{3BEF6A23-3BB6-4400-9421-D055B36466DC}.Release|x64.Build.0 = Release|x64
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|Win32.ActiveCfg = Debug|Win32
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|Win32.Build.0 = Debug|Win32
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|x64.ActiveCfg = Debug|x64
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|x64.Build.0 = Debug|x64
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Release|Win32.ActiveCfg = Release|Win32
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Release|Win32.Build.0 = Release|Win32
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Release|x64.ActiveCfg = Release|x64
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
