@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -20,10 +20,9 @@
 */
 
 #import <UIKit/UIKit.h>
+#import "SDL_uikitviewcontroller.h"
 
 #include "SDL_touch.h"
-#include "SDL_video.h"
-#include "../SDL_sysvideo.h"
 
 #define IPHONE_TOUCH_EFFICIENT_DANGEROUS
 
@@ -47,6 +46,9 @@
     UITextField *textField;
     BOOL keyboardVisible;
 #endif
+
+@public
+    SDL_uikitviewcontroller *viewcontroller;
 }
 - (CGPoint)touchLocation:(UITouch *)touch shouldNormalize:(BOOL)normalize;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;

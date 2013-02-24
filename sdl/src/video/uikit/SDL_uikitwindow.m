@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -49,6 +49,17 @@ static int SetupWindowData(_THIS, SDL_Window *window, UIWindow *uiwindow, SDL_bo
     SDL_VideoDisplay *display = SDL_GetDisplayForWindow(window);
     SDL_DisplayModeData *displaymodedata = (SDL_DisplayModeData *) display->current_mode.driverdata;
     SDL_DisplayData *displaydata = (SDL_DisplayData *) display->driverdata;
+    SDL_WindowData *data;
+
+    /* Allocate the window data */
+    data = (SDL_WindowData *)SDL_malloc(sizeof(*data));
+    if (!data) {
+        SDL_OutOfMemory();
+        return -1;
+    }
+    data->uiwindow = uiwindow;
+    data->viewcontroller = nil;
+    data->view = nil;
 
     /* Fill in the SDL window with the window data */
     {
@@ -77,6 +88,8 @@ static int SetupWindowData(_THIS, SDL_Window *window, UIWindow *uiwindow, SDL_bo
         window->h = height;
     }
 
+    window->driverdata = data;
+
     /* only one window on iOS, always shown */
     window->flags &= ~SDL_WINDOW_HIDDEN;
 
@@ -97,7 +110,13 @@ static int SetupWindowData(_THIS, SDL_Window *window, UIWindow *uiwindow, SDL_bo
         window->flags |= SDL_WINDOW_BORDERLESS;  // never has a status bar.
     }
 
-    [SDLUIKitDelegate sharedAppDelegate].viewController.window = window;
+    // The View Controller will handle rotating the view when the
+    //  device orientation changes. This will trigger resize events, if
+    //  appropriate.
+    SDL_uikitviewcontroller *controller;
+    controller = [SDL_uikitviewcontroller alloc];
+    data->viewcontroller = [controller initWithSDLWindow:window];
+    [data->viewcontroller setTitle:@"SDL App"];  // !!! FIXME: hook up SDL_SetWindowTitle()
 
     return 0;
 }
@@ -148,6 +167,14 @@ UIKit_CreateWindow(_THIS, SDL_Window *window)
         }
     }
     
+    if (data->uiscreen == [UIScreen mainScreen]) {
+        if (window->flags & (SDL_WINDOW_FULLSCREEN|SDL_WINDOW_BORDERLESS)) {
+            [UIApplication sharedApplication].statusBarHidden = YES;
+        } else {
+            [UIApplication sharedApplication].statusBarHidden = NO;
+        }
+    }
+    
     if (!(window->flags & SDL_WINDOW_RESIZABLE)) {
         if (window->w > window->h) {
             if (!UIKit_IsDisplayLandscape(data->uiscreen)) {
@@ -162,7 +189,8 @@ UIKit_CreateWindow(_THIS, SDL_Window *window)
 
     /* ignore the size user requested, and make a fullscreen window */
     // !!! FIXME: can we have a smaller view?
-    UIWindow *uiwindow = [SDLUIKitDelegate sharedAppDelegate].uiwindow;
+    UIWindow *uiwindow = [UIWindow alloc];
+    uiwindow = [uiwindow initWithFrame:[data->uiscreen bounds]];
 
     // put the window on an external display if appropriate. This implicitly
     //  does [uiwindow setframe:[uiscreen bounds]], so don't do it on the
@@ -184,11 +212,17 @@ UIKit_CreateWindow(_THIS, SDL_Window *window)
 void
 UIKit_ShowWindow(_THIS, SDL_Window * window)
 {
+    UIWindow *uiwindow = ((SDL_WindowData *) window->driverdata)->uiwindow;
+
+    [uiwindow makeKeyAndVisible];
 }
 
 void
 UIKit_HideWindow(_THIS, SDL_Window * window)
 {
+    UIWindow *uiwindow = ((SDL_WindowData *) window->driverdata)->uiwindow;
+
+    uiwindow.hidden = YES;
 }
 
 void
@@ -204,17 +238,65 @@ UIKit_RaiseWindow(_THIS, SDL_Window * window)
 void
 UIKit_SetWindowFullscreen(_THIS, SDL_Window * window, SDL_VideoDisplay * display, SDL_bool fullscreen)
 {
+    SDL_DisplayData *displaydata = (SDL_DisplayData *) display->driverdata;
+    SDL_DisplayModeData *displaymodedata = (SDL_DisplayModeData *) display->current_mode.driverdata;
+    UIWindow *uiwindow = ((SDL_WindowData *) window->driverdata)->uiwindow;
+
+    if (fullscreen) {
+        [UIApplication sharedApplication].statusBarHidden = YES;
+    } else {
+        [UIApplication sharedApplication].statusBarHidden = NO;
+    }
+
+    CGRect bounds;
+    if (fullscreen) {
+        bounds = [displaydata->uiscreen bounds];
+    } else {
+        bounds = [displaydata->uiscreen applicationFrame];
+    }
+
+    /* Get frame dimensions in pixels */
+    int width = (int)(bounds.size.width * displaymodedata->scale);
+    int height = (int)(bounds.size.height * displaymodedata->scale);
+
+    /* We can pick either width or height here and we'll rotate the
+       screen to match, so we pick the closest to what we wanted.
+     */
+    if (window->w >= window->h) {
+        if (width > height) {
+            window->w = width;
+            window->h = height;
+        } else {
+            window->w = height;
+            window->h = width;
+        }
+    } else {
+        if (width > height) {
+            window->w = height;
+            window->h = width;
+        } else {
+            window->w = width;
+            window->h = height;
+        }
+    }
 }
 
 void
 UIKit_DestroyWindow(_THIS, SDL_Window * window)
 {
+    SDL_WindowData *data = (SDL_WindowData *)window->driverdata;
+    if (data) {
+        [data->viewcontroller release];
+        [data->uiwindow release];
+        SDL_free(data);
+        window->driverdata = NULL;
+    }
 }
 
 SDL_bool
 UIKit_GetWindowWMInfo(_THIS, SDL_Window * window, SDL_SysWMinfo * info)
 {
-    UIWindow *uiwindow = [SDLUIKitDelegate sharedAppDelegate].uiwindow;
+    UIWindow *uiwindow = ((SDL_WindowData *) window->driverdata)->uiwindow;
 
     if (info->version.major <= SDL_MAJOR_VERSION) {
         info->subsystem = SDL_SYSWM_UIKIT;
@@ -230,7 +312,14 @@ UIKit_GetWindowWMInfo(_THIS, SDL_Window * window, SDL_SysWMinfo * info)
 int
 SDL_iPhoneSetAnimationCallback(SDL_Window * window, int interval, void (*callback)(void*), void *callbackParam)
 {
-    [(SDL_uikitopenglview*)[SDLUIKitDelegate sharedAppDelegate].viewController.view setAnimationCallback:interval callback:callback callbackParam:callbackParam];
+    SDL_WindowData *data = window ? (SDL_WindowData *)window->driverdata : NULL;
+
+    if (!data || !data->view) {
+        SDL_SetError("Invalid window or view not set");
+        return -1;
+    }
+
+    [data->view setAnimationCallback:interval callback:callback callbackParam:callbackParam];
     return 0;
 }
 

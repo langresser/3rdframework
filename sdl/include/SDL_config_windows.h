@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -77,7 +77,7 @@ typedef unsigned int uintptr_t;
 #endif
 
 /* Enabled for SDL 1.2 (binary compatibility) */
-#define HAVE_LIBC     1
+//#define HAVE_LIBC     1
 #ifdef HAVE_LIBC
 /* Useful headers */
 #define HAVE_STDIO_H 1
@@ -120,7 +120,6 @@ typedef unsigned int uintptr_t;
 #define HAVE__STRICMP 1
 #define HAVE__STRNICMP 1
 #define HAVE_SSCANF 1
-#define HAVE_STDLIB_H 1
 #define HAVE_M_PI 1
 #define HAVE_ATAN 1
 #define HAVE_ATAN2 1
@@ -152,12 +151,7 @@ typedef unsigned int uintptr_t;
 
 /* Enable various input drivers */
 #define SDL_JOYSTICK_DINPUT	1
-#ifdef __GNUC__
-/* There isn't a compatible dinput.h for mingw as far as I know */
-#define SDL_HAPTIC_DISABLED	1
-#else
 #define SDL_HAPTIC_DINPUT	1
-#endif
 
 /* Enable various shared object loading systems */
 #define SDL_LOADSO_WINDOWS	1

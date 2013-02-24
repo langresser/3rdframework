@@ -1,6 +1,6 @@
  /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -27,8 +27,6 @@
 #include "../../events/SDL_keyboard_c.h"
 #include "../../events/SDL_mouse_c.h"
 #include "../../events/SDL_touch_c.h"
-
-#import "SDL_uikitviewcontroller.h"
 
 #if SDL_IPHONE_KEYBOARD
 #include "keyinfotable.h"
@@ -81,7 +79,7 @@
     CGPoint point = [touch locationInView: self];
 
     // Get the display scale and apply that to the input coordinates
-    SDL_Window *window = [SDLUIKitDelegate sharedAppDelegate].viewController.window;
+    SDL_Window *window = self->viewcontroller.window;
     SDL_VideoDisplay *display = SDL_GetDisplayForWindow(window);
     SDL_DisplayModeData *displaymodedata = (SDL_DisplayModeData *) display->current_mode.driverdata;
     
@@ -328,7 +326,19 @@
 
 static SDL_uikitview * getWindowView(SDL_Window * window)
 {
-    return (SDL_uikitview*)[SDLUIKitDelegate sharedAppDelegate].viewController.glView;
+    if (window == NULL) {
+        SDL_SetError("Window does not exist");
+        return nil;
+    }
+
+    SDL_WindowData *data = (SDL_WindowData *)window->driverdata;
+    SDL_uikitview *view = data != NULL ? data->view : nil;
+
+    if (view == nil) {
+        SDL_SetError("Window has no view");
+    }
+
+    return view;
 }
 
 SDL_bool UIKit_HasScreenKeyboardSupport(_THIS)

@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -35,7 +35,8 @@
 
 
 @implementation SDL_uikitviewcontroller
-@synthesize window, glView;
+
+@synthesize window;
 
 - (id)initWithSDLWindow:(SDL_Window *)_window
 {
@@ -50,22 +51,27 @@
 
 - (void)loadView
 {
-    CGRect rect  = [UIScreen mainScreen].bounds;
-    self.view = [[UIView alloc]initWithFrame:rect];
-    self.view.backgroundColor = [UIColor greenColor];
+    // do nothing.
 }
 
--(BOOL)shouldAutorotate
+- (void)viewDidLayoutSubviews
 {
-    return YES;
+    if (self->window->flags & SDL_WINDOW_RESIZABLE) {
+        SDL_WindowData *data = self->window->driverdata;
+        SDL_VideoDisplay *display = SDL_GetDisplayForWindow(self->window);
+        SDL_DisplayModeData *displaymodedata = (SDL_DisplayModeData *) display->current_mode.driverdata;
+        const CGSize size = data->view.bounds.size;
+        int w, h;
+        
+        w = (int)(size.width * displaymodedata->scale);
+        h = (int)(size.height * displaymodedata->scale);
+        
+        SDL_SendWindowEvent(self->window, SDL_WINDOWEVENT_RESIZED, w, h);
+    }
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    if (!self->window) {
-        return UIInterfaceOrientationMaskAll;
-    }
-
     NSUInteger orientationMask = 0;
     
     const char *orientationsCString;

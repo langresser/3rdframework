@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -65,6 +65,8 @@
 #cmakedefine HAVE_SIGNAL_H 1
 #cmakedefine HAVE_ALTIVEC_H 1
 #cmakedefine HAVE_PTHREAD_NP_H 1
+#cmakedefine HAVE_LIBUDEV_H 1
+#cmakedefine HAVE_DBUS_DBUS_H 1
 
 /* C library functions */
 #cmakedefine HAVE_MALLOC 1

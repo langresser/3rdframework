@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -96,6 +96,7 @@ Cocoa_CreateDevice(int devindex)
     device->SetWindowPosition = Cocoa_SetWindowPosition;
     device->SetWindowSize = Cocoa_SetWindowSize;
     device->SetWindowMinimumSize = Cocoa_SetWindowMinimumSize;
+    device->SetWindowMaximumSize = Cocoa_SetWindowMaximumSize;
     device->ShowWindow = Cocoa_ShowWindow;
     device->HideWindow = Cocoa_HideWindow;
     device->RaiseWindow = Cocoa_RaiseWindow;
@@ -228,11 +229,7 @@ Cocoa_CreateImage(SDL_Surface * surface)
 
 void SDL_NSLog(const char *text)
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
-    NSLog(@"%@", [[NSString alloc] initWithUTF8String:text]);
-
-    [pool release];
+    NSLog(@"%s", text);
 }
 
 /*
@@ -277,6 +274,8 @@ SDL_PromptAssertion_cocoa(const SDL_assert_data *data)
     [alert addButtonWithTitle:@"Ignore"];
     [alert addButtonWithTitle:@"Always Ignore"];
     const NSInteger clicked = [alert runModal];
+    [alert release];
+
     [pool release];
 
     if (!initialized) {

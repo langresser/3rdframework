@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -20,17 +20,11 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "SDL_uikitviewcontroller.h"
 
 @interface SDLUIKitDelegate : NSObject<UIApplicationDelegate> {
-    UIWindow* uiwindow;
-    SDL_uikitviewcontroller* viewController;
 }
 
-@property(nonatomic, retain) UIWindow* uiwindow;
-@property(nonatomic, retain) SDL_uikitviewcontroller* viewController;
-
-+ (SDLUIKitDelegate*) sharedAppDelegate;
++ (id) sharedAppDelegate;
 + (NSString *)getAppDelegateClassName;
 
 @end

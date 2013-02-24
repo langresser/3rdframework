@@ -1,6 +1,6 @@
 /*
  Simple DirectMedia Layer
- Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+ Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
  This software is provided 'as-is', without any express or implied
  warranty.  In no event will the authors be held liable for any damages
@@ -22,18 +22,17 @@
 #import <UIKit/UIKit.h>
 
 #include "../SDL_sysvideo.h"
-#import "SDL_uikitopenglview.h"
 
 @interface SDL_uikitviewcontroller : UIViewController {
-    SDL_uikitopenglview* glView;
 @private
     SDL_Window *window;
 }
 
 @property (readwrite) SDL_Window *window;
-@property(nonatomic, retain) SDL_uikitopenglview* glView;
 
 - (id)initWithSDLWindow:(SDL_Window *)_window;
+- (void)loadView;
+- (void)viewDidLayoutSubviews;
 - (NSUInteger)supportedInterfaceOrientations;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orient;
 

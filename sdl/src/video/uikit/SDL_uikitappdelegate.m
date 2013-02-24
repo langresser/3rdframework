@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -38,7 +38,6 @@
 #endif
 
 extern int SDL_main(int argc, char *argv[]);
-extern void SDL_gameLoop();
 static int forward_argc;
 static char **forward_argv;
 static int exit_status;
@@ -59,8 +58,7 @@ int main(int argc, char **argv)
     forward_argv[i] = NULL;
 
     /* Give over control to run loop, SDLUIKitDelegate will handle most things from here */
-    UIApplicationMain(argc, argv, NULL, @"AppDelegate");
-//    UIApplicationMain(argc, argv, NULL, @"SDLUIKitDelegate");
+    UIApplicationMain(argc, argv, NULL, [SDLUIKitDelegate getAppDelegateClassName]);
 
     /* free the memory we used to hold copies of argc and argv */
     for (i = 0; i < forward_argc; i++) {
@@ -80,13 +78,98 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
     [UIApplication sharedApplication].idleTimerDisabled = disable;
 }
 
+@interface SDL_splashviewcontroller : UIViewController {
+    UIImageView *splash;
+    UIImage *splashPortrait;
+    UIImage *splashLandscape;
+}
+
+- (void)updateSplashImage:(UIInterfaceOrientation)interfaceOrientation;
+@end
+
+@implementation SDL_splashviewcontroller
+
+- (id)init
+{
+    self = [super init];
+    if (self == nil) {
+        return nil;
+    }
+
+    self->splash = [[UIImageView alloc] init];
+    [self setView:self->splash];
+
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    float height = SDL_max(size.width, size.height);
+    self->splashPortrait = [UIImage imageNamed:[NSString stringWithFormat:@"Default-%dh.png", (int)height]];
+    if (!self->splashPortrait) {
+        self->splashPortrait = [UIImage imageNamed:@"Default.png"];
+    }
+    self->splashLandscape = [UIImage imageNamed:@"Default-Landscape.png"];
+    if (!self->splashLandscape && self->splashPortrait) {
+        self->splashLandscape = [[UIImage alloc] initWithCGImage: self->splashPortrait.CGImage
+                                                           scale: 1.0
+                                                     orientation: UIImageOrientationRight];
+    }
+    if (self->splashPortrait) {
+        [self->splashPortrait retain];
+    }
+    if (self->splashLandscape) {
+        [self->splashLandscape retain];
+    }
+ 
+    [self updateSplashImage:[[UIApplication sharedApplication] statusBarOrientation]];
+
+    return self;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    NSUInteger orientationMask = UIInterfaceOrientationMaskAll;
+    
+    // Don't allow upside-down orientation on the phone, so answering calls is in the natural orientation
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        orientationMask &= ~UIInterfaceOrientationMaskPortraitUpsideDown;
+    }
+    return orientationMask;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orient
+{
+    NSUInteger orientationMask = [self supportedInterfaceOrientations];
+    return (orientationMask & (1 << orient));
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self updateSplashImage:interfaceOrientation];
+}
+
+- (void)updateSplashImage:(UIInterfaceOrientation)interfaceOrientation
+{
+    UIImage *image;
+    
+    if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
+        image = self->splashLandscape;
+    } else {
+        image = self->splashPortrait;
+    }
+    if (image)
+    {
+        splash.image = image;
+    }
+}
+
+@end
+
+
 @implementation SDLUIKitDelegate
-@synthesize uiwindow, viewController;
+
 /* convenience method */
-+ (SDLUIKitDelegate*) sharedAppDelegate
++ (id) sharedAppDelegate
 {
     /* the delegate is set in UIApplicationMain(), which is garaunteed to be called before this method */
-    return (SDLUIKitDelegate*)[[UIApplication sharedApplication] delegate];
+    return [[UIApplication sharedApplication] delegate];
 }
 
 + (NSString *)getAppDelegateClassName
@@ -106,8 +189,14 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
 {
     /* run the user's application, passing argc and argv */
     SDL_iPhoneSetEventPump(SDL_TRUE);
-    SDL_gameLoop();
+    exit_status = SDL_main(forward_argc, forward_argv);
     SDL_iPhoneSetEventPump(SDL_FALSE);
+
+    /* If we showed a splash image, clean it up */
+    if (launch_window) {
+        [launch_window release];
+        launch_window = NULL;
+    }
 
     /* exit, passing the return status from the user's application */
     // We don't actually exit to support applications that do setup in
@@ -117,11 +206,20 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /* Keep the launch image up until we set a video mode */
+    launch_window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    UIViewController *splashViewController = [[SDL_splashviewcontroller alloc] init];
+    launch_window.rootViewController = splashViewController;
+    [launch_window addSubview:splashViewController.view];
+    [launch_window makeKeyAndVisible];
+
+    /* Set working directory to resource path */
+    [[NSFileManager defaultManager] changeCurrentDirectoryPath: [[NSBundle mainBundle] resourcePath]];
+
     /* register a callback for the idletimer hint */
     SDL_SetHint(SDL_HINT_IDLE_TIMER_DISABLED, "0");
     SDL_RegisterHintChangedCb(SDL_HINT_IDLE_TIMER_DISABLED, &SDL_IdleTimerDisabledChanged);
-    
-    exit_status = SDL_main(forward_argc, forward_argv);
 
     [self performSelector:@selector(postFinishLaunch) withObject:nil afterDelay:0.0];
 

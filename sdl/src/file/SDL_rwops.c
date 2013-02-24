@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -28,7 +28,6 @@
 
 #include "SDL_endian.h"
 #include "SDL_rwops.h"
-#include "SDL_compat.h"
 
 #ifdef __APPLE__
 #include "cocoa/SDL_rwopsbundlesupport.h"
@@ -532,11 +531,7 @@ SDL_RWFromFile(const char *file, const char *mode)
 #elif HAVE_STDIO_H
     {
     	#ifdef __APPLE__
-#ifdef __IPHONEOS__
-        FILE* fp = SDL_openFile(file, mode);
-#else
     	FILE *fp = SDL_OpenFPFromBundleOrFallback(file, mode);
-#endif
         #else
     	FILE *fp = fopen(file, mode);
     	#endif

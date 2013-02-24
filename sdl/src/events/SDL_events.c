@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -70,9 +70,9 @@ static __inline__ SDL_bool
 SDL_ShouldPollJoystick()
 {
 #if !SDL_JOYSTICK_DISABLED
-    if (SDL_numjoysticks &&
-        (!SDL_disabled_events[SDL_JOYAXISMOTION >> 8] ||
-         SDL_JoystickEventState(SDL_QUERY))) {
+    if ((!SDL_disabled_events[SDL_JOYAXISMOTION >> 8] ||
+         SDL_JoystickEventState(SDL_QUERY)) &&
+        SDL_PrivateJoystickNeedsPolling()) {
         return SDL_TRUE;
     }
 #endif

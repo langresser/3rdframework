@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -137,11 +137,7 @@ UIKit_VideoQuit(_THIS)
 
 void SDL_NSLog(const char *text)
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
-    NSLog(@"%@", [[NSString alloc] initWithUTF8String:text]);
-
-    [pool release];
+    NSLog(@"%s", text);
 }
 
 #endif /* SDL_VIDEO_DRIVER_UIKIT */
