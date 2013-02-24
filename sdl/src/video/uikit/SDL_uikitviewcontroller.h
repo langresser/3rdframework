@@ -22,17 +22,18 @@
 #import <UIKit/UIKit.h>
 
 #include "../SDL_sysvideo.h"
+#import "SDL_uikitopenglview.h"
 
 @interface SDL_uikitviewcontroller : UIViewController {
+    SDL_uikitopenglview* glView;
 @private
     SDL_Window *window;
 }
 
 @property (readwrite) SDL_Window *window;
+@property(nonatomic, retain) SDL_uikitopenglview* glView;
 
 - (id)initWithSDLWindow:(SDL_Window *)_window;
-- (void)loadView;
-- (void)viewDidLayoutSubviews;
 - (NSUInteger)supportedInterfaceOrientations;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orient;
 

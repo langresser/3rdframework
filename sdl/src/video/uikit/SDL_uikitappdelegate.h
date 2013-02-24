@@ -20,13 +20,22 @@
 */
 
 #import <UIKit/UIKit.h>
+#import "SDL_uikitviewcontroller.h"
+#import "SDL_uikitopenglview.h"
 
 @interface SDLUIKitDelegate : NSObject<UIApplicationDelegate> {
+    UIWindow* uiwindow;
+    SDL_uikitviewcontroller* viewController;
 }
 
 + (id) sharedAppDelegate;
 + (NSString *)getAppDelegateClassName;
 
++(SDL_uikitopenglview*)getGameView;
++(UIWindow*)getGameWindow;
+
+@property(nonatomic, retain) UIWindow* uiwindow;
+@property(nonatomic, retain) SDL_uikitviewcontroller* viewController;
 @end
 
 /* vi: set ts=4 sw=4 expandtab: */

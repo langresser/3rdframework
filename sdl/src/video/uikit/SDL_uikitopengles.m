@@ -53,8 +53,7 @@ UIKit_GL_GetProcAddress(_THIS, const char *proc)
 int UIKit_GL_MakeCurrent(_THIS, SDL_Window * window, SDL_GLContext context)
 {
     if (context) {
-        SDL_WindowData *data = (SDL_WindowData *)window->driverdata;
-        [data->view setCurrentContext];
+        [[SDLUIKitDelegate getGameView] setCurrentContext];
     }
     else {
         [EAGLContext setCurrentContext: nil];
@@ -85,12 +84,7 @@ void UIKit_GL_SwapWindow(_THIS, SDL_Window * window)
     SDL_UIKit_UpdateBatteryMonitoring();
 #endif
 
-    SDL_WindowData *data = (SDL_WindowData *)window->driverdata;
-
-    if (nil == data->view) {
-        return;
-    }
-    [data->view swapBuffers];
+    [[SDLUIKitDelegate getGameView] swapBuffers];
 
     /* we need to let the event cycle run, or the OS won't update the OpenGL view! */
     SDL_PumpEvents();
@@ -99,19 +93,12 @@ void UIKit_GL_SwapWindow(_THIS, SDL_Window * window)
 SDL_GLContext UIKit_GL_CreateContext(_THIS, SDL_Window * window)
 {
     SDL_uikitopenglview *view;
-    SDL_WindowData *data = (SDL_WindowData *) window->driverdata;
     SDL_VideoDisplay *display = SDL_GetDisplayForWindow(window);
     SDL_DisplayData *displaydata = display->driverdata;
     SDL_DisplayModeData *displaymodedata = display->current_mode.driverdata;
-    UIWindow *uiwindow = data->uiwindow;
 
     /* construct our view, passing in SDL's OpenGL configuration data */
-    CGRect frame;
-    if (window->flags & (SDL_WINDOW_FULLSCREEN|SDL_WINDOW_BORDERLESS)) {
-        frame = [displaydata->uiscreen bounds];
-    } else {
-        frame = [displaydata->uiscreen applicationFrame];
-    }
+    CGRect frame = [UIScreen mainScreen].bounds;
     view = [[SDL_uikitopenglview alloc] initWithFrame: frame
                                     scale: displaymodedata->scale
                                     retainBacking: _this->gl_config.retained_backing
@@ -126,18 +113,8 @@ SDL_GLContext UIKit_GL_CreateContext(_THIS, SDL_Window * window)
         return NULL;
     }
 
-    data->view = view;
-    view->viewcontroller = data->viewcontroller;
-    if (view->viewcontroller != nil) {
-        [view->viewcontroller setView:view];
-        [view->viewcontroller retain];
-    }
-    [uiwindow addSubview: view];
-    
-    // The view controller needs to be the root in order to control rotation on iOS 6.0
-    if (uiwindow.rootViewController == nil) {
-        uiwindow.rootViewController = view->viewcontroller;
-    }
+    [((SDLUIKitDelegate*)[SDLUIKitDelegate sharedAppDelegate]).viewController.view insertSubview:view atIndex:0];
+    ((SDLUIKitDelegate*)[SDLUIKitDelegate sharedAppDelegate]).viewController.glView = view;
 
     if (UIKit_GL_MakeCurrent(_this, window, view) < 0) {
         UIKit_GL_DeleteContext(_this, view);
@@ -155,18 +132,6 @@ SDL_GLContext UIKit_GL_CreateContext(_THIS, SDL_Window * window)
 
 void UIKit_GL_DeleteContext(_THIS, SDL_GLContext context)
 {
-    /* the delegate has retained the view, this will release him */
-    SDL_uikitopenglview *view = (SDL_uikitopenglview *)context;
-    if (view->viewcontroller) {
-        UIWindow *uiwindow = (UIWindow *)view.superview;
-        if (uiwindow.rootViewController == view->viewcontroller) {
-            uiwindow.rootViewController = nil;
-        }
-        [view->viewcontroller setView:nil];
-        [view->viewcontroller release];
-    }
-    [view removeFromSuperview];
-    [view release];
 }
 
 #endif /* SDL_VIDEO_DRIVER_UIKIT */

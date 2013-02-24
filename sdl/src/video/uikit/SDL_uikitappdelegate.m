@@ -164,6 +164,7 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
 
 
 @implementation SDLUIKitDelegate
+@synthesize uiwindow, viewController;
 
 /* convenience method */
 + (id) sharedAppDelegate
@@ -224,6 +225,19 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
     [self performSelector:@selector(postFinishLaunch) withObject:nil afterDelay:0.0];
 
     return YES;
+}
+
++(SDL_uikitopenglview*)getGameView
+{
+    SDLUIKitDelegate* delegate = (SDLUIKitDelegate*)[SDLUIKitDelegate sharedAppDelegate];
+    SDL_uikitopenglview* view = delegate.viewController.glView;
+    return view;
+}
+
++(UIWindow*)getGameWindow
+{
+    SDLUIKitDelegate* delegate = (SDLUIKitDelegate*)[SDLUIKitDelegate sharedAppDelegate];
+    return delegate.uiwindow;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

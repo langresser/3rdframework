@@ -112,6 +112,7 @@ SDL_SendWindowEvent(SDL_Window * window, Uint8 windowevent, int data1,
         window->y = data2;
         break;
     case SDL_WINDOWEVENT_RESIZED:
+#ifndef __APPLE__
         if (!(window->flags & SDL_WINDOW_FULLSCREEN)) {
             window->windowed.w = data1;
             window->windowed.h = data2;
@@ -122,6 +123,7 @@ SDL_SendWindowEvent(SDL_Window * window, Uint8 windowevent, int data1,
         window->w = data1;
         window->h = data2;
         SDL_OnWindowResized(window);
+#endif
         break;
     case SDL_WINDOWEVENT_MINIMIZED:
         if (window->flags & SDL_WINDOW_MINIMIZED) {

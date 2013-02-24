@@ -130,7 +130,7 @@ UIKit_AddDisplay(UIScreen *uiscreen)
     // units.
     CGFloat scale;
     if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-        scale = [uiscreen scale]; // iOS >= 4.0
+        scale = 1.0f;// no scale is right[uiscreen scale]; // iOS >= 4.0
     } else {
         scale = 1.0f; // iOS < 4.0
     }
