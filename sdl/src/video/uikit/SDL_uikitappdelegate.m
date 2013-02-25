@@ -177,7 +177,7 @@ static void SDL_IdleTimerDisabledChanged(const char *name, const char *oldValue,
 {
     /* subclassing notice: when you subclass this appdelegate, make sure to add a category to override
        this method and return the actual name of the delegate */
-    return @"SDLUIKitDelegate";
+    return @"AppDelegate";
 }
 
 - (id)init
